@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
+import { FaqSection } from "@/components/FaqSection";
 import drFarhanImg from "@/assets/dr-farhan.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -127,6 +128,108 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className="bg-sand">
+        <div className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
+          <h2 className="text-center font-serif text-3xl text-foreground lg:text-4xl">
+            Credentials at a Glance
+          </h2>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                label: "Board Certification",
+                value: "Board-certified urologist",
+                detail: "Practicing urology with a focus on functional and reconstructive care.",
+              },
+              {
+                label: "Fellowship Training",
+                value: "Two UC Irvine fellowships",
+                detail:
+                  "Functional urology, voiding dysfunction & pelvic reconstruction (2019) and male genitourinary reconstruction (2018).",
+              },
+              {
+                label: "Academic Role",
+                value: "Former Associate Professor, UTMB",
+                detail:
+                  "Founded and developed the HoLEP service program, expanding access to advanced BPH surgery.",
+              },
+              {
+                label: "Languages",
+                value: "English & Arabic",
+                detail:
+                  "Care delivered in the language patients and families are most comfortable using.",
+              },
+            ].map((item) => (
+              <div key={item.label} className="rounded-sm bg-white p-6 shadow-sm lift">
+                <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                  {item.label}
+                </p>
+                <p className="mt-3 font-serif text-xl text-foreground">{item.value}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {item.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-sm bg-white p-8 shadow-sm">
+              <h3 className="font-serif text-2xl">Where Dr. Farhan Practices</h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                CLS Health Urology - Southeast Houston
+                <br />
+                10950 Resource Parkway, Suite A, Houston, TX 77089
+                <br />
+                Phone: (346) 414-3426 · Monday–Friday, 8:00 AM – 5:00 PM
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                New patients are welcome, and most major insurance plans are accepted,
+                including Aetna, Blue Cross Blue Shield, Cigna, Humana, Medicare, Molina,
+                United Healthcare, and Wellcare.
+              </p>
+            </div>
+            <div className="rounded-sm bg-white p-8 shadow-sm">
+              <h3 className="font-serif text-2xl">Approach to Care</h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Dr. Farhan treats conditions that shape everyday life — leakage, urgency,
+                difficulty emptying, pain, and the anxiety that comes with them. Evaluation
+                begins with objective testing so treatment is matched to the true cause, and
+                conservative options are always discussed before surgery.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Because quality-of-life conditions require follow-up, he builds long-term
+                relationships with patients, adjusting care as needs change over the years.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FaqSection
+        heading="Questions Patients Ask First"
+        faqs={[
+          {
+            question: "What conditions does Dr. Farhan treat?",
+            answer:
+              "Male and female urinary incontinence, overactive bladder, voiding dysfunction and neurogenic bladder, BPH, urethral stricture, pelvic organ prolapse, genitourinary fistula, male prosthetic urology, and kidney stones.",
+          },
+          {
+            question: "Do I need a referral?",
+            answer:
+              "A referral is not required for most plans, though some insurers ask for one. Call (346) 414-3426 and our team will confirm what your plan needs before your visit.",
+          },
+          {
+            question: "What should I bring to my first appointment?",
+            answer:
+              "Bring your insurance card, a photo ID, a list of current medications, and any prior urology records, imaging, or operative reports. A short bladder diary is also helpful.",
+          },
+          {
+            question: "Are second opinions available?",
+            answer:
+              "Yes. Dr. Farhan frequently evaluates patients after failed prior surgery, mesh complications, recurrent stricture, or persistent incontinence.",
+          },
+        ]}
+      />
 
       <section className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center lg:px-6">
