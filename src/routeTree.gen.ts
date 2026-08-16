@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FemaleUrologyRouteImport } from './routes/female-urology'
+import { Route as InsuranceRouteImport } from './routes/insurance'
+import { Route as MaleUrologyRouteImport } from './routes/male-urology'
+import { Route as PelvicReconstructionRouteImport } from './routes/pelvic-reconstruction'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as VoidingDysfunctionRouteImport } from './routes/voiding-dysfunction'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FemaleUrologyRoute = FemaleUrologyRouteImport.update({
+  id: '/female-urology',
+  path: '/female-urology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsuranceRoute = InsuranceRouteImport.update({
+  id: '/insurance',
+  path: '/insurance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MaleUrologyRoute = MaleUrologyRouteImport.update({
+  id: '/male-urology',
+  path: '/male-urology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PelvicReconstructionRoute = PelvicReconstructionRouteImport.update({
+  id: '/pelvic-reconstruction',
+  path: '/pelvic-reconstruction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VoidingDysfunctionRoute = VoidingDysfunctionRouteImport.update({
+  id: '/voiding-dysfunction',
+  path: '/voiding-dysfunction',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/female-urology': typeof FemaleUrologyRoute
+  '/insurance': typeof InsuranceRoute
+  '/male-urology': typeof MaleUrologyRoute
+  '/pelvic-reconstruction': typeof PelvicReconstructionRoute
+  '/reviews': typeof ReviewsRoute
+  '/voiding-dysfunction': typeof VoidingDysfunctionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/female-urology': typeof FemaleUrologyRoute
+  '/insurance': typeof InsuranceRoute
+  '/male-urology': typeof MaleUrologyRoute
+  '/pelvic-reconstruction': typeof PelvicReconstructionRoute
+  '/reviews': typeof ReviewsRoute
+  '/voiding-dysfunction': typeof VoidingDysfunctionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/female-urology': typeof FemaleUrologyRoute
+  '/insurance': typeof InsuranceRoute
+  '/male-urology': typeof MaleUrologyRoute
+  '/pelvic-reconstruction': typeof PelvicReconstructionRoute
+  '/reviews': typeof ReviewsRoute
+  '/voiding-dysfunction': typeof VoidingDysfunctionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/female-urology'
+    | '/insurance'
+    | '/male-urology'
+    | '/pelvic-reconstruction'
+    | '/reviews'
+    | '/voiding-dysfunction'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/female-urology'
+    | '/insurance'
+    | '/male-urology'
+    | '/pelvic-reconstruction'
+    | '/reviews'
+    | '/voiding-dysfunction'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/female-urology'
+    | '/insurance'
+    | '/male-urology'
+    | '/pelvic-reconstruction'
+    | '/reviews'
+    | '/voiding-dysfunction'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  FemaleUrologyRoute: typeof FemaleUrologyRoute
+  InsuranceRoute: typeof InsuranceRoute
+  MaleUrologyRoute: typeof MaleUrologyRoute
+  PelvicReconstructionRoute: typeof PelvicReconstructionRoute
+  ReviewsRoute: typeof ReviewsRoute
+  VoidingDysfunctionRoute: typeof VoidingDysfunctionRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/female-urology': {
+      id: '/female-urology'
+      path: '/female-urology'
+      fullPath: '/female-urology'
+      preLoaderRoute: typeof FemaleUrologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insurance': {
+      id: '/insurance'
+      path: '/insurance'
+      fullPath: '/insurance'
+      preLoaderRoute: typeof InsuranceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/male-urology': {
+      id: '/male-urology'
+      path: '/male-urology'
+      fullPath: '/male-urology'
+      preLoaderRoute: typeof MaleUrologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pelvic-reconstruction': {
+      id: '/pelvic-reconstruction'
+      path: '/pelvic-reconstruction'
+      fullPath: '/pelvic-reconstruction'
+      preLoaderRoute: typeof PelvicReconstructionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/voiding-dysfunction': {
+      id: '/voiding-dysfunction'
+      path: '/voiding-dysfunction'
+      fullPath: '/voiding-dysfunction'
+      preLoaderRoute: typeof VoidingDysfunctionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  FemaleUrologyRoute: FemaleUrologyRoute,
+  InsuranceRoute: InsuranceRoute,
+  MaleUrologyRoute: MaleUrologyRoute,
+  PelvicReconstructionRoute: PelvicReconstructionRoute,
+  ReviewsRoute: ReviewsRoute,
+  VoidingDysfunctionRoute: VoidingDysfunctionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
