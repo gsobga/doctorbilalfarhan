@@ -178,6 +178,7 @@ export function Header() {
               href="tel:3464143426"
               className="mt-4 flex items-center gap-2 py-3 text-sm font-medium text-white"
             >
+              {/* phone */}
               <Phone className="h-4 w-4" />
               (346) 414-3426
             </a>
