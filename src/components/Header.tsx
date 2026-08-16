@@ -24,10 +24,29 @@ const navItems = [
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground transition-colors">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 text-primary-foreground transition-all duration-500 ${
+        scrolled
+          ? "bg-primary/80 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl saturate-150"
+          : "bg-primary/95"
+      }`}
+    >
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-glow/60 to-transparent"
+      />
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-6">
+
         <Link to="/" className="flex items-center gap-3">
           <div className="flex flex-col leading-none">
             <span className="font-serif text-2xl tracking-wide lg:text-3xl">
