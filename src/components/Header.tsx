@@ -104,7 +104,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <MotionToggle />
+          <span className="hidden xl:block"><MotionToggle /></span>
           <a
             href="tel:3464143426"
             className="flex items-center gap-2 text-sm font-medium text-primary-foreground/90 hover:text-white"
