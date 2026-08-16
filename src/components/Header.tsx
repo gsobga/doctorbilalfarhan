@@ -182,6 +182,7 @@ export function Header() {
               <Phone className="h-4 w-4" />
               (346) 414-3426
             </a>
+            <MotionToggle className="mt-1 w-fit" />
             <Link
               to="/contact"
               onClick={() => setMobileOpen(false)}
