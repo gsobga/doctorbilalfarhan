@@ -41,7 +41,7 @@ export function MotionProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    document.documentElement.dataset.motion = reduced ? "reduced" : "full";
+    document.documentElement.dataset["motion"] = reduced ? "reduced" : "full";
   }, [reduced]);
 
   const setReduced = useCallback((value: boolean) => {
