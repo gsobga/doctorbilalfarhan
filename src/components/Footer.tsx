@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, Mail, Clock } from "lucide-react";
+import { MotionToggle } from "@/components/MotionProvider";
 
 export function Footer() {
   return (
@@ -90,7 +91,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-background/10 pt-8 text-center text-xs text-background/60">
+        <div className="mt-16 flex flex-col items-center gap-4 border-t border-background/10 pt-8 text-center text-xs text-background/60">
+          <MotionToggle />
           <p>
             &copy; {new Date().getFullYear()} Bilal Farhan, MD. All rights reserved. This
             website is for informational purposes and does not constitute medical advice.

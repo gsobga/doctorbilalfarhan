@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MotionProvider } from "@/components/MotionProvider";
 
 function NotFoundComponent() {
   return (
@@ -134,13 +135,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <div className="flex-1">
-          <Outlet />
+      <MotionProvider>
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <div className="flex-1">
+            <Outlet />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </MotionProvider>
     </QueryClientProvider>
   );
 }

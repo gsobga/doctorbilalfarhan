@@ -267,3 +267,21 @@
     transition-duration: .001ms !important;
   }
 }
+
+/* Explicit in-app reduced-motion toggle (overrides the OS setting either way) */
+html[data-motion="reduced"] *,
+html[data-motion="reduced"] *::before,
+html[data-motion="reduced"] *::after {
+  animation: none !important;
+  transition-duration: .001ms !important;
+  scroll-behavior: auto !important;
+}
+
+html[data-motion="reduced"] .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html[data-motion="full"] * {
+  animation-play-state: running;
+}

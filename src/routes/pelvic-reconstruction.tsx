@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
+import { ProcedureGallery } from "@/components/ProcedureGallery";
+import { FaqSection } from "@/components/FaqSection";
+import galleryRobotic from "@/assets/gallery-robotic.jpg";
+import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
+import galleryConsult from "@/assets/gallery-consult.jpg";
+import galleryLaser from "@/assets/gallery-laser.jpg";
 import pelvicImg from "@/assets/pelvic-reconstruction.jpg";
 
 export const Route = createFileRoute("/pelvic-reconstruction")({
@@ -23,6 +29,45 @@ export const Route = createFileRoute("/pelvic-reconstruction")({
   }),
   component: PelvicReconstructionPage,
 });
+
+
+const slides = [
+  {
+    title: "Urethroplasty",
+    category: "Urethral Reconstruction",
+    description: "Excisional and buccal mucosal graft repairs rebuild the urethra for stricture disease, trauma, and failed prior endoscopic treatment.",
+    image: galleryRobotic,
+    facts: ["Durable alternative to repeat dilation", "Graft harvested from inner cheek", "Tailored to stricture length and location"],
+  },
+  {
+    title: "Fistula Repair",
+    category: "Restoring Continence",
+    description: "Vesicovaginal and urethrovaginal fistula repair closes abnormal connections caused by surgery, radiation, or obstructed labor, restoring continence and anatomy.",
+    image: galleryConsult,
+    facts: ["Transvaginal and abdominal approaches", "Tissue interposition flaps when needed", "High closure rates in experienced hands"],
+  },
+  {
+    title: "Revision Sling & Mesh Surgery",
+    category: "Complication Care",
+    description: "Excision and revision for pain, erosion, obstruction, or recurrent leakage after prior sling or mesh procedures performed elsewhere.",
+    image: galleryLaser,
+    facts: ["Partial or complete mesh excision", "Simultaneous continence restoration", "Second-opinion evaluations welcome"],
+  },
+  {
+    title: "Robotic & Post-Trauma Reconstruction",
+    category: "Advanced Surgery",
+    description: "Robotic sacrocolpopexy, ureteral reconstruction, and repair after pelvic fracture urethral injury bring minimally invasive precision to complex cases.",
+    image: galleryDiagnostics,
+    facts: ["Robotic precision, smaller incisions", "Pelvic fracture urethral injury repair", "Congenital and post-radiation cases"],
+  },
+];
+
+const faqs = [
+  { question: "I had surgery elsewhere that failed. Can you help?", answer: "Yes. A large share of Dr. Farhan's practice is revision and salvage surgery after failed slings, mesh complications, recurrent stricture, or persistent fistula." },
+  { question: "What imaging or testing is needed first?", answer: "Depending on the problem, evaluation may include cystoscopy, retrograde urethrogram, urodynamics, and cross-sectional imaging so the reconstruction is planned precisely." },
+  { question: "How long is recovery from reconstruction?", answer: "It varies by procedure. Many patients go home within one to two days with a temporary catheter, resuming normal activity over two to six weeks." },
+  { question: "Do you see out-of-area patients?", answer: "Yes. Referrals and second opinions are welcome at CLS Health Urology - Southeast Houston. Call (346) 414-3426 to arrange an evaluation." },
+];
 
 function PelvicReconstructionPage() {
   return (
@@ -129,6 +174,14 @@ function PelvicReconstructionPage() {
           </div>
         </div>
       </section>
+
+      <ProcedureGallery
+        heading="Reconstructive Work, Step by Step"
+        intro="Complex reconstruction demands planning, imaging, and technique. These are the procedures Dr. Farhan performs most for patients referred with difficult anatomy."
+        slides={slides}
+      />
+
+      <FaqSection faqs={faqs} />
     </main>
   );
 }

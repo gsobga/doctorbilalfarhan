@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
+import { ProcedureGallery } from "@/components/ProcedureGallery";
+import { FaqSection } from "@/components/FaqSection";
+import galleryRobotic from "@/assets/gallery-robotic.jpg";
+import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
+import galleryConsult from "@/assets/gallery-consult.jpg";
+import galleryLaser from "@/assets/gallery-laser.jpg";
 import voidingImg from "@/assets/voiding-dysfunction.jpg";
 
 export const Route = createFileRoute("/voiding-dysfunction")({
@@ -23,6 +29,45 @@ export const Route = createFileRoute("/voiding-dysfunction")({
   }),
   component: VoidingDysfunctionPage,
 });
+
+
+const slides = [
+  {
+    title: "Urodynamic Testing",
+    category: "Diagnostics",
+    description: "Pressure-flow studies measure how the bladder stores and empties, distinguishing obstruction from underactivity and guiding treatment precisely.",
+    image: galleryDiagnostics,
+    facts: ["Objective pressure and flow data", "Clarifies neurogenic vs obstructive causes", "Performed in office in under an hour"],
+  },
+  {
+    title: "Cystoscopy",
+    category: "Diagnostics",
+    description: "A slim camera examines the urethra and bladder lining for stricture, stones, inflammation, or anatomic causes of difficult urination.",
+    image: galleryConsult,
+    facts: ["Local anesthetic, office based", "Immediate visual diagnosis", "Guides same-day treatment planning"],
+  },
+  {
+    title: "Neuromodulation & Bladder Botox",
+    category: "Therapy",
+    description: "Sacral neuromodulation and bladder Botox retrain or relax an overactive or poorly coordinated bladder, often reducing or eliminating catheter dependence.",
+    image: galleryLaser,
+    facts: ["Test phase before permanent implant", "Botox repeated every 6-9 months", "Also helps refractory urgency and retention"],
+  },
+  {
+    title: "Reconstruction & Catheter-Free Solutions",
+    category: "Surgery",
+    description: "When outlet obstruction, stricture, or neurogenic disease limits emptying, reconstructive surgery and diversion options restore safe, independent voiding.",
+    image: galleryRobotic,
+    facts: ["Urethroplasty for stricture disease", "Options to reduce catheter dependence", "Long-term monitoring of kidney safety"],
+  },
+];
+
+const faqs = [
+  { question: "What causes voiding dysfunction?", answer: "Common causes include neurologic disease such as multiple sclerosis, Parkinson's, or spinal cord injury, pelvic surgery, prostate obstruction, urethral stricture, medications, and pelvic floor dyssynergia." },
+  { question: "Do I have to keep using a catheter?", answer: "Not necessarily. Many patients reduce or stop catheterization after neuromodulation, Botox, or surgery to relieve obstruction. Dr. Farhan's goal is the safest catheter-free option available to you." },
+  { question: "Is urodynamic testing uncomfortable?", answer: "It involves small catheters and takes about 30-45 minutes. Most patients describe it as mildly uncomfortable rather than painful, and it delivers information no other test provides." },
+  { question: "Do you coordinate with neurologists?", answer: "Yes. Neuro-urologic care is collaborative. Dr. Farhan works alongside neurology and rehabilitation teams to protect kidney function while improving daily quality of life." },
+];
 
 function VoidingDysfunctionPage() {
   return (
@@ -129,6 +174,14 @@ function VoidingDysfunctionPage() {
           </div>
         </div>
       </section>
+
+      <ProcedureGallery
+        heading="Diagnostics & Therapies in Motion"
+        intro="Voiding dysfunction is diagnosed with objective testing, not guesswork. Here is the pathway from measurement to targeted therapy."
+        slides={slides}
+      />
+
+      <FaqSection faqs={faqs} />
     </main>
   );
 }

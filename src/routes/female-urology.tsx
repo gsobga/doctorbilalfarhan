@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
+import { ProcedureGallery } from "@/components/ProcedureGallery";
+import { FaqSection } from "@/components/FaqSection";
+import galleryRobotic from "@/assets/gallery-robotic.jpg";
+import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
+import galleryConsult from "@/assets/gallery-consult.jpg";
+import galleryLaser from "@/assets/gallery-laser.jpg";
 import femaleUrologyImg from "@/assets/female-urology.jpg";
 
 export const Route = createFileRoute("/female-urology")({
@@ -23,6 +29,45 @@ export const Route = createFileRoute("/female-urology")({
   }),
   component: FemaleUrologyPage,
 });
+
+
+const slides = [
+  {
+    title: "Bladder Botox",
+    category: "In-Office Therapy",
+    description: "OnabotulinumtoxinA injected into the bladder wall calms involuntary contractions that drive urgency, frequency, and leakage when medications fall short.",
+    image: galleryConsult,
+    facts: ["Performed in office under local anesthesia", "Typically 15-20 minutes", "Effect generally lasts 6-9 months"],
+  },
+  {
+    title: "Sacral Neuromodulation",
+    category: "InterStim / Axonics",
+    description: "A small implanted device gently modulates the sacral nerves that coordinate bladder function. Patients trial the therapy before committing to the full implant.",
+    image: galleryDiagnostics,
+    facts: ["Two-stage test-then-implant approach", "Treats urgency incontinence and retention", "MRI-conditional, rechargeable options"],
+  },
+  {
+    title: "Female Sling Surgery",
+    category: "Outpatient Surgery",
+    description: "Mesh and native-tissue sling options restore support beneath the urethra for stress urinary incontinence caused by childbirth, aging, or prior surgery.",
+    image: galleryRobotic,
+    facts: ["Same-day outpatient procedure", "Mesh and mesh-free options discussed", "Most patients resume light activity in days"],
+  },
+  {
+    title: "Prolapse Repair & Reconstruction",
+    category: "Advanced Surgery",
+    description: "Vaginal, laparoscopic, and robotic approaches rebuild pelvic support for cystocele, rectocele, uterine, and vault prolapse, including revision of failed prior repairs.",
+    image: galleryLaser,
+    facts: ["Native tissue and graft-based techniques", "Robotic sacrocolpopexy available", "Combined continence repair when indicated"],
+  },
+];
+
+const faqs = [
+  { question: "Do I need surgery for urinary incontinence?", answer: "No. Most patients start with conservative care such as pelvic floor therapy, behavioral changes, or medication. Dr. Farhan only recommends procedures when less invasive options have not achieved your goals." },
+  { question: "Is bladder Botox painful?", answer: "The injections are done through a small cystoscope with local anesthetic in the office. Most patients describe mild pressure and return to normal activity the same day." },
+  { question: "Will my insurance cover treatment?", answer: "Most major plans accepted at CLS Health cover urologic evaluation and treatment, including Aetna, Blue Cross Blue Shield, Cigna, Humana, Medicare, and United Healthcare. Our team can verify benefits before your visit." },
+  { question: "How do I schedule?", answer: "Call (346) 414-3426 or request a consult online. Dr. Farhan is accepting new patients at CLS Health Urology - Southeast Houston and speaks both English and Arabic." },
+];
 
 function FemaleUrologyPage() {
   return (
@@ -130,6 +175,14 @@ function FemaleUrologyPage() {
           </div>
         </div>
       </section>
+
+      <ProcedureGallery
+        heading="Inside the Procedures"
+        intro="A closer look at the most common treatments Dr. Farhan performs for women, from in-office therapies to fellowship-level reconstructive surgery."
+        slides={slides}
+      />
+
+      <FaqSection faqs={faqs} />
     </main>
   );
 }
