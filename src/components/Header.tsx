@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
-import { MotionToggle } from "@/components/MotionProvider";
 
 
 const navItems = [
@@ -104,7 +103,6 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <span className="hidden xl:block"><MotionToggle /></span>
           <a
             href="tel:3464143426"
             className="flex items-center gap-2 text-sm font-medium text-primary-foreground/90 hover:text-white"
@@ -182,7 +180,6 @@ export function Header() {
               <Phone className="h-4 w-4" />
               (346) 414-3426
             </a>
-            <MotionToggle className="mt-1 w-fit" />
             <Link
               to="/contact"
               onClick={() => setMobileOpen(false)}
