@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Phone } from "lucide-react";
+import { Phone, ArrowRight, ChevronDown } from "lucide-react";
+import { AuroraBackground } from "@/components/AuroraBackground";
 
 interface HeroProps {
   eyebrow?: string;
@@ -9,6 +10,7 @@ interface HeroProps {
   cta?: { label: string; to: string };
   phone?: string;
   align?: "left" | "center";
+  scrollHint?: boolean;
 }
 
 export function Hero({
@@ -19,35 +21,61 @@ export function Hero({
   cta,
   phone,
   align = "center",
+  scrollHint = false,
 }: HeroProps) {
   return (
-    <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden pt-20">
+    <section className="relative flex min-h-[88vh] items-center justify-center overflow-hidden pt-24">
       <div className="absolute inset-0">
         <img
           src={image}
           alt=""
-          className="h-full w-full object-cover"
+          className="h-full w-full scale-105 object-cover"
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/45" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,color-mix(in_oklab,black_55%,transparent))]" />
       </div>
 
+      <AuroraBackground variant="dark" />
+
+      {/* scanning light beam */}
       <div
-        className={`relative z-10 mx-auto max-w-7xl px-4 py-20 lg:px-6 ${
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 left-0 w-1/3 -skew-x-12 bg-[var(--gradient-sheen)] opacity-[0.07] animate-sheen"
+      />
+
+      <div
+        className={`relative z-10 mx-auto w-full max-w-7xl px-4 py-24 lg:px-6 ${
           align === "center" ? "text-center" : "text-left"
         }`}
       >
         {eyebrow && (
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-white/80">
-            {eyebrow}
-          </p>
+          <div
+            className={`mb-6 flex ${align === "center" ? "justify-center" : "justify-start"}`}
+          >
+            <span className="inline-flex items-center gap-2 rounded-full glass-dark px-4 py-2 text-[11px] font-medium uppercase tracking-[0.25em] text-white/85">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-glow animate-pulse-ring" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-glow" />
+              </span>
+              {eyebrow}
+            </span>
+          </div>
         )}
-        <h1 className="max-w-4xl font-serif text-4xl font-normal uppercase leading-[1.1] tracking-wide text-white md:text-5xl lg:text-6xl">
+        <h1
+          className={`font-serif text-4xl font-normal uppercase leading-[1.05] tracking-wide text-gradient-light md:text-6xl lg:text-7xl ${
+            align === "center" ? "mx-auto max-w-5xl" : "max-w-4xl"
+          }`}
+        >
           {title}
         </h1>
         {subtitle && (
-          <p className="mx-auto mt-6 max-w-2xl text-lg font-light leading-relaxed text-white/90 md:text-xl">
+          <p
+            className={`mt-6 max-w-2xl text-lg font-light leading-relaxed text-white/85 md:text-xl ${
+              align === "center" ? "mx-auto" : ""
+            }`}
+          >
             {subtitle}
           </p>
         )}
@@ -59,15 +87,17 @@ export function Hero({
           {cta && (
             <Link
               to={cta.to}
-              className="rounded-sm border border-white bg-white/10 px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-primary"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary glow-ring transition-transform duration-500 hover:-translate-y-1"
             >
-              {cta.label}
+              <span className="relative z-10">{cta.label}</span>
+              <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <span className="absolute inset-y-0 -left-full w-1/2 bg-[var(--gradient-sheen)] opacity-40 transition-transform duration-700 group-hover:translate-x-[320%]" />
             </Link>
           )}
           {phone && (
             <a
               href={`tel:${phone.replace(/\D/g, "")}`}
-              className="flex items-center justify-center gap-2 rounded-sm border border-white/30 px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-full glass-dark px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-500 hover:-translate-y-1 hover:bg-white/15"
             >
               <Phone className="h-4 w-4" />
               {phone}
@@ -75,6 +105,12 @@ export function Hero({
           )}
         </div>
       </div>
+
+      {scrollHint && (
+        <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-float text-white/60">
+          <ChevronDown className="h-6 w-6" aria-hidden="true" />
+        </div>
+      )}
     </section>
   );
 }
