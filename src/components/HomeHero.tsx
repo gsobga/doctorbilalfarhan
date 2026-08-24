@@ -17,11 +17,7 @@ export function HomeHero() {
       <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-end gap-10 px-4 pb-16 pt-32 md:grid-cols-[1fr_minmax(0,0.9fr)] md:gap-8 lg:px-6 lg:pb-0 lg:pt-40">
         {/* Copy column */}
         <div className="max-w-xl md:pb-16 lg:pb-24">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-white/70">
-            Functional • Reconstructive • Minimally Invasive Urology
-          </p>
-
-          <h1 className="mt-5 font-serif text-[2.5rem] font-normal uppercase leading-[0.95] tracking-wide text-white sm:text-5xl lg:text-[4rem]">
+          <h1 className="font-serif text-[2.5rem] font-normal uppercase leading-[0.95] tracking-wide text-white sm:text-5xl lg:text-[4rem]">
             Bilal Farhan, MD, FACS
           </h1>
 
@@ -33,7 +29,7 @@ export function HomeHero() {
 
           <p className="mt-6 max-w-lg text-base leading-relaxed text-white/75">
             HoLEP and BPH, male and female incontinence, mesh complications, urethral
-            reconstruction, and complex kidney stones — from a fellowship-trained surgeon who
+            reconstruction, and complex kidney stones, from a fellowship-trained surgeon who
             listens first and plans with you.
           </p>
 
