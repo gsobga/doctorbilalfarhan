@@ -66,7 +66,7 @@ export function HomeHero() {
           />
           <img
             src={drFarhanCutout}
-            alt="Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist in Houston"
+            alt="Bilal Farhan, MD, FACS, fellowship-trained functional and reconstructive urologist in Houston"
             className="relative z-10 block w-auto max-w-full object-contain object-bottom drop-shadow-[0_25px_60px_rgba(0,0,0,0.55)] max-h-[52svh] md:max-h-[72svh] lg:max-h-[92svh]"
             width={753}
             height={1024}
