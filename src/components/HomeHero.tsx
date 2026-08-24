@@ -121,7 +121,7 @@ export function HomeHero() {
           </div>
 
           {/* floating credential cards */}
-          <div className="glass-dark absolute -left-4 top-10 hidden items-center gap-3 rounded-2xl px-4 py-3 sm:flex">
+          <div className="glass-dark absolute -left-6 top-1/3 max-w-[16rem] hidden items-center gap-3 rounded-2xl px-4 py-3 sm:flex">
             <Award className="h-5 w-5 text-accent" aria-hidden="true" />
             <div>
               <p className="text-sm font-semibold text-white">4× Center of Excellence</p>
@@ -130,7 +130,7 @@ export function HomeHero() {
               </p>
             </div>
           </div>
-          <div className="glass-dark absolute -right-4 bottom-16 hidden items-center gap-3 rounded-2xl px-4 py-3 sm:flex">
+          <div className="glass-dark absolute -right-6 bottom-40 max-w-[16rem] hidden items-center gap-3 rounded-2xl px-4 py-3 sm:flex">
             <Activity className="h-5 w-5 text-accent" aria-hidden="true" />
             <div>
               <p className="text-sm font-semibold text-white">250+ HoLEP Procedures</p>
