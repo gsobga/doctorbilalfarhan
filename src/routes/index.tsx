@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Hero } from "@/components/Hero";
+import { HomeHero } from "@/components/HomeHero";
 import { Reveal } from "@/components/Reveal";
 import { AuroraBackground } from "@/components/AuroraBackground";
 import { StatCounter } from "@/components/StatCounter";
@@ -176,15 +176,7 @@ const areas = [
 function HomePage() {
   return (
     <main className="overflow-hidden">
-      <Hero
-        eyebrow="Center for Advanced Urology • CLS Health"
-        title="Advanced Expertise. Individualized Urologic Care."
-        subtitle="Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist. Specialized care for BPH, urinary incontinence, voiding dysfunction, urethral stricture, pelvic health, and complex urinary conditions, tailored to your needs, goals, and quality of life."
-        image={heroBg}
-        cta={{ label: "Schedule an Appointment", to: "/contact" }}
-        phone="346-414-3426"
-        scrollHint
-      />
+      <HomeHero />
 
       {/* Marquee band */}
       <div className="relative overflow-hidden border-y border-border bg-foreground py-4">
