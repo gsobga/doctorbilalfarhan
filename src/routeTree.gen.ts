@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as BphHolepRouteImport } from './routes/bph-holep'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FemaleUrologyRouteImport } from './routes/female-urology'
 import { Route as InsuranceRouteImport } from './routes/insurance'
@@ -27,6 +28,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BphHolepRoute = BphHolepRouteImport.update({
+  id: '/bph-holep',
+  path: '/bph-holep',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -68,6 +74,7 @@ const VoidingDysfunctionRoute = VoidingDysfunctionRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bph-holep': typeof BphHolepRoute
   '/contact': typeof ContactRoute
   '/female-urology': typeof FemaleUrologyRoute
   '/insurance': typeof InsuranceRoute
@@ -79,6 +86,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bph-holep': typeof BphHolepRoute
   '/contact': typeof ContactRoute
   '/female-urology': typeof FemaleUrologyRoute
   '/insurance': typeof InsuranceRoute
@@ -91,6 +99,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bph-holep': typeof BphHolepRoute
   '/contact': typeof ContactRoute
   '/female-urology': typeof FemaleUrologyRoute
   '/insurance': typeof InsuranceRoute
@@ -104,6 +113,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/bph-holep'
     | '/contact'
     | '/female-urology'
     | '/insurance'
@@ -115,6 +125,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/bph-holep'
     | '/contact'
     | '/female-urology'
     | '/insurance'
@@ -126,6 +137,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/bph-holep'
     | '/contact'
     | '/female-urology'
     | '/insurance'
@@ -138,6 +150,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BphHolepRoute: typeof BphHolepRoute
   ContactRoute: typeof ContactRoute
   FemaleUrologyRoute: typeof FemaleUrologyRoute
   InsuranceRoute: typeof InsuranceRoute
@@ -161,6 +174,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bph-holep': {
+      id: '/bph-holep'
+      path: '/bph-holep'
+      fullPath: '/bph-holep'
+      preLoaderRoute: typeof BphHolepRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -218,6 +238,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BphHolepRoute: BphHolepRoute,
   ContactRoute: ContactRoute,
   FemaleUrologyRoute: FemaleUrologyRoute,
   InsuranceRoute: InsuranceRoute,
