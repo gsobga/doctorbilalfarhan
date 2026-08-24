@@ -44,9 +44,9 @@ function ContactPage() {
               Contact Information
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Dr. Farhan sees patients at CLS Health Urology - Southeast Houston. New and
-              existing patients can request an appointment by phone or through the CLS Health
-              online booking system.
+              Dr. Farhan sees patients at the CLS Health Center for Advanced Urology in
+              Southeast Houston. New and existing patients can schedule by phone, through
+              online scheduling, or through the patient portal when applicable.
             </p>
 
             <ul className="mt-10 space-y-6">
@@ -55,9 +55,11 @@ function ContactPage() {
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">CLS Health Urology - Southeast Houston</p>
+                  <p className="font-medium text-foreground">
+                    CLS Health — Center for Advanced Urology
+                  </p>
                   <p className="text-sm text-muted-foreground">
-                    10950 Resource Parkway, Suite A
+                    10950 Resource Pkwy
                     <br />
                     Houston, TX 77089
                   </p>
@@ -68,13 +70,14 @@ function ContactPage() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Phone</p>
+                  <p className="font-medium text-foreground">Phone & Fax</p>
                   <a
                     href="tel:3464143426"
-                    className="text-sm text-muted-foreground hover:text-primary"
+                    className="block text-sm text-muted-foreground hover:text-primary"
                   >
-                    (346) 414-3426
+                    346-414-3426
                   </a>
+                  <p className="text-sm text-muted-foreground">Fax: 346-400-4338</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -82,9 +85,25 @@ function ContactPage() {
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Appointments</p>
+                  <p className="font-medium text-foreground">Ways to Schedule</p>
                   <p className="text-sm text-muted-foreground">
-                    Schedule online through CLS Health provider profile
+                    By phone, online scheduling, or the patient portal when applicable.
+                    In-person and telehealth appointments are available.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Building2 className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Hospital Affiliations</p>
+                  <p className="text-sm text-muted-foreground">
+                    Memorial Hermann Southeast Hospital — Houston
+                    <br />
+                    HCA Houston Healthcare Pearland
+                    <br />
+                    HCA Houston Healthcare Clear Lake — Webster
                   </p>
                 </div>
               </li>
@@ -95,13 +114,13 @@ function ContactPage() {
                 <div>
                   <p className="font-medium text-foreground">Office Hours</p>
                   <p className="text-sm text-muted-foreground">
-                    Monday - Friday: 8:00 AM - 5:00 PM
-                    <br />
-                    Saturday - Sunday: Closed
+                    Per CLS Health scheduling — please call 346-414-3426 to confirm current
+                    hours and availability.
                   </p>
                 </div>
               </li>
             </ul>
+
           </div>
 
           <div className="rounded-sm bg-card p-8 shadow-sm">
