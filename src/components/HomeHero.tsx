@@ -120,23 +120,25 @@ export function HomeHero() {
             </div>
           </div>
 
-          {/* floating credential cards */}
-          <div className="glass-dark absolute -left-6 top-1/3 max-w-[16rem] hidden items-center gap-3 rounded-2xl px-4 py-3 sm:flex">
-            <Award className="h-5 w-5 text-accent" aria-hidden="true" />
-            <div>
-              <p className="text-sm font-semibold text-white">4× Center of Excellence</p>
-              <p className="text-[10px] uppercase tracking-[0.18em] text-white/60">
-                HoLEP • GreenLight • AUS • Female Sling
-              </p>
+          {/* credential strip */}
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="glass-dark flex items-center gap-3 rounded-2xl px-4 py-3">
+              <Award className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+              <div>
+                <p className="text-sm font-semibold text-white">4× Center of Excellence</p>
+                <p className="text-[10px] uppercase tracking-[0.16em] text-white/60">
+                  HoLEP • GreenLight • AUS • Female Sling
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="glass-dark absolute -right-6 bottom-40 max-w-[16rem] hidden items-center gap-3 rounded-2xl px-4 py-3 sm:flex">
-            <Activity className="h-5 w-5 text-accent" aria-hidden="true" />
-            <div>
-              <p className="text-sm font-semibold text-white">250+ HoLEP Procedures</p>
-              <p className="text-[10px] uppercase tracking-[0.18em] text-white/60">
-                Established the UTMB HoLEP program
-              </p>
+            <div className="glass-dark flex items-center gap-3 rounded-2xl px-4 py-3">
+              <Activity className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+              <div>
+                <p className="text-sm font-semibold text-white">250+ HoLEP Procedures</p>
+                <p className="text-[10px] uppercase tracking-[0.16em] text-white/60">
+                  Established the UTMB HoLEP program
+                </p>
+              </div>
             </div>
           </div>
         </div>
