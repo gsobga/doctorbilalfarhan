@@ -13,35 +13,18 @@ export function HomeHero() {
       </div>
       <AuroraBackground variant="dark" />
 
-      {/* Portrait — foreground cutout, bleeding off the bottom right */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-[1] flex w-full justify-center lg:w-[58%] lg:justify-end">
-        <div
-          aria-hidden="true"
-          className="absolute bottom-0 right-0 h-[70%] w-[85%] rounded-full bg-[var(--gradient-aurora)] opacity-30 blur-3xl"
-        />
-        <img
-          src={drFarhanCutout}
-          alt="Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist in Houston"
-          className="relative h-[64%] max-h-none w-auto self-end object-contain object-bottom opacity-90 drop-shadow-[0_25px_60px_rgba(0,0,0,0.45)] sm:h-[70%] lg:h-[92%] lg:opacity-100"
-          width={753}
-          height={1024}
-        />
-      </div>
-
-      {/* navy wash over the photo so copy stays legible */}
-      <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-primary via-primary/45 to-transparent lg:bg-gradient-to-r lg:from-primary lg:via-primary/70 lg:via-45% lg:to-transparent" />
-
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-40 lg:px-6 lg:pb-24">
-        <div className="max-w-xl">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-end gap-10 px-4 pb-16 pt-32 md:grid-cols-[1fr_minmax(0,0.9fr)] md:gap-8 lg:px-6 lg:pb-0 lg:pt-40">
+        {/* Copy column */}
+        <div className="max-w-xl md:pb-16 lg:pb-24">
           <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-white/70">
             Functional • Reconstructive • Minimally Invasive Urology
           </p>
 
-          <h1 className="mt-5 font-serif text-[2.75rem] font-normal uppercase leading-[0.95] tracking-wide text-white sm:text-6xl lg:text-[4.25rem]">
+          <h1 className="mt-5 font-serif text-[2.5rem] font-normal uppercase leading-[0.95] tracking-wide text-white sm:text-5xl lg:text-[4rem]">
             Bilal Farhan, MD, FACS
           </h1>
 
-          <p className="mt-6 font-serif text-2xl uppercase leading-[1.15] tracking-wide text-white/90 lg:text-[1.9rem]">
+          <p className="mt-6 font-serif text-xl uppercase leading-[1.15] tracking-wide text-white/90 lg:text-[1.9rem]">
             Advanced expertise.
             <br />
             Individualized urologic care.
@@ -69,7 +52,23 @@ export function HomeHero() {
             </Link>
           </div>
         </div>
+
+        {/* Portrait column — separate from the copy */}
+        <div className="relative flex items-end justify-center md:justify-end">
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 h-[80%] w-[90%] rounded-full bg-[var(--gradient-aurora)] opacity-30 blur-3xl"
+          />
+          <img
+            src={drFarhanCutout}
+            alt="Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist in Houston"
+            className="relative w-auto max-w-full self-end object-contain object-bottom drop-shadow-[0_25px_60px_rgba(0,0,0,0.45)] max-h-[46svh] md:max-h-[62svh] lg:max-h-[82svh]"
+            width={753}
+            height={1024}
+          />
+        </div>
       </div>
     </section>
+
   );
 }
