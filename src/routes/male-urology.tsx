@@ -66,19 +66,58 @@ const faqs = [
   { question: "Which BPH procedure is right for me?", answer: "It depends on prostate size, symptoms, medications, and your goals. Dr. Farhan reviews HoLEP, GreenLight, and medication options with objective testing such as uroflow and ultrasound before recommending a path." },
   { question: "How long is recovery after HoLEP?", answer: "Most men go home within a day, keep a catheter briefly, and return to normal routines within one to two weeks with clear improvement in flow." },
   { question: "Do you treat incontinence after prostate cancer surgery?", answer: "Yes. Post-prostatectomy incontinence is a core focus, including male slings and artificial urinary sphincter placement, as well as revision of prior devices." },
-  { question: "Are you accepting new patients?", answer: "Yes. Dr. Farhan sees new patients at CLS Health Urology - Southeast Houston, 10950 Resource Parkway, Suite A, Houston, TX 77089. Call (346) 414-3426." },
+  { question: "Are you accepting new patients?", answer: "Yes. Dr. Farhan sees new patients at CLS Health Center for Advanced Urology in Southeast Houston, 10950 Resource Pkwy, Houston, TX 77089. Call 346-414-3426." },
 ];
 
 function MaleUrologyPage() {
   return (
     <main>
       <Hero
-        eyebrow="Expert Care for Men"
+        eyebrow="Male Continence & Prostate Care"
         title="Male Urology"
-        subtitle="Comprehensive solutions for prostate, bladder, urinary, and reproductive health in men."
+        subtitle="Artificial urinary sphincter, male sling, post-prostatectomy incontinence, BPH, and complex or revision continence reconstruction."
         image={maleUrologyImg}
-        cta={{ label: "Request a Consult", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        phone="346-414-3426"
       />
+
+      <section className="mx-auto max-w-7xl px-4 pt-20 lg:px-6">
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
+              Male Urology & Continence
+            </h2>
+            <p className="mt-6 leading-relaxed text-muted-foreground">
+              Male urinary incontinence after prostate surgery, radiation, or previous procedures is treatable — and more than one option usually exists. Treatment is individualized to the degree of leakage, hand function, prior surgery, anatomy, and personal goals.
+            </p>
+            <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
+              My experience includes Artificial Urinary Sphincter Center of Excellence recognition, with expertise in both straightforward and complex post-prostatectomy incontinence, including patients who have already undergone treatment or surgery.
+            </p>
+          </div>
+          <div className="rounded-2xl bg-card p-8 shadow-sm">
+            <h3 className="font-serif text-2xl">Procedures & Treatments</h3>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                  "Artificial Urinary Sphincter (AUS)",
+                  "Male Sling",
+                  "Complex male continence reconstruction",
+                  "Revision of previous continence procedures",
+                  "BPH treatment including HoLEP and GreenLight",
+                  "Urethral stricture and reconstructive surgery",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-muted-foreground">
+              A diagnosis does not automatically mean surgery. Conservative and non-surgical
+              options are reviewed first whenever they can achieve your goals.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">

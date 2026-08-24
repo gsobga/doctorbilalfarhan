@@ -66,19 +66,60 @@ const faqs = [
   { question: "Do I need surgery for urinary incontinence?", answer: "No. Most patients start with conservative care such as pelvic floor therapy, behavioral changes, or medication. Dr. Farhan only recommends procedures when less invasive options have not achieved your goals." },
   { question: "Is bladder Botox painful?", answer: "The injections are done through a small cystoscope with local anesthetic in the office. Most patients describe mild pressure and return to normal activity the same day." },
   { question: "Will my insurance cover treatment?", answer: "Most major plans accepted at CLS Health cover urologic evaluation and treatment, including Aetna, Blue Cross Blue Shield, Cigna, Humana, Medicare, and United Healthcare. Our team can verify benefits before your visit." },
-  { question: "How do I schedule?", answer: "Call (346) 414-3426 or request a consult online. Dr. Farhan is accepting new patients at CLS Health Urology - Southeast Houston and speaks both English and Arabic." },
+  { question: "How do I schedule?", answer: "Call 346-414-3426 or request a consult online. Dr. Farhan is accepting new patients at CLS Health Center for Advanced Urology in Southeast Houston and speaks both English and Arabic." },
 ];
 
 function FemaleUrologyPage() {
   return (
     <main>
       <Hero
-        eyebrow="Specialized Care for Women"
+        eyebrow="Female Urology & Pelvic Health"
         title="Female Urology"
-        subtitle="Compassionate, evidence-based treatment for urinary and pelvic health conditions affecting women."
+        subtitle="Incontinence, prolapse, mesh-related complications, and complex revision care — with mesh, non-mesh, and non-surgical options discussed openly."
         image={femaleUrologyImg}
-        cta={{ label: "Request a Consult", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        phone="346-414-3426"
       />
+
+      <section className="mx-auto max-w-7xl px-4 pt-20 lg:px-6">
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
+              Female Continence, Prolapse & Mesh Complications
+            </h2>
+            <p className="mt-6 leading-relaxed text-muted-foreground">
+              Treatment includes surgical and non-surgical approaches individualized according to the type and severity of incontinence, anatomy, previous treatment or surgery, goals, and preferences.
+            </p>
+            <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
+              A mesh-related complication does not automatically mean complete mesh removal. Treatment is individualized according to symptoms, examination findings, anatomy, previous procedures, and patient goals. Female Sling / Continence Surgery Center of Excellence recognition.
+            </p>
+          </div>
+          <div className="rounded-2xl bg-card p-8 shadow-sm">
+            <h3 className="font-serif text-2xl">Procedures & Treatments</h3>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                  "Midurethral sling (mesh)",
+                  "Autologous fascial sling (non-mesh)",
+                  "Urethral bulking agent injection",
+                  "Evaluation and management of mesh-related complications",
+                  "Mesh revision or excision when clinically appropriate",
+                  "Persistent or recurrent stress urinary incontinence",
+                  "Revision of previous continence surgery",
+                  "Complex female continence and reconstructive surgery",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-muted-foreground">
+              A diagnosis does not automatically mean surgery. Conservative and non-surgical
+              options are reviewed first whenever they can achieve your goals.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">

@@ -1,22 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
 import heroBg from "@/assets/hero-bg.jpg";
-import { Phone, MapPin, Mail, Clock } from "lucide-react";
+import { Phone, MapPin, Mail, Clock, Building2 } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Bilal Farhan, MD" },
+      { title: "Schedule an Appointment — Bilal Farhan, MD, FACS" },
       {
         name: "description",
         content:
-          "Contact Dr. Bilal Farhan's office in Houston, TX. Request a consultation for female urology, male urology, voiding dysfunction, or pelvic reconstruction.",
+          "Schedule with Dr. Bilal Farhan in Southeast Houston: 346-414-3426. In-person and telehealth appointments for BPH, incontinence, voiding dysfunction, reconstruction, and kidney stones.",
       },
-      { property: "og:title", content: "Contact — Bilal Farhan, MD" },
+      { property: "og:title", content: "Schedule an Appointment — Bilal Farhan, MD, FACS" },
       {
         property: "og:description",
         content:
-          "Contact Dr. Bilal Farhan's office in Houston, TX. Request a consultation for female urology, male urology, voiding dysfunction, or pelvic reconstruction.",
+          "Schedule with Dr. Bilal Farhan in Southeast Houston: 346-414-3426. In-person and telehealth appointments for BPH, incontinence, voiding dysfunction, reconstruction, and kidney stones.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,11 +29,13 @@ function ContactPage() {
   return (
     <main>
       <Hero
-        eyebrow="Get in Touch"
-        title="Request a Consultation"
-        subtitle="Take the first step toward better urologic health. Our team is ready to help you schedule your appointment."
+        eyebrow="In-Person & Telehealth Appointments"
+        title="Schedule an Appointment"
+        subtitle="Need help scheduling? Call 346-414-3426. Our team will help you find the right visit and confirm any insurance requirements."
         image={heroBg}
+        cta={{ label: "Call 346-414-3426", to: "/contact" }}
       />
+
 
       <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
         <div className="grid gap-12 lg:grid-cols-2">
@@ -42,9 +44,9 @@ function ContactPage() {
               Contact Information
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Dr. Farhan sees patients at CLS Health Urology - Southeast Houston. New and
-              existing patients can request an appointment by phone or through the CLS Health
-              online booking system.
+              Dr. Farhan sees patients at the CLS Health Center for Advanced Urology in
+              Southeast Houston. New and existing patients can schedule by phone, through
+              online scheduling, or through the patient portal when applicable.
             </p>
 
             <ul className="mt-10 space-y-6">
@@ -53,9 +55,11 @@ function ContactPage() {
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">CLS Health Urology - Southeast Houston</p>
+                  <p className="font-medium text-foreground">
+                    CLS Health — Center for Advanced Urology
+                  </p>
                   <p className="text-sm text-muted-foreground">
-                    10950 Resource Parkway, Suite A
+                    10950 Resource Pkwy
                     <br />
                     Houston, TX 77089
                   </p>
@@ -66,13 +70,14 @@ function ContactPage() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Phone</p>
+                  <p className="font-medium text-foreground">Phone & Fax</p>
                   <a
                     href="tel:3464143426"
-                    className="text-sm text-muted-foreground hover:text-primary"
+                    className="block text-sm text-muted-foreground hover:text-primary"
                   >
-                    (346) 414-3426
+                    346-414-3426
                   </a>
+                  <p className="text-sm text-muted-foreground">Fax: 346-400-4338</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -80,9 +85,25 @@ function ContactPage() {
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Appointments</p>
+                  <p className="font-medium text-foreground">Ways to Schedule</p>
                   <p className="text-sm text-muted-foreground">
-                    Schedule online through CLS Health provider profile
+                    By phone, online scheduling, or the patient portal when applicable.
+                    In-person and telehealth appointments are available.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Building2 className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Hospital Affiliations</p>
+                  <p className="text-sm text-muted-foreground">
+                    Memorial Hermann Southeast Hospital — Houston
+                    <br />
+                    HCA Houston Healthcare Pearland
+                    <br />
+                    HCA Houston Healthcare Clear Lake — Webster
                   </p>
                 </div>
               </li>
@@ -93,13 +114,13 @@ function ContactPage() {
                 <div>
                   <p className="font-medium text-foreground">Office Hours</p>
                   <p className="text-sm text-muted-foreground">
-                    Monday - Friday: 8:00 AM - 5:00 PM
-                    <br />
-                    Saturday - Sunday: Closed
+                    Per CLS Health scheduling — please call 346-414-3426 to confirm current
+                    hours and availability.
                   </p>
                 </div>
               </li>
             </ul>
+
           </div>
 
           <div className="rounded-sm bg-card p-8 shadow-sm">
@@ -148,7 +169,7 @@ function ContactPage() {
                   id="phone"
                   type="tel"
                   className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
-                  placeholder="(346) 414-3426"
+                  placeholder="346-414-3426"
                 />
               </div>
               <div>
@@ -160,10 +181,14 @@ function ContactPage() {
                   className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
                 >
                   <option>General Urology Consultation</option>
-                  <option>Female Urology</option>
-                  <option>Male Urology</option>
-                  <option>Voiding Dysfunction</option>
-                  <option>Pelvic Reconstruction</option>
+                  <option>BPH & HoLEP</option>
+                  <option>Male Urology & Continence</option>
+                  <option>Female Urology & Mesh Complications</option>
+                  <option>Voiding Dysfunction & Overactive Bladder</option>
+                  <option>Urethral & Pelvic Reconstruction</option>
+                  <option>Kidney Stones</option>
+                  <option>Second Opinion / Revision Surgery</option>
+                  <option>Telehealth Visit</option>
                 </select>
               </div>
               <div>
@@ -184,8 +209,10 @@ function ContactPage() {
                 Submit Request
               </button>
               <p className="text-xs text-muted-foreground">
-                This form is for appointment requests only. For medical emergencies, please
-                call 911 or visit the nearest emergency room.
+                This form is for appointment requests only. Please do not include
+                sensitive medical information — call 346-414-3426 to discuss protected
+                health information securely. For medical emergencies, call 911 or visit the
+                nearest emergency room.
               </p>
             </form>
           </div>
@@ -193,6 +220,62 @@ function ContactPage() {
       </section>
 
       <section className="bg-sand">
+        <div className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="rounded-2xl bg-card p-8 shadow-sm">
+              <h3 className="font-serif text-2xl">What to Bring</h3>
+              <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
+                {[
+                  "Photo ID",
+                  "Insurance information",
+                  "Current medication list",
+                  "Relevant laboratory results",
+                  "Imaging",
+                  "Previous urology records",
+                  "Previous operative reports",
+                  "Urodynamic studies when applicable",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 text-sm italic text-muted-foreground">
+                For second opinions and revision surgery, previous operative reports and
+                imaging are particularly helpful.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-card p-8 shadow-sm">
+              <h3 className="font-serif text-2xl">What to Expect</h3>
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                The first visit focuses on understanding the whole problem rather than
+                simply selecting a procedure. That includes reviewing your symptoms,
+                previous treatment, relevant testing, and how the condition affects your
+                quality of life.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Available treatment options are then discussed together so you can
+                participate in developing an individualized care plan.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-card p-8 shadow-sm">
+              <h3 className="font-serif text-2xl">Referrals & Privacy</h3>
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                Many patients can schedule directly with Dr. Farhan. Certain insurance plans
+                may require a referral or prior authorization; our scheduling team can help
+                determine the requirements for your individual plan.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Sensitive medical information should not be sent through a general contact
+                form. Please call the office so information can be collected securely.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background">
         <div className="mx-auto max-w-7xl px-4 py-12 lg:px-6">
           <iframe
             title="Office Location"

@@ -66,19 +66,61 @@ const faqs = [
   { question: "I had surgery elsewhere that failed. Can you help?", answer: "Yes. A large share of Dr. Farhan's practice is revision and salvage surgery after failed slings, mesh complications, recurrent stricture, or persistent fistula." },
   { question: "What imaging or testing is needed first?", answer: "Depending on the problem, evaluation may include cystoscopy, retrograde urethrogram, urodynamics, and cross-sectional imaging so the reconstruction is planned precisely." },
   { question: "How long is recovery from reconstruction?", answer: "It varies by procedure. Many patients go home within one to two days with a temporary catheter, resuming normal activity over two to six weeks." },
-  { question: "Do you see out-of-area patients?", answer: "Yes. Referrals and second opinions are welcome at CLS Health Urology - Southeast Houston. Call (346) 414-3426 to arrange an evaluation." },
+  { question: "Do you see out-of-area patients?", answer: "Yes. Referrals and second opinions are welcome at CLS Health Center for Advanced Urology in Southeast Houston. Call 346-414-3426 to arrange an evaluation." },
 ];
 
 function PelvicReconstructionPage() {
   return (
     <main>
       <Hero
-        eyebrow="Complex Reconstructive Surgery"
+        eyebrow="Urethral & Pelvic Reconstruction"
         title="Pelvic Reconstruction"
-        subtitle="Restoring form, function, and quality of life through advanced pelvic and genitourinary reconstruction."
+        subtitle="Urethral stricture, urinary fistula, bladder diverticulum, prolapse repair, and complications after previous urologic surgery."
         image={pelvicImg}
-        cta={{ label: "Request a Consult", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        phone="346-414-3426"
       />
+
+      <section className="mx-auto max-w-7xl px-4 pt-20 lg:px-6">
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
+              Reconstructive & Revision Urology
+            </h2>
+            <p className="mt-6 leading-relaxed text-muted-foreground">
+              Particular emphasis is placed on recurrent strictures, previous failed procedures, complex anatomy, and patients seeking a definitive reconstructive opinion. Prolapse care considers symptoms, anatomy, sexual function, previous surgery, and goals.
+            </p>
+            <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
+              Complex problems deserve a thoughtful second look. The best next step may be reconstruction — or it may be a non-surgical plan with clear expectations.
+            </p>
+          </div>
+          <div className="rounded-2xl bg-card p-8 shadow-sm">
+            <h3 className="font-serif text-2xl">Procedures & Treatments</h3>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                  "Urethroplasty",
+                  "Buccal mucosal graft urethroplasty",
+                  "Endoscopic stricture treatment when appropriate",
+                  "Urinary fistula repair",
+                  "Bladder diverticulectomy",
+                  "Vaginal pelvic organ prolapse repair",
+                  "Robotic pelvic organ prolapse repair",
+                  "Robotic urinary tract reconstruction",
+                  "Complex revision surgery",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-muted-foreground">
+              A diagnosis does not automatically mean surgery. Conservative and non-surgical
+              options are reviewed first whenever they can achieve your goals.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">

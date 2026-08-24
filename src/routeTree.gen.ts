@@ -11,12 +11,15 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as BphHolepRouteImport } from './routes/bph-holep'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FemaleUrologyRouteImport } from './routes/female-urology'
 import { Route as InsuranceRouteImport } from './routes/insurance'
+import { Route as KidneyStonesRouteImport } from './routes/kidney-stones'
 import { Route as MaleUrologyRouteImport } from './routes/male-urology'
 import { Route as PelvicReconstructionRouteImport } from './routes/pelvic-reconstruction'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as SecondOpinionsRouteImport } from './routes/second-opinions'
 import { Route as VoidingDysfunctionRouteImport } from './routes/voiding-dysfunction'
 
 const IndexRoute = IndexRouteImport.update({
@@ -27,6 +30,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BphHolepRoute = BphHolepRouteImport.update({
+  id: '/bph-holep',
+  path: '/bph-holep',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -44,6 +52,11 @@ const InsuranceRoute = InsuranceRouteImport.update({
   path: '/insurance',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KidneyStonesRoute = KidneyStonesRouteImport.update({
+  id: '/kidney-stones',
+  path: '/kidney-stones',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MaleUrologyRoute = MaleUrologyRouteImport.update({
   id: '/male-urology',
   path: '/male-urology',
@@ -59,6 +72,11 @@ const ReviewsRoute = ReviewsRouteImport.update({
   path: '/reviews',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SecondOpinionsRoute = SecondOpinionsRouteImport.update({
+  id: '/second-opinions',
+  path: '/second-opinions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VoidingDysfunctionRoute = VoidingDysfunctionRouteImport.update({
   id: '/voiding-dysfunction',
   path: '/voiding-dysfunction',
@@ -68,35 +86,44 @@ const VoidingDysfunctionRoute = VoidingDysfunctionRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bph-holep': typeof BphHolepRoute
   '/contact': typeof ContactRoute
   '/female-urology': typeof FemaleUrologyRoute
   '/insurance': typeof InsuranceRoute
+  '/kidney-stones': typeof KidneyStonesRoute
   '/male-urology': typeof MaleUrologyRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
   '/reviews': typeof ReviewsRoute
+  '/second-opinions': typeof SecondOpinionsRoute
   '/voiding-dysfunction': typeof VoidingDysfunctionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bph-holep': typeof BphHolepRoute
   '/contact': typeof ContactRoute
   '/female-urology': typeof FemaleUrologyRoute
   '/insurance': typeof InsuranceRoute
+  '/kidney-stones': typeof KidneyStonesRoute
   '/male-urology': typeof MaleUrologyRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
   '/reviews': typeof ReviewsRoute
+  '/second-opinions': typeof SecondOpinionsRoute
   '/voiding-dysfunction': typeof VoidingDysfunctionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bph-holep': typeof BphHolepRoute
   '/contact': typeof ContactRoute
   '/female-urology': typeof FemaleUrologyRoute
   '/insurance': typeof InsuranceRoute
+  '/kidney-stones': typeof KidneyStonesRoute
   '/male-urology': typeof MaleUrologyRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
   '/reviews': typeof ReviewsRoute
+  '/second-opinions': typeof SecondOpinionsRoute
   '/voiding-dysfunction': typeof VoidingDysfunctionRoute
 }
 export interface FileRouteTypes {
@@ -104,46 +131,58 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/bph-holep'
     | '/contact'
     | '/female-urology'
     | '/insurance'
+    | '/kidney-stones'
     | '/male-urology'
     | '/pelvic-reconstruction'
     | '/reviews'
+    | '/second-opinions'
     | '/voiding-dysfunction'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/bph-holep'
     | '/contact'
     | '/female-urology'
     | '/insurance'
+    | '/kidney-stones'
     | '/male-urology'
     | '/pelvic-reconstruction'
     | '/reviews'
+    | '/second-opinions'
     | '/voiding-dysfunction'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/bph-holep'
     | '/contact'
     | '/female-urology'
     | '/insurance'
+    | '/kidney-stones'
     | '/male-urology'
     | '/pelvic-reconstruction'
     | '/reviews'
+    | '/second-opinions'
     | '/voiding-dysfunction'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BphHolepRoute: typeof BphHolepRoute
   ContactRoute: typeof ContactRoute
   FemaleUrologyRoute: typeof FemaleUrologyRoute
   InsuranceRoute: typeof InsuranceRoute
+  KidneyStonesRoute: typeof KidneyStonesRoute
   MaleUrologyRoute: typeof MaleUrologyRoute
   PelvicReconstructionRoute: typeof PelvicReconstructionRoute
   ReviewsRoute: typeof ReviewsRoute
+  SecondOpinionsRoute: typeof SecondOpinionsRoute
   VoidingDysfunctionRoute: typeof VoidingDysfunctionRoute
 }
 
@@ -161,6 +200,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bph-holep': {
+      id: '/bph-holep'
+      path: '/bph-holep'
+      fullPath: '/bph-holep'
+      preLoaderRoute: typeof BphHolepRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -184,6 +230,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsuranceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kidney-stones': {
+      id: '/kidney-stones'
+      path: '/kidney-stones'
+      fullPath: '/kidney-stones'
+      preLoaderRoute: typeof KidneyStonesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/male-urology': {
       id: '/male-urology'
       path: '/male-urology'
@@ -205,6 +258,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReviewsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/second-opinions': {
+      id: '/second-opinions'
+      path: '/second-opinions'
+      fullPath: '/second-opinions'
+      preLoaderRoute: typeof SecondOpinionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/voiding-dysfunction': {
       id: '/voiding-dysfunction'
       path: '/voiding-dysfunction'
@@ -218,12 +278,15 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BphHolepRoute: BphHolepRoute,
   ContactRoute: ContactRoute,
   FemaleUrologyRoute: FemaleUrologyRoute,
   InsuranceRoute: InsuranceRoute,
+  KidneyStonesRoute: KidneyStonesRoute,
   MaleUrologyRoute: MaleUrologyRoute,
   PelvicReconstructionRoute: PelvicReconstructionRoute,
   ReviewsRoute: ReviewsRoute,
+  SecondOpinionsRoute: SecondOpinionsRoute,
   VoidingDysfunctionRoute: VoidingDysfunctionRoute,
 }
 export const routeTree = rootRouteImport

@@ -73,12 +73,51 @@ function VoidingDysfunctionPage() {
   return (
     <main>
       <Hero
-        eyebrow="Neuro-Urology & Bladder Control"
+        eyebrow="Overactive Bladder & Voiding Dysfunction"
         title="Voiding Dysfunction"
-        subtitle="Advanced care for patients with difficult, incomplete, or uncontrolled bladder emptying."
+        subtitle="Urgency, frequency, refractory overactive bladder, neurogenic bladder, urinary retention, and complex bladder dysfunction."
         image={voidingImg}
-        cta={{ label: "Request a Consult", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        phone="346-414-3426"
       />
+
+      <section className="mx-auto max-w-7xl px-4 pt-20 lg:px-6">
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
+              A Stepwise, Individualized Approach
+            </h2>
+            <p className="mt-6 leading-relaxed text-muted-foreground">
+              Treatment may range from behavioral and medical therapy to advanced therapies for refractory symptoms. Objective testing clarifies whether obstruction, bladder dysfunction, or both are responsible before advanced treatment is recommended.
+            </p>
+            <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
+              The emphasis is on a stepwise and individualized approach — starting with the least invasive option that can realistically achieve your goals.
+            </p>
+          </div>
+          <div className="rounded-2xl bg-card p-8 shadow-sm">
+            <h3 className="font-serif text-2xl">Procedures & Treatments</h3>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                  "Behavioral and medical therapy",
+                  "Bladder Botox",
+                  "Sacral neuromodulation",
+                  "Percutaneous nerve evaluation / neuromodulation trial",
+                  "Urodynamic testing",
+                  "Treatment of complex voiding dysfunction and urinary retention",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-muted-foreground">
+              A diagnosis does not automatically mean surgery. Conservative and non-surgical
+              options are reviewed first whenever they can achieve your goals.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
