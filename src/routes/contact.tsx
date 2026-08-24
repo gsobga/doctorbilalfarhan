@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
 import heroBg from "@/assets/hero-bg.jpg";
-import { Phone, MapPin, Mail, Clock, Building2 } from "lucide-react";
+import { PHONE_DISPLAY, PHONE_TEL, BOOKING_URL } from "@/lib/booking";
+import { Phone, MapPin, Mail, Clock, Building2, CalendarCheck, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -33,7 +34,8 @@ function ContactPage() {
         title="Schedule an Appointment"
         subtitle="Need help scheduling? Call 346-414-3426. Our team will help you find the right visit and confirm any insurance requirements."
         image={heroBg}
-        cta={{ label: "Call 346-414-3426", to: "/contact" }}
+        cta={{ label: "Schedule Online", to: BOOKING_URL }}
+        phone={PHONE_DISPLAY}
       />
 
 
@@ -133,7 +135,24 @@ function ContactPage() {
           </div>
 
           <div className="rounded-sm bg-card p-8 shadow-sm">
-            <h3 className="mb-6 font-serif text-2xl">Request an Appointment</h3>
+            <h3 className="mb-2 font-serif text-2xl">Request an Appointment</h3>
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-6 flex items-center justify-between gap-3 rounded-md bg-primary px-5 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              <span className="flex items-center gap-3">
+                <CalendarCheck className="h-5 w-5" />
+                Schedule online now
+              </span>
+              <ExternalLink className="h-4 w-4 opacity-80" />
+            </a>
+            <p className="mb-6 text-xs text-muted-foreground">
+              Prefer to schedule in real time? Use our secure online portal to pick a visit
+              time that works for you. You can also use the form below to send a request and our
+              team will reach out, or call {PHONE_DISPLAY}.
+            </p>
             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
