@@ -63,7 +63,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 xl:flex">
+        <nav className="hidden items-center gap-5 xl:flex">
           {navItems.map((item) =>
             item.children ? (
               <div
@@ -106,19 +106,19 @@ export function Header() {
           )}
         </nav>
 
-        <div className="hidden items-center gap-4 xl:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <a
             href="tel:3464143426"
-            className="flex items-center gap-2 whitespace-nowrap text-sm font-medium text-primary-foreground/90 hover:text-white"
+            className="hidden items-center gap-2 whitespace-nowrap text-sm font-medium text-primary-foreground/90 hover:text-white 2xl:flex"
           >
             <Phone className="h-4 w-4" />
             346-414-3426
           </a>
           <Link
             to="/contact"
-            className="whitespace-nowrap rounded-sm border border-white/30 bg-white/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-primary"
+            className="whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-primary"
           >
-            Schedule an Appointment
+            Request Appointment
           </Link>
         </div>
 
@@ -188,7 +188,7 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className="mt-2 rounded-sm bg-white px-5 py-3 text-center text-sm font-semibold uppercase tracking-wider text-primary"
             >
-              Schedule an Appointment
+              Request Appointment
             </Link>
           </nav>
         </div>
