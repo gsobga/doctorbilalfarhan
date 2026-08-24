@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
@@ -77,7 +78,7 @@ function PelvicReconstructionPage() {
         title="Pelvic Reconstruction"
         subtitle="Urethral stricture, urinary fistula, bladder diverticulum, prolapse repair, and complications after previous urologic surgery."
         image={pelvicImg}
-        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
       />
 

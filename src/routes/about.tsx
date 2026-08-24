@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { FaqSection } from "@/components/FaqSection";
@@ -115,7 +116,7 @@ function AboutPage() {
         title="Bilal Farhan, MD, FACS"
         subtitle="Fellowship-Trained Functional & Reconstructive Urologist • Former Associate Professor of Urology"
         image={heroBg}
-        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
       />
 

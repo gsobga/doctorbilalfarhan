@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { FaqSection } from "@/components/FaqSection";
@@ -91,7 +92,7 @@ function SecondOpinionsPage() {
         title="Complex Problems Deserve a Thoughtful Second Look"
         subtitle="Patients with persistent symptoms or previous unsuccessful treatment often need more than another procedure."
         image={galleryConsult}
-        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
       />
 

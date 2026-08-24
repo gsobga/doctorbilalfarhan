@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
@@ -77,7 +78,7 @@ function MaleUrologyPage() {
         title="Male Urology"
         subtitle="Artificial urinary sphincter, male sling, post-prostatectomy incontinence, BPH, and complex or revision continence reconstruction."
         image={maleUrologyImg}
-        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
       />
 

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
@@ -118,7 +119,7 @@ function BphPage() {
         title="BPH & HoLEP"
         subtitle="Advanced BPH treatment individualized to the patient — not simply the size of the prostate."
         image={maleUrologyImg}
-        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
       />
 
