@@ -79,6 +79,12 @@ export function Footer() {
                 <Printer className="h-4 w-4 shrink-0 text-accent" />
                 <span>Fax 346-400-4338</span>
               </li>
+              <li className="flex items-center gap-3">
+                <Printer className="h-4 w-4 shrink-0 text-accent opacity-0" aria-hidden />
+                <a href="mailto:drfarhan@cls.health" className="hover:text-white">
+                  drfarhan@cls.health
+                </a>
+              </li>
               <li className="flex items-start gap-3">
                 <Building2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                 <span>

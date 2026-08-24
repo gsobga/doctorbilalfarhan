@@ -78,6 +78,15 @@ function ContactPage() {
                     346-414-3426
                   </a>
                   <p className="text-sm text-muted-foreground">Fax: 346-400-4338</p>
+                  <a
+                    href="mailto:drfarhan@cls.health"
+                    className="block text-sm text-muted-foreground hover:text-primary"
+                  >
+                    drfarhan@cls.health
+                  </a>
+                  <p className="text-xs text-muted-foreground">
+                    Please do not send medical information by email — use secure scheduling or call the office.
+                  </p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
