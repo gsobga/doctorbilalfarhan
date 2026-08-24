@@ -66,7 +66,7 @@ const faqs = [
   { question: "I had surgery elsewhere that failed. Can you help?", answer: "Yes. A large share of Dr. Farhan's practice is revision and salvage surgery after failed slings, mesh complications, recurrent stricture, or persistent fistula." },
   { question: "What imaging or testing is needed first?", answer: "Depending on the problem, evaluation may include cystoscopy, retrograde urethrogram, urodynamics, and cross-sectional imaging so the reconstruction is planned precisely." },
   { question: "How long is recovery from reconstruction?", answer: "It varies by procedure. Many patients go home within one to two days with a temporary catheter, resuming normal activity over two to six weeks." },
-  { question: "Do you see out-of-area patients?", answer: "Yes. Referrals and second opinions are welcome at CLS Health Urology - Southeast Houston. Call (346) 414-3426 to arrange an evaluation." },
+  { question: "Do you see out-of-area patients?", answer: "Yes. Referrals and second opinions are welcome at CLS Health Center for Advanced Urology in Southeast Houston. Call 346-414-3426 to arrange an evaluation." },
 ];
 
 function PelvicReconstructionPage() {

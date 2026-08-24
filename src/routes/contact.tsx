@@ -169,7 +169,7 @@ function ContactPage() {
                   id="phone"
                   type="tel"
                   className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
-                  placeholder="(346) 414-3426"
+                  placeholder="346-414-3426"
                 />
               </div>
               <div>

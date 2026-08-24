@@ -9,13 +9,13 @@ export const Route = createFileRoute("/insurance")({
       {
         name: "description",
         content:
-          "Dr. Bilal Farhan accepts most major insurance plans at CLS Health Urology - Southeast Houston. Verify your coverage and explore payment options.",
+          "Dr. Bilal Farhan accepts most major insurance plans at CLS Health Center for Advanced Urology in Southeast Houston. Verify your coverage and explore payment options.",
       },
       { property: "og:title", content: "Insurance & Financing — Bilal Farhan, MD" },
       {
         property: "og:description",
         content:
-          "Dr. Bilal Farhan accepts most major insurance plans at CLS Health Urology - Southeast Houston. Verify your coverage and explore payment options.",
+          "Dr. Bilal Farhan accepts most major insurance plans at CLS Health Center for Advanced Urology in Southeast Houston. Verify your coverage and explore payment options.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

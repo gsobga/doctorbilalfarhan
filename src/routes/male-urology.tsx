@@ -66,7 +66,7 @@ const faqs = [
   { question: "Which BPH procedure is right for me?", answer: "It depends on prostate size, symptoms, medications, and your goals. Dr. Farhan reviews HoLEP, GreenLight, and medication options with objective testing such as uroflow and ultrasound before recommending a path." },
   { question: "How long is recovery after HoLEP?", answer: "Most men go home within a day, keep a catheter briefly, and return to normal routines within one to two weeks with clear improvement in flow." },
   { question: "Do you treat incontinence after prostate cancer surgery?", answer: "Yes. Post-prostatectomy incontinence is a core focus, including male slings and artificial urinary sphincter placement, as well as revision of prior devices." },
-  { question: "Are you accepting new patients?", answer: "Yes. Dr. Farhan sees new patients at CLS Health Urology - Southeast Houston, 10950 Resource Parkway, Suite A, Houston, TX 77089. Call (346) 414-3426." },
+  { question: "Are you accepting new patients?", answer: "Yes. Dr. Farhan sees new patients at CLS Health Center for Advanced Urology in Southeast Houston, 10950 Resource Pkwy, Houston, TX 77089. Call 346-414-3426." },
 ];
 
 function MaleUrologyPage() {

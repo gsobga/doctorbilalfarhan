@@ -66,7 +66,7 @@ const faqs = [
   { question: "Do I need surgery for urinary incontinence?", answer: "No. Most patients start with conservative care such as pelvic floor therapy, behavioral changes, or medication. Dr. Farhan only recommends procedures when less invasive options have not achieved your goals." },
   { question: "Is bladder Botox painful?", answer: "The injections are done through a small cystoscope with local anesthetic in the office. Most patients describe mild pressure and return to normal activity the same day." },
   { question: "Will my insurance cover treatment?", answer: "Most major plans accepted at CLS Health cover urologic evaluation and treatment, including Aetna, Blue Cross Blue Shield, Cigna, Humana, Medicare, and United Healthcare. Our team can verify benefits before your visit." },
-  { question: "How do I schedule?", answer: "Call (346) 414-3426 or request a consult online. Dr. Farhan is accepting new patients at CLS Health Urology - Southeast Houston and speaks both English and Arabic." },
+  { question: "How do I schedule?", answer: "Call 346-414-3426 or request a consult online. Dr. Farhan is accepting new patients at CLS Health Center for Advanced Urology in Southeast Houston and speaks both English and Arabic." },
 ];
 
 function FemaleUrologyPage() {
