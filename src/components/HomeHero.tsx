@@ -53,19 +53,21 @@ export function HomeHero() {
           </div>
         </div>
 
-        {/* Portrait column — separate from the copy */}
+        {/* Portrait column — framed, separate from the copy */}
         <div className="relative flex items-end justify-center md:justify-end">
           <div
             aria-hidden="true"
             className="absolute bottom-0 h-[80%] w-[90%] rounded-full bg-[var(--gradient-aurora)] opacity-30 blur-3xl"
           />
-          <img
-            src={drFarhanCutout}
-            alt="Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist in Houston"
-            className="relative w-auto max-w-full self-end object-contain object-bottom drop-shadow-[0_25px_60px_rgba(0,0,0,0.45)] max-h-[46svh] md:max-h-[62svh] lg:max-h-[82svh]"
-            width={753}
-            height={1024}
-          />
+          <div className="relative self-end overflow-hidden rounded-[2rem] border border-white/15 bg-primary/40 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.65),0_0_0_1px_rgba(255,255,255,0.08)_inset] ring-1 ring-white/10 backdrop-blur-[2px] max-h-[52svh] md:max-h-[72svh] lg:max-h-[90svh]">
+            <img
+              src={drFarhanCutout}
+              alt="Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist in Houston"
+              className="relative block w-auto max-w-full object-contain object-bottom max-h-[52svh] md:max-h-[72svh] lg:max-h-[90svh]"
+              width={753}
+              height={1024}
+            />
+          </div>
         </div>
       </div>
     </section>
