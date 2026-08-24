@@ -53,21 +53,25 @@ export function HomeHero() {
           </div>
         </div>
 
-        {/* Portrait column — framed, separate from the copy */}
+        {/* Portrait column — blends into the navy field, no hard frame */}
         <div className="relative flex items-end justify-center md:justify-end">
+          {/* soft aurora halo behind the figure */}
           <div
             aria-hidden="true"
-            className="absolute bottom-0 h-[80%] w-[90%] rounded-full bg-[var(--gradient-aurora)] opacity-30 blur-3xl"
+            className="pointer-events-none absolute bottom-[8%] left-1/2 h-[78%] w-[92%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_38%,color-mix(in_oklab,var(--glow)_42%,transparent),transparent_68%)] opacity-60 blur-2xl"
           />
-          <div className="relative self-end overflow-hidden rounded-[2rem] border border-white/15 bg-primary/40 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.65),0_0_0_1px_rgba(255,255,255,0.08)_inset] ring-1 ring-white/10 backdrop-blur-[2px] max-h-[52svh] md:max-h-[72svh] lg:max-h-[90svh]">
-            <img
-              src={drFarhanCutout}
-              alt="Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist in Houston"
-              className="relative block w-auto max-w-full object-contain object-bottom max-h-[52svh] md:max-h-[72svh] lg:max-h-[90svh]"
-              width={753}
-              height={1024}
-            />
-          </div>
+          {/* gradient wash that fades the cutout into the background */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[42%] bg-gradient-to-t from-primary via-primary/55 to-transparent"
+          />
+          <img
+            src={drFarhanCutout}
+            alt="Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist in Houston"
+            className="relative z-10 block w-auto max-w-full object-contain object-bottom drop-shadow-[0_25px_60px_rgba(0,0,0,0.55)] max-h-[52svh] md:max-h-[72svh] lg:max-h-[92svh]"
+            width={753}
+            height={1024}
+          />
         </div>
       </div>
     </section>
