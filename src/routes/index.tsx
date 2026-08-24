@@ -14,7 +14,7 @@ import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
 import { Star, Phone, ArrowRight, ArrowUpRight } from "lucide-react";
 
 const description =
-  "Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist in Houston. Advanced expertise and individualized care for BPH and HoLEP, male and female incontinence, mesh complications, voiding dysfunction, urethral reconstruction, and complex kidney stones.";
+  "Bilal Farhan, MD, FACS, fellowship-trained functional and reconstructive urologist in Houston. Advanced expertise and individualized care for BPH and HoLEP, male and female incontinence, mesh complications, voiding dysfunction, urethral reconstruction, and complex kidney stones.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -80,7 +80,7 @@ const conditions = [
 
 const featuredTreatment = {
   title: "HoLEP for BPH",
-  body: "Holmium laser enucleation of the prostate — a durable, size-independent treatment for enlarged prostate, performed by a surgeon who established a hospital HoLEP program.",
+  body: "Holmium laser enucleation of the prostate, a durable, size-independent treatment for enlarged prostate, performed by a surgeon who established a hospital HoLEP program.",
   points: [
     "250+ HoLEP procedures performed",
     "HoLEP Center of Excellence",
@@ -266,7 +266,7 @@ function HomePage() {
             </h2>
             <p className="mt-5 text-muted-foreground">
               A diagnosis does not automatically mean surgery. Options span conservative care,
-              minimally invasive procedures, and advanced reconstruction — explained simply,
+              minimally invasive procedures, and advanced reconstruction, explained simply,
               planned with you.
             </p>
           </Reveal>
@@ -438,7 +438,7 @@ function HomePage() {
             </h2>
             <p className="mt-4 max-w-xl text-primary-foreground/80">
               Request a consultation. We will walk through your options together and help you
-              decide what comes next — in person or by telehealth.
+              decide what comes next, in person or by telehealth.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

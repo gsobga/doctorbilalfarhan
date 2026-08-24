@@ -92,7 +92,7 @@ function PelvicReconstructionPage() {
               Particular emphasis is placed on recurrent strictures, previous failed procedures, complex anatomy, and patients seeking a definitive reconstructive opinion. Prolapse care considers symptoms, anatomy, sexual function, previous surgery, and goals.
             </p>
             <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
-              Complex problems deserve a thoughtful second look. The best next step may be reconstruction — or it may be a non-surgical plan with clear expectations.
+              Complex problems deserve a thoughtful second look. The best next step may be reconstruction, or it may be a non-surgical plan with clear expectations.
             </p>
           </div>
           <div className="rounded-2xl bg-card p-8 shadow-sm">

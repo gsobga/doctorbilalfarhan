@@ -92,7 +92,7 @@ function VoidingDysfunctionPage() {
               Treatment may range from behavioral and medical therapy to advanced therapies for refractory symptoms. Objective testing clarifies whether obstruction, bladder dysfunction, or both are responsible before advanced treatment is recommended.
             </p>
             <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
-              The emphasis is on a stepwise and individualized approach — starting with the least invasive option that can realistically achieve your goals.
+              The emphasis is on a stepwise and individualized approach, starting with the least invasive option that can realistically achieve your goals.
             </p>
           </div>
           <div className="rounded-2xl bg-card p-8 shadow-sm">

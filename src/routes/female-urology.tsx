@@ -76,7 +76,7 @@ function FemaleUrologyPage() {
       <Hero
         eyebrow="Female Urology & Pelvic Health"
         title="Female Urology"
-        subtitle="Incontinence, prolapse, mesh-related complications, and complex revision care — with mesh, non-mesh, and non-surgical options discussed openly."
+        subtitle="Incontinence, prolapse, mesh-related complications, and complex revision care, with mesh, non-mesh, and non-surgical options discussed openly."
         image={femaleUrologyImg}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
