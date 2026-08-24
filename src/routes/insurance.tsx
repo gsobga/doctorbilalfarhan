@@ -57,14 +57,14 @@ function InsurancePage() {
               Accepted Insurance Plans
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Dr. Farhan sees patients at CLS Health Urology - Southeast Houston, which
-              accepts a wide range of insurance plans. Please contact your insurance
-              provider or our office directly to confirm your specific plan and coverage
-              details.
+              Dr. Farhan sees patients through CLS Health, which accepts a wide range of
+              insurance plans. Insurance coverage varies by plan. Our team can assist with
+              insurance verification and authorization requirements when necessary.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              We recommend verifying your benefits prior to your appointment so we can help
-              you understand any co-pays, deductibles, or out-of-pocket costs.
+              Many patients can schedule directly with Dr. Farhan. Certain plans may require
+              a referral or prior authorization — our scheduling team can help determine the
+              requirements for your individual plan before your visit.
             </p>
           </div>
 
@@ -94,14 +94,14 @@ function InsurancePage() {
                 Self-Pay & Financing Options
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                For patients without insurance or those seeking elective procedures not
-                covered by insurance, our office can discuss self-pay pricing and payment
-                expectations. We believe financial concerns should never stand in the way of
-                necessary urologic care.
+                For patients without insurance or those seeking services not covered by
+                insurance, our office can discuss self-pay options and payment expectations.
+                Financial concerns should never stand in the way of necessary urologic care.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Contact our office to learn more about estimated costs, payment plans, and
-                financing partners that may be available.
+                Self-pay pricing, payment plans, financing options, and international
+                self-pay arrangements are administered through CLS Health. Please call
+                346-414-3426 for current details — specific pricing is not published here.
               </p>
             </div>
             <div className="rounded-sm bg-primary p-8 text-primary-foreground">
@@ -114,7 +114,7 @@ function InsurancePage() {
                 href="tel:3464143426"
                 className="mt-6 inline-block rounded-sm bg-white px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary transition-colors hover:bg-accent hover:text-accent-foreground"
               >
-                Call (346) 414-3426
+                Call 346-414-3426
               </a>
             </div>
           </div>

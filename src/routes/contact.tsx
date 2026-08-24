@@ -6,17 +6,17 @@ import { Phone, MapPin, Mail, Clock, Building2 } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Bilal Farhan, MD" },
+      { title: "Schedule an Appointment — Bilal Farhan, MD, FACS" },
       {
         name: "description",
         content:
-          "Contact Dr. Bilal Farhan's office in Houston, TX. Request a consultation for female urology, male urology, voiding dysfunction, or pelvic reconstruction.",
+          "Schedule with Dr. Bilal Farhan in Southeast Houston: 346-414-3426. In-person and telehealth appointments for BPH, incontinence, voiding dysfunction, reconstruction, and kidney stones.",
       },
-      { property: "og:title", content: "Contact — Bilal Farhan, MD" },
+      { property: "og:title", content: "Schedule an Appointment — Bilal Farhan, MD, FACS" },
       {
         property: "og:description",
         content:
-          "Contact Dr. Bilal Farhan's office in Houston, TX. Request a consultation for female urology, male urology, voiding dysfunction, or pelvic reconstruction.",
+          "Schedule with Dr. Bilal Farhan in Southeast Houston: 346-414-3426. In-person and telehealth appointments for BPH, incontinence, voiding dysfunction, reconstruction, and kidney stones.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
