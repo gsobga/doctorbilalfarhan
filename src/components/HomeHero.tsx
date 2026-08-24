@@ -27,7 +27,7 @@ export function HomeHero() {
         </div>
         {/* navy wash: strong on the left, clearing over the face */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/92 to-primary/25 lg:from-primary lg:via-primary/85 lg:via-40% lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-primary/40 lg:from-primary/60 lg:via-transparent lg:to-primary/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-primary/40 lg:from-primary/75 lg:via-transparent lg:to-primary/45" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_18%_45%,color-mix(in_oklab,var(--glow)_18%,transparent),transparent_62%)]" />
       </div>
 
