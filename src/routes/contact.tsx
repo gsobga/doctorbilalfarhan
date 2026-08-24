@@ -29,11 +29,13 @@ function ContactPage() {
   return (
     <main>
       <Hero
-        eyebrow="Get in Touch"
-        title="Request a Consultation"
-        subtitle="Take the first step toward better urologic health. Our team is ready to help you schedule your appointment."
+        eyebrow="In-Person & Telehealth Appointments"
+        title="Schedule an Appointment"
+        subtitle="Need help scheduling? Call 346-414-3426. Our team will help you find the right visit and confirm any insurance requirements."
         image={heroBg}
+        cta={{ label: "Call 346-414-3426", to: "/contact" }}
       />
+
 
       <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
         <div className="grid gap-12 lg:grid-cols-2">
