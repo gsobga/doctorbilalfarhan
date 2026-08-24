@@ -4,7 +4,6 @@ import { Reveal } from "@/components/Reveal";
 import { AuroraBackground } from "@/components/AuroraBackground";
 import { StatCounter } from "@/components/StatCounter";
 import drFarhanImg from "@/assets/dr-farhan.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
 import femaleUrologyImg from "@/assets/female-urology.jpg";
 import maleUrologyImg from "@/assets/male-urology.jpg";
 import voidingImg from "@/assets/voiding-dysfunction.jpg";
