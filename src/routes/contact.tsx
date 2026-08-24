@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
 import heroBg from "@/assets/hero-bg.jpg";
-import { PHONE_DISPLAY, PHONE_TEL, BOOKING_URL } from "@/lib/booking";
+import { PHONE_DISPLAY, BOOKING_URL } from "@/lib/booking";
 import { Phone, MapPin, Mail, Clock, Building2, CalendarCheck, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
