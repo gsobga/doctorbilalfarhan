@@ -106,6 +106,29 @@ function ReviewsPage() {
         </div>
       </section>
 
+      <section className="bg-sand">
+        <div className="mx-auto max-w-4xl px-4 py-16 lg:px-6">
+          <h2 className="font-serif text-3xl text-foreground lg:text-4xl">Patient Stories</h2>
+          <p className="mt-5 leading-relaxed text-muted-foreground">
+            Complex urologic problems often require collaboration across specialties. One
+            published example describes a multidisciplinary reconstruction that restored a
+            patient&apos;s quality of life during Dr. Farhan&apos;s time at UTMB.
+          </p>
+          <a
+            href="https://www.utmb.edu/utmb/news-article/health-blog/2021/03/22/complex-collaboration-yields-new-quality-of-life-for-patient"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex rounded-full border border-primary px-6 py-3 text-sm font-semibold uppercase tracking-wider text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            Read the UTMB patient story
+          </a>
+          <p className="mt-6 text-xs italic text-muted-foreground">
+            No identifiable patient photograph, video, testimonial, or case information is
+            published without appropriate written authorization.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center lg:px-6">
           <h2 className="font-serif text-3xl lg:text-4xl">Share Your Experience</h2>
