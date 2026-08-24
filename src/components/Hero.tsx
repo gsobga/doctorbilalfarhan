@@ -85,14 +85,27 @@ export function Hero({
           }`}
         >
           {cta && (
-            <Link
-              to={cta.to}
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary glow-ring transition-transform duration-500 hover:-translate-y-1"
-            >
-              <span className="relative z-10">{cta.label}</span>
-              <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              <span className="absolute inset-y-0 -left-full w-1/2 bg-[var(--gradient-sheen)] opacity-40 transition-transform duration-700 group-hover:translate-x-[320%]" />
-            </Link>
+            (cta.to.startsWith("http") ? (
+              <a
+                href={cta.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary glow-ring transition-transform duration-500 hover:-translate-y-1"
+              >
+                <span className="relative z-10">{cta.label}</span>
+                <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <span className="absolute inset-y-0 -left-full w-1/2 bg-[var(--gradient-sheen)] opacity-40 transition-transform duration-700 group-hover:translate-x-[320%]" />
+              </a>
+            ) : (
+              <Link
+                to={cta.to}
+                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary glow-ring transition-transform duration-500 hover:-translate-y-1"
+              >
+                <span className="relative z-10">{cta.label}</span>
+                <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <span className="absolute inset-y-0 -left-full w-1/2 bg-[var(--gradient-sheen)] opacity-40 transition-transform duration-700 group-hover:translate-x-[320%]" />
+              </Link>
+            ))
           )}
           {phone && (
             <a

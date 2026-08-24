@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
@@ -106,7 +107,7 @@ function StonesPage() {
         title="Kidney Stone Disease"
         subtitle="Routine, recurrent, large, and complex kidney and ureteral stones — treated with the approach that fits your anatomy, not a single default technique."
         image={heroBg}
-        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
       />
 
@@ -165,12 +166,14 @@ function StonesPage() {
             Bring your prior imaging and operative reports — they often change the plan.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              to="/contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary"
             >
               Schedule an Appointment
-            </Link>
+            </a>
             <a
               href="tel:3464143426"
               className="rounded-full glass-dark px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white"

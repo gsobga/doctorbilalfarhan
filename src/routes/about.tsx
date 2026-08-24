@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { FaqSection } from "@/components/FaqSection";
@@ -115,7 +116,7 @@ function AboutPage() {
         title="Bilal Farhan, MD, FACS"
         subtitle="Fellowship-Trained Functional & Reconstructive Urologist • Former Associate Professor of Urology"
         image={heroBg}
-        cta={{ label: "Schedule an Appointment", to: "/contact" }}
+        cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
       />
 
@@ -333,12 +334,14 @@ function AboutPage() {
             The treatment should fit the patient — not the other way around.
           </h2>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              to="/contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary"
             >
               Schedule an Appointment
-            </Link>
+            </a>
             <a
               href="tel:3464143426"
               className="rounded-full glass-dark px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white"
