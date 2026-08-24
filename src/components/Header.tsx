@@ -109,7 +109,7 @@ export function Header() {
         <div className="hidden items-center gap-3 xl:flex">
           <a
             href="tel:3464143426"
-            className="flex items-center gap-2 whitespace-nowrap text-sm font-medium text-primary-foreground/90 hover:text-white"
+            className="hidden items-center gap-2 whitespace-nowrap text-sm font-medium text-primary-foreground/90 hover:text-white 2xl:flex"
           >
             <Phone className="h-4 w-4" />
             346-414-3426
