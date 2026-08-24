@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { AuroraBackground } from "@/components/AuroraBackground";
+import { BOOKING_URL } from "@/lib/booking";
 import drFarhanCutout from "@/assets/dr-farhan-cutout.png";
 
 export function HomeHero() {
@@ -37,13 +38,15 @@ export function HomeHero() {
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">
-            <Link
-              to="/contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-primary transition-transform duration-500 hover:-translate-y-1"
             >
               Request a consultation
               <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
-            </Link>
+            </a>
             <Link
               to="/about"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold text-white transition-colors duration-500 hover:bg-white/10"

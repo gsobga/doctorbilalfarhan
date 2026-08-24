@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { BOOKING_URL } from "@/lib/booking";
 
 const navItems = [
   { label: "Home", to: "/" },
@@ -114,12 +115,14 @@ export function Header() {
             <Phone className="h-4 w-4" />
             346-414-3426
           </a>
-          <Link
-            to="/contact"
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-primary"
           >
             Request Appointment
-          </Link>
+          </a>
         </div>
 
         {/* Mobile menu button */}
@@ -183,13 +186,15 @@ export function Header() {
               <Phone className="h-4 w-4" />
               346-414-3426
             </a>
-            <Link
-              to="/contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="mt-2 rounded-sm bg-white px-5 py-3 text-center text-sm font-semibold uppercase tracking-wider text-primary"
             >
               Request Appointment
-            </Link>
+            </a>
           </nav>
         </div>
       )}

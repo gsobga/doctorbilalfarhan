@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { BOOKING_URL } from "@/lib/booking";
 import { HomeHero } from "@/components/HomeHero";
 import { Reveal } from "@/components/Reveal";
 import { AuroraBackground } from "@/components/AuroraBackground";
@@ -441,12 +442,14 @@ function HomePage() {
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Link
-              to="/contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-primary transition-transform duration-500 hover:-translate-y-1"
             >
               Request Appointment
-            </Link>
+            </a>
             <a
               href="tel:3464143426"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold text-white transition-colors duration-500 hover:bg-white/10"

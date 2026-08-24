@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, Printer, Clock, Building2 } from "lucide-react";
+import { BOOKING_URL } from "@/lib/booking";
 
 export function Footer() {
   return (
@@ -110,12 +111,14 @@ export function Footer() {
               </li>
             </ul>
             <div className="mt-8">
-              <Link
-                to="/contact"
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block rounded-sm bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-accent-foreground transition-colors hover:bg-white hover:text-foreground"
               >
                 Schedule an Appointment
-              </Link>
+              </a>
               <p className="mt-3 text-xs text-background/60">
                 Need help scheduling? Call 346-414-3426
               </p>
