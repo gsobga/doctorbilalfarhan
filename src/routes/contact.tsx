@@ -98,9 +98,17 @@ function ContactPage() {
                 <div>
                   <p className="font-medium text-foreground">Ways to Schedule</p>
                   <p className="text-sm text-muted-foreground">
-                    By phone, online scheduling, or the patient portal when applicable.
-                    In-person and telehealth appointments are available.
+                    Schedule online through our secure portal, by phone, or through the patient
+                    portal when applicable. In-person and telehealth appointments are available.
                   </p>
+                  <a
+                    href={BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm font-semibold text-primary hover:underline"
+                  >
+                    Open the online scheduling portal →
+                  </a>
                 </div>
               </li>
               <li className="flex items-start gap-4">
