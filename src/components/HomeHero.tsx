@@ -36,7 +36,7 @@ export function HomeHero() {
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-4 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:px-6">
         {/* Copy */}
-        <div className="text-center lg:text-left">
+        <div className="order-2 text-center lg:order-1 lg:text-left">
           <div className="flex justify-center lg:justify-start">
             <span className="inline-flex items-center gap-2 rounded-full glass-dark px-4 py-2 text-[11px] font-medium uppercase tracking-[0.25em] text-white/85">
               <span className="relative flex h-2 w-2">
@@ -94,7 +94,7 @@ export function HomeHero() {
         </div>
 
         {/* Portrait */}
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div className="relative order-1 mx-auto w-full max-w-md lg:order-2 lg:max-w-none">
           <div
             aria-hidden="true"
             className="absolute -inset-6 rounded-[2.5rem] bg-[var(--gradient-aurora)] opacity-40 blur-2xl"
