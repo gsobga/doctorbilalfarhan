@@ -105,7 +105,7 @@ function StonesPage() {
       <Hero
         eyebrow="Advanced Endourology"
         title="Kidney Stone Disease"
-        subtitle="Routine, recurrent, large, and complex kidney and ureteral stones — treated with the approach that fits your anatomy, not a single default technique."
+        subtitle="Routine, recurrent, large, and complex kidney and ureteral stones, treated with the approach that fits your anatomy, not a single default technique."
         image={heroBg}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
@@ -163,7 +163,7 @@ function StonesPage() {
         <div className="mx-auto max-w-4xl px-4 py-16 text-center lg:px-6">
           <h2 className="font-serif text-3xl lg:text-4xl">Recurrent or complex stones?</h2>
           <p className="mt-4 text-primary-foreground/85">
-            Bring your prior imaging and operative reports — they often change the plan.
+            Bring your prior imaging and operative reports, they often change the plan.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a

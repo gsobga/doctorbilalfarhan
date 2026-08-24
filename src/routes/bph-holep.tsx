@@ -88,7 +88,7 @@ const faqs = [
       "No. HoLEP is one excellent option among several. The right treatment depends on prostate anatomy, symptom severity, bladder function, medical history, previous treatment, goals, and patient preference. Some men do best with medication, some with GreenLight or another endoscopic option, and some with HoLEP.",
   },
   {
-    question: "My prostate is very large — am I still a candidate?",
+    question: "My prostate is very large, am I still a candidate?",
     answer:
       "Usually yes. HoLEP is size-independent, which is why it is often recommended for very large glands that previously required open surgery. Dr. Farhan established the HoLEP program at UTMB and routinely treats large and complex prostates.",
   },
@@ -100,7 +100,7 @@ const faqs = [
   {
     question: "What if medication has already failed?",
     answer:
-      "Failed medical therapy is one of the most common reasons for referral. It does not mean options are exhausted — it means the next step should be chosen based on objective testing rather than trial and error.",
+      "Failed medical therapy is one of the most common reasons for referral. It does not mean options are exhausted, it means the next step should be chosen based on objective testing rather than trial and error.",
   },
 ];
 
@@ -117,7 +117,7 @@ function BphPage() {
       <Hero
         eyebrow="Priority Program • Advanced BPH"
         title="BPH & HoLEP"
-        subtitle="Advanced BPH treatment individualized to the patient — not simply the size of the prostate."
+        subtitle="Advanced BPH treatment individualized to the patient, not simply the size of the prostate."
         image={maleUrologyImg}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
@@ -132,7 +132,7 @@ function BphPage() {
             <p className="mt-6 leading-relaxed text-muted-foreground">
               Benign prostatic hyperplasia can cause weak stream, straining, frequency,
               night-time urination, incomplete emptying, and eventually urinary retention.
-              These symptoms affect sleep, work, travel, exercise, and confidence — and the
+              These symptoms affect sleep, work, travel, exercise, and confidence, and the
               goal of treatment is to restore both function and everyday quality of life.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">

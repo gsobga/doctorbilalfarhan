@@ -89,7 +89,7 @@ function MaleUrologyPage() {
               Male Urology & Continence
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Male urinary incontinence after prostate surgery, radiation, or previous procedures is treatable — and more than one option usually exists. Treatment is individualized to the degree of leakage, hand function, prior surgery, anatomy, and personal goals.
+              Male urinary incontinence after prostate surgery, radiation, or previous procedures is treatable, and more than one option usually exists. Treatment is individualized to the degree of leakage, hand function, prior surgery, anatomy, and personal goals.
             </p>
             <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
               My experience includes Artificial Urinary Sphincter Center of Excellence recognition, with expertise in both straightforward and complex post-prostatectomy incontinence, including patients who have already undergone treatment or surgery.

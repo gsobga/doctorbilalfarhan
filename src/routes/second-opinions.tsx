@@ -103,7 +103,7 @@ function SecondOpinionsPage() {
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">
             My approach is to reconsider the diagnosis, understand what has already been
-            tried, review previous testing and surgery, and determine the best next step —
+            tried, review previous testing and surgery, and determine the best next step,
             which may or may not involve another operation.
           </p>
         </Reveal>
