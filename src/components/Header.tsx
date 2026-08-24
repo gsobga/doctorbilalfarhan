@@ -74,7 +74,7 @@ export function Header() {
               >
                 <Link
                   to={item.to}
-                  className="flex items-center gap-1 py-2 text-xs font-medium uppercase tracking-wider text-primary-foreground/90 transition-colors hover:text-white"
+                  className="flex items-center gap-1 whitespace-nowrap py-2 text-xs font-medium uppercase tracking-wider text-primary-foreground/90 transition-colors hover:text-white"
                 >
                   {item.label}
                   <ChevronDown className="h-3.5 w-3.5" />
@@ -98,7 +98,7 @@ export function Header() {
                 key={item.label}
                 to={item.to}
                 activeProps={{ className: "text-white underline underline-offset-8" }}
-                className="py-2 text-xs font-medium uppercase tracking-wider text-primary-foreground/90 transition-colors hover:text-white"
+                className="whitespace-nowrap py-2 text-xs font-medium uppercase tracking-wider text-primary-foreground/90 transition-colors hover:text-white"
               >
                 {item.label}
               </Link>
@@ -116,7 +116,7 @@ export function Header() {
           </a>
           <Link
             to="/contact"
-            className="rounded-sm border border-white/30 bg-white/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-primary"
+            className="whitespace-nowrap rounded-sm border border-white/30 bg-white/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-primary"
           >
             Schedule an Appointment
           </Link>
