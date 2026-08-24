@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
 import heroBg from "@/assets/hero-bg.jpg";
-import { Phone, MapPin, Mail, Clock } from "lucide-react";
+import { Phone, MapPin, Mail, Clock, Building2 } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -181,10 +181,14 @@ function ContactPage() {
                   className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
                 >
                   <option>General Urology Consultation</option>
-                  <option>Female Urology</option>
-                  <option>Male Urology</option>
-                  <option>Voiding Dysfunction</option>
-                  <option>Pelvic Reconstruction</option>
+                  <option>BPH & HoLEP</option>
+                  <option>Male Urology & Continence</option>
+                  <option>Female Urology & Mesh Complications</option>
+                  <option>Voiding Dysfunction & Overactive Bladder</option>
+                  <option>Urethral & Pelvic Reconstruction</option>
+                  <option>Kidney Stones</option>
+                  <option>Second Opinion / Revision Surgery</option>
+                  <option>Telehealth Visit</option>
                 </select>
               </div>
               <div>
@@ -205,8 +209,10 @@ function ContactPage() {
                 Submit Request
               </button>
               <p className="text-xs text-muted-foreground">
-                This form is for appointment requests only. For medical emergencies, please
-                call 911 or visit the nearest emergency room.
+                This form is for appointment requests only. Please do not include
+                sensitive medical information — call 346-414-3426 to discuss protected
+                health information securely. For medical emergencies, call 911 or visit the
+                nearest emergency room.
               </p>
             </form>
           </div>
@@ -214,6 +220,62 @@ function ContactPage() {
       </section>
 
       <section className="bg-sand">
+        <div className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="rounded-2xl bg-card p-8 shadow-sm">
+              <h3 className="font-serif text-2xl">What to Bring</h3>
+              <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
+                {[
+                  "Photo ID",
+                  "Insurance information",
+                  "Current medication list",
+                  "Relevant laboratory results",
+                  "Imaging",
+                  "Previous urology records",
+                  "Previous operative reports",
+                  "Urodynamic studies when applicable",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 text-sm italic text-muted-foreground">
+                For second opinions and revision surgery, previous operative reports and
+                imaging are particularly helpful.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-card p-8 shadow-sm">
+              <h3 className="font-serif text-2xl">What to Expect</h3>
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                The first visit focuses on understanding the whole problem rather than
+                simply selecting a procedure. That includes reviewing your symptoms,
+                previous treatment, relevant testing, and how the condition affects your
+                quality of life.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Available treatment options are then discussed together so you can
+                participate in developing an individualized care plan.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-card p-8 shadow-sm">
+              <h3 className="font-serif text-2xl">Referrals & Privacy</h3>
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                Many patients can schedule directly with Dr. Farhan. Certain insurance plans
+                may require a referral or prior authorization; our scheduling team can help
+                determine the requirements for your individual plan.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Sensitive medical information should not be sent through a general contact
+                form. Please call the office so information can be collected securely.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background">
         <div className="mx-auto max-w-7xl px-4 py-12 lg:px-6">
           <iframe
             title="Office Location"
