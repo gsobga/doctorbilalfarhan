@@ -22,7 +22,7 @@ export function HomeHero() {
         <img
           src={drFarhanCutout}
           alt="Bilal Farhan, MD, FACS — fellowship-trained functional and reconstructive urologist in Houston"
-          className="relative h-[62%] max-h-none w-auto self-end object-contain object-bottom opacity-90 drop-shadow-[0_25px_60px_rgba(0,0,0,0.45)] sm:h-[70%] lg:h-[88%] lg:opacity-100"
+          className="relative h-[64%] max-h-none w-auto self-end object-contain object-bottom opacity-90 drop-shadow-[0_25px_60px_rgba(0,0,0,0.45)] sm:h-[70%] lg:h-[92%] lg:opacity-100"
           width={753}
           height={1024}
         />
