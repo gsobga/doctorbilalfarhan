@@ -334,12 +334,14 @@ function AboutPage() {
             The treatment should fit the patient — not the other way around.
           </h2>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              to="/contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary"
             >
               Schedule an Appointment
-            </Link>
+            </a>
             <a
               href="tel:3464143426"
               className="rounded-full glass-dark px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white"
