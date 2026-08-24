@@ -10,13 +10,13 @@ export const Route = createFileRoute("/reviews")({
       {
         name: "description",
         content:
-          "Read patient reviews for Dr. Bilal Farhan, a board-certified urologist in Houston, TX specializing in female & male urology, voiding dysfunction, and pelvic reconstruction.",
+          "Read patient reviews for Dr. Bilal Farhan, a fellowship-trained functional and reconstructive urologist in Houston, TX treating BPH, incontinence, voiding dysfunction, and pelvic reconstruction.",
       },
       { property: "og:title", content: "Patient Reviews — Bilal Farhan, MD" },
       {
         property: "og:description",
         content:
-          "Read patient reviews for Dr. Bilal Farhan, a board-certified urologist in Houston, TX specializing in female & male urology, voiding dysfunction, and pelvic reconstruction.",
+          "Read patient reviews for Dr. Bilal Farhan, a fellowship-trained functional and reconstructive urologist in Houston, TX treating BPH, incontinence, voiding dysfunction, and pelvic reconstruction.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
