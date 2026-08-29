@@ -26,7 +26,9 @@ export const Route = createFileRoute("/pelvic-reconstruction")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://drbilalfarhan.dev/pelvic-reconstruction" },
     ],
+    links: [{ rel: "canonical", href: "https://drbilalfarhan.dev/pelvic-reconstruction" }],
   }),
   component: PelvicReconstructionPage,
 });

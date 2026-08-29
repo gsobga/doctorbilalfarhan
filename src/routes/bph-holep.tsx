@@ -25,7 +25,9 @@ export const Route = createFileRoute("/bph-holep")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://drbilalfarhan.dev/bph-holep" },
     ],
+    links: [{ rel: "canonical", href: "https://drbilalfarhan.dev/bph-holep" }],
   }),
   component: BphPage,
 });

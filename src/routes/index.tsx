@@ -28,7 +28,9 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://drbilalfarhan.dev" },
     ],
+    links: [{ rel: "canonical", href: "https://drbilalfarhan.dev" }],
   }),
   component: HomePage,
 });
