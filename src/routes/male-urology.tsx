@@ -26,7 +26,9 @@ export const Route = createFileRoute("/male-urology")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://drbilalfarhan.dev/male-urology" },
     ],
+    links: [{ rel: "canonical", href: "https://drbilalfarhan.dev/male-urology" }],
   }),
   component: MaleUrologyPage,
 });

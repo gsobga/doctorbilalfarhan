@@ -26,7 +26,9 @@ export const Route = createFileRoute("/voiding-dysfunction")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://drbilalfarhan.dev/voiding-dysfunction" },
     ],
+    links: [{ rel: "canonical", href: "https://drbilalfarhan.dev/voiding-dysfunction" }],
   }),
   component: VoidingDysfunctionPage,
 });

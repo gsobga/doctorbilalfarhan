@@ -20,7 +20,9 @@ export const Route = createFileRoute("/second-opinions")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://drbilalfarhan.dev/second-opinions" },
     ],
+    links: [{ rel: "canonical", href: "https://drbilalfarhan.dev/second-opinions" }],
   }),
   component: SecondOpinionsPage,
 });

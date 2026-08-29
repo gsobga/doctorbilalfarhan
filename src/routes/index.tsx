@@ -28,8 +28,75 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://drbilalfarhan.dev" },
+    ],
+    links: [{ rel: "canonical", href: "https://drbilalfarhan.dev" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Physician",
+              "@id": "https://drbilalfarhan.dev/#physician",
+              name: "Bilal Farhan, MD, FACS",
+              alternateName: [
+                "Dr. Bilal Farhan",
+                "Bilal Farhan MD",
+                "Dr Bilal Farhan Urologist",
+              ],
+              url: "https://drbilalfarhan.dev",
+              image: "https://drbilalfarhan.dev/favicon.png",
+              description:
+                "Fellowship-trained functional and reconstructive urologist in Houston, Texas. HoLEP for BPH, male and female incontinence, mesh complications, urethral reconstruction, and complex kidney stones.",
+              medicalSpecialty: "Urologic",
+              telephone: "+1-346-414-3426",
+              email: "drfarhan@cls.health",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "10950 Resource Pkwy",
+                addressLocality: "Houston",
+                addressRegion: "TX",
+                addressCountry: "US",
+              },
+              areaServed: [
+                "Houston, TX",
+                "Katy, TX",
+                "Sugar Land, TX",
+                "The Woodlands, TX",
+                "Galveston, TX",
+              ],
+              knowsAbout: [
+                "HoLEP",
+                "Benign prostatic hyperplasia",
+                "Urinary incontinence",
+                "Mesh complications",
+                "Urethral stricture reconstruction",
+                "Kidney stones",
+                "Voiding dysfunction",
+              ],
+              availableService: [
+                { "@type": "MedicalProcedure", name: "Holmium Laser Enucleation of the Prostate (HoLEP)" },
+                { "@type": "MedicalProcedure", name: "Male incontinence surgery" },
+                { "@type": "MedicalProcedure", name: "Female incontinence surgery" },
+                { "@type": "MedicalProcedure", name: "Urethral reconstruction" },
+                { "@type": "MedicalProcedure", name: "Kidney stone treatment" },
+              ],
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://drbilalfarhan.dev/#website",
+              url: "https://drbilalfarhan.dev",
+              name: "Center for Advanced Urology | Bilal Farhan, MD, FACS",
+              publisher: { "@id": "https://drbilalfarhan.dev/#physician" },
+            },
+          ],
+        }),
+      },
     ],
   }),
+
   component: HomePage,
 });
 

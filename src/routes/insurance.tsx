@@ -19,7 +19,9 @@ export const Route = createFileRoute("/insurance")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://drbilalfarhan.dev/insurance" },
     ],
+    links: [{ rel: "canonical", href: "https://drbilalfarhan.dev/insurance" }],
   }),
   component: InsurancePage,
 });

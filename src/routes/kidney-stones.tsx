@@ -25,7 +25,9 @@ export const Route = createFileRoute("/kidney-stones")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://drbilalfarhan.dev/kidney-stones" },
     ],
+    links: [{ rel: "canonical", href: "https://drbilalfarhan.dev/kidney-stones" }],
   }),
   component: StonesPage,
 });
