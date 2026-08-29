@@ -80,21 +80,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Bilal Farhan, MD, FACS — Center for Advanced Urology" },
+      {
+        name: "description",
+        content:
+          "Fellowship-trained functional and reconstructive urologist in Houston offering HoLEP for BPH, male and female continence care, urethral reconstruction, and complex kidney stone treatment. Schedule online today.",
+      },
+      { name: "author", content: "Bilal Farhan, MD, FACS" },
+      { property: "og:title", content: "Bilal Farhan, MD, FACS — Center for Advanced Urology" },
+      {
+        property: "og:description",
+        content:
+          "Functional, reconstructive, and minimally invasive urology in Houston. HoLEP for BPH, continence, mesh complications, urethral reconstruction, and complex kidney stones.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Center for Advanced Urology | Bilal Farhan, MD, FACS" },
+      { property: "og:url", content: "https://drbilalfarhan.dev" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       {
         rel: "preconnect",
         href: "https://fonts.googleapis.com",
