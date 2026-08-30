@@ -107,7 +107,7 @@ export function Footer() {
                 <span>In-person and telehealth appointments available</span>
               </li>
               <li className="text-background/60">
-                Office hours per CLS Health — call to confirm
+                Mon–Fri 7 AM–7 PM · Sat 9 AM–1 PM · Sun closed
               </li>
             </ul>
             <div className="mt-8">
