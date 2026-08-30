@@ -80,6 +80,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "google-site-verification",
+        content: "CT9APG2XCiITr8IGIVpHsyag3vVHuXS6ZQC6bwbkwh4",
+      },
       { title: "Bilal Farhan, MD, FACS — Center for Advanced Urology" },
       {
         name: "description",
