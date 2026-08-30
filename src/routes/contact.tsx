@@ -135,8 +135,11 @@ function ContactPage() {
                 <div>
                   <p className="font-medium text-foreground">Office Hours</p>
                   <p className="text-sm text-muted-foreground">
-                    Per CLS Health scheduling — please call 346-414-3426 to confirm current
-                    hours and availability.
+                    Monday – Friday: 7:00 AM – 7:00 PM
+                    <br />
+                    Saturday: 9:00 AM – 1:00 PM
+                    <br />
+                    Sunday: Closed
                   </p>
                 </div>
               </li>
