@@ -17,6 +17,7 @@ import { Route as FemaleUrologyRouteImport } from './routes/female-urology'
 import { Route as InsuranceRouteImport } from './routes/insurance'
 import { Route as KidneyStonesRouteImport } from './routes/kidney-stones'
 import { Route as MaleUrologyRouteImport } from './routes/male-urology'
+import { Route as PatientEducationRouteImport } from './routes/patient-education'
 import { Route as PelvicReconstructionRouteImport } from './routes/pelvic-reconstruction'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as SecondOpinionsRouteImport } from './routes/second-opinions'
@@ -62,6 +63,11 @@ const MaleUrologyRoute = MaleUrologyRouteImport.update({
   path: '/male-urology',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PatientEducationRoute = PatientEducationRouteImport.update({
+  id: '/patient-education',
+  path: '/patient-education',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PelvicReconstructionRoute = PelvicReconstructionRouteImport.update({
   id: '/pelvic-reconstruction',
   path: '/pelvic-reconstruction',
@@ -92,6 +98,7 @@ export interface FileRoutesByFullPath {
   '/insurance': typeof InsuranceRoute
   '/kidney-stones': typeof KidneyStonesRoute
   '/male-urology': typeof MaleUrologyRoute
+  '/patient-education': typeof PatientEducationRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
   '/reviews': typeof ReviewsRoute
   '/second-opinions': typeof SecondOpinionsRoute
@@ -106,6 +113,7 @@ export interface FileRoutesByTo {
   '/insurance': typeof InsuranceRoute
   '/kidney-stones': typeof KidneyStonesRoute
   '/male-urology': typeof MaleUrologyRoute
+  '/patient-education': typeof PatientEducationRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
   '/reviews': typeof ReviewsRoute
   '/second-opinions': typeof SecondOpinionsRoute
@@ -121,6 +129,7 @@ export interface FileRoutesById {
   '/insurance': typeof InsuranceRoute
   '/kidney-stones': typeof KidneyStonesRoute
   '/male-urology': typeof MaleUrologyRoute
+  '/patient-education': typeof PatientEducationRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
   '/reviews': typeof ReviewsRoute
   '/second-opinions': typeof SecondOpinionsRoute
@@ -137,6 +146,7 @@ export interface FileRouteTypes {
     | '/insurance'
     | '/kidney-stones'
     | '/male-urology'
+    | '/patient-education'
     | '/pelvic-reconstruction'
     | '/reviews'
     | '/second-opinions'
@@ -151,6 +161,7 @@ export interface FileRouteTypes {
     | '/insurance'
     | '/kidney-stones'
     | '/male-urology'
+    | '/patient-education'
     | '/pelvic-reconstruction'
     | '/reviews'
     | '/second-opinions'
@@ -165,6 +176,7 @@ export interface FileRouteTypes {
     | '/insurance'
     | '/kidney-stones'
     | '/male-urology'
+    | '/patient-education'
     | '/pelvic-reconstruction'
     | '/reviews'
     | '/second-opinions'
@@ -180,6 +192,7 @@ export interface RootRouteChildren {
   InsuranceRoute: typeof InsuranceRoute
   KidneyStonesRoute: typeof KidneyStonesRoute
   MaleUrologyRoute: typeof MaleUrologyRoute
+  PatientEducationRoute: typeof PatientEducationRoute
   PelvicReconstructionRoute: typeof PelvicReconstructionRoute
   ReviewsRoute: typeof ReviewsRoute
   SecondOpinionsRoute: typeof SecondOpinionsRoute
@@ -244,6 +257,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MaleUrologyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/patient-education': {
+      id: '/patient-education'
+      path: '/patient-education'
+      fullPath: '/patient-education'
+      preLoaderRoute: typeof PatientEducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pelvic-reconstruction': {
       id: '/pelvic-reconstruction'
       path: '/pelvic-reconstruction'
@@ -284,6 +304,7 @@ const rootRouteChildren: RootRouteChildren = {
   InsuranceRoute: InsuranceRoute,
   KidneyStonesRoute: KidneyStonesRoute,
   MaleUrologyRoute: MaleUrologyRoute,
+  PatientEducationRoute: PatientEducationRoute,
   PelvicReconstructionRoute: PelvicReconstructionRoute,
   ReviewsRoute: ReviewsRoute,
   SecondOpinionsRoute: SecondOpinionsRoute,

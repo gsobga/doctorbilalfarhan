@@ -93,19 +93,42 @@ function InsurancePage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
-                Self-Pay & Financing Options
+                Self-Pay, Billing & Financial Assistance
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
                 For patients without insurance or those seeking services not covered by
-                insurance, our office can discuss self-pay options and payment expectations.
-                Financial concerns should never stand in the way of necessary urologic care.
+                insurance, our office can discuss self-pay options and payment
+                expectations. Financial concerns should never stand in the way of
+                necessary urologic care.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Self-pay pricing, payment plans, financing options, and international
-                self-pay arrangements are administered through CLS Health. Please call
-                346-414-3426 for current details — specific pricing is not published here.
+                Billing is administered through CLS Health, which works with several
+                medical billing companies. Questions about a statement are best directed
+                to the billing company listed on that statement. For general account
+                questions, the CLS Health customer service center can be reached at
+                281-724-1860, Monday through Friday, 8 AM to 5 PM.
               </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                CLS Health does not publish a single third-party financing partner. Self-pay
+                pricing, payment arrangements, and any available financing are confirmed
+                case by case. You may also request a written cost estimate before tests or
+                procedures are performed. Please call 346-414-3426 for current details.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                You are also protected from surprise and balance billing for emergency
+                care and for many services delivered at an in-network facility. Details are
+                available in the CLS Health patient resources library.
+              </p>
+              <a
+                href="https://cls.health/patient-resources"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block text-sm font-semibold uppercase tracking-wider text-accent hover:underline"
+              >
+                View CLS Health Patient Resources
+              </a>
             </div>
+
             <div className="rounded-sm bg-primary p-8 text-primary-foreground">
               <h3 className="mb-4 font-serif text-2xl">Need Help?</h3>
               <p className="text-primary-foreground/90">
