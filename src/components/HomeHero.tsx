@@ -60,41 +60,50 @@ export function HomeHero() {
             className="pointer-events-none absolute bottom-[8%] left-1/2 h-[78%] w-[92%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_38%,color-mix(in_oklab,var(--glow)_42%,transparent),transparent_68%)] opacity-60 blur-2xl"
           />
 
-          {/* substantial graphic behind the portrait */}
+          {/* motion graphic system behind the portrait */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute bottom-[6%] left-1/2 z-[1] w-[110%] max-w-[580px] -translate-x-1/2 opacity-70"
+            className="pointer-events-none absolute bottom-[6%] left-1/2 z-[1] aspect-square w-[115%] max-w-[620px] -translate-x-1/2"
           >
             {/* blurred color nodes */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-[72%] w-[72%] rounded-full bg-[radial-gradient(circle_at_center,color-mix(in_oklab,var(--glow)_30%,transparent),transparent_70%)] blur-2xl" />
-              <div className="absolute h-[46%] w-[46%] rounded-full bg-[radial-gradient(circle_at_center,color-mix(in_oklab,var(--glow)_22%,transparent),transparent_70%)] blur-xl" />
+              <div className="h-[72%] w-[72%] rounded-full bg-[radial-gradient(circle_at_center,color-mix(in_oklab,var(--glow)_32%,transparent),transparent_70%)] blur-2xl" />
             </div>
 
-            <svg
-              viewBox="0 0 400 400"
-              fill="none"
-              className="h-auto w-full animate-[spin_90s_linear_infinite]"
-            >
+            {/* radar sweep — rotating conic beam */}
+            <div className="absolute inset-0 animate-[spin_8s_linear_infinite] rounded-full bg-[conic-gradient(from_0deg,transparent_0deg,transparent_300deg,color-mix(in_oklab,var(--glow)_35%,transparent)_355deg,transparent_360deg)] [mask-image:radial-gradient(circle,black_55%,transparent_72%)]" />
+
+            {/* expanding sonar pulse rings */}
+            <div className="absolute inset-[18%] rounded-full border border-[color-mix(in_oklab,var(--glow)_55%,transparent)] motion-safe:animate-[hero-sonar_4s_ease-out_infinite]" />
+            <div className="absolute inset-[18%] rounded-full border border-[color-mix(in_oklab,var(--glow)_45%,transparent)] motion-safe:animate-[hero-sonar_4s_ease-out_1.33s_infinite]" />
+            <div className="absolute inset-[18%] rounded-full border border-[color-mix(in_oklab,var(--glow)_35%,transparent)] motion-safe:animate-[hero-sonar_4s_ease-out_2.66s_infinite]" />
+
+            {/* rising particles */}
+            {[...Array(10)].map((_, i) => (
+              <span
+                key={i}
+                className="absolute bottom-[12%] h-1 w-1 rounded-full bg-[color-mix(in_oklab,var(--glow)_80%,white)] motion-safe:animate-[hero-rise_6s_linear_infinite]"
+                style={{
+                  left: `${12 + i * 8}%`,
+                  animationDelay: `${(i * 0.7).toFixed(1)}s`,
+                  animationDuration: `${5 + (i % 4)}s`,
+                  opacity: 0.5,
+                }}
+              />
+            ))}
+
+            {/* orbital rings with travelling nodes + ecg line */}
+            <svg viewBox="0 0 400 400" fill="none" className="absolute inset-0 h-full w-full">
               <defs>
                 <linearGradient id="heroRingGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="var(--glow)" stopOpacity="0.5" />
-                  <stop offset="55%" stopColor="var(--glow)" stopOpacity="0.12" />
-                  <stop offset="100%" stopColor="white" stopOpacity="0.06" />
+                  <stop offset="0%" stopColor="var(--glow)" stopOpacity="0.55" />
+                  <stop offset="55%" stopColor="var(--glow)" stopOpacity="0.14" />
+                  <stop offset="100%" stopColor="white" stopOpacity="0.07" />
                 </linearGradient>
-                <radialGradient id="heroCoreGrad" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="var(--glow)" stopOpacity="0.22" />
-                  <stop offset="100%" stopColor="var(--glow)" stopOpacity="0" />
-                </radialGradient>
               </defs>
 
-              {/* central glow disc */}
-              <circle cx="200" cy="200" r="130" fill="url(#heroCoreGrad)" />
-
-              {/* outer solid ring */}
+              {/* outer ring + ticks */}
               <circle cx="200" cy="200" r="192" stroke="url(#heroRingGrad)" strokeWidth="1.5" />
-
-              {/* tick marks on outer ring */}
               {[...Array(24)].map((_, i) => {
                 const angle = (i * 15 * Math.PI) / 180;
                 const r1 = 184;
@@ -113,48 +122,26 @@ export function HomeHero() {
                 );
               })}
 
-              {/* dashed middle ring */}
-              <circle
-                cx="200"
-                cy="200"
-                r="156"
-                stroke="url(#heroRingGrad)"
-                strokeWidth="1"
-                strokeDasharray="6 10"
-                opacity="0.55"
-              />
-
-              {/* inner thin ring */}
-              <circle
-                cx="200"
-                cy="200"
-                r="118"
-                stroke="white"
-                strokeWidth="0.5"
-                strokeDasharray="1 5"
-                opacity="0.18"
-              />
-
-              {/* crosshair guides */}
-              <path
-                d="M200 40 V360 M40 200 H360"
-                stroke="url(#heroRingGrad)"
-                strokeWidth="0.5"
-                opacity="0.12"
-              />
-
-              {/* sweeping accent arc */}
-              <path
-                d="M 60 200 A 140 140 0 0 1 340 200"
-                stroke="var(--glow)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                opacity="0.28"
-              />
-
-              {/* counter-rotating inner ring + orbiting node */}
+              {/* dashed middle ring, slow rotation */}
               <g
-                className="animate-[spin_45s_linear_infinite_reverse]"
+                className="motion-safe:animate-[spin_60s_linear_infinite]"
+                style={{ transformOrigin: "200px 200px" }}
+              >
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="156"
+                  stroke="url(#heroRingGrad)"
+                  strokeWidth="1"
+                  strokeDasharray="6 10"
+                  opacity="0.55"
+                />
+                <circle cx="356" cy="200" r="3" fill="var(--glow)" opacity="0.8" />
+              </g>
+
+              {/* counter-rotating inner ring with orbiting nodes */}
+              <g
+                className="motion-safe:animate-[spin_30s_linear_infinite_reverse]"
                 style={{ transformOrigin: "200px 200px" }}
               >
                 <circle
@@ -166,21 +153,21 @@ export function HomeHero() {
                   strokeDasharray="32 40"
                   opacity="0.45"
                 />
-                <circle
-                  cx="304"
-                  cy="200"
-                  r="4"
-                  fill="var(--glow)"
-                  opacity="0.85"
-                />
-                <circle
-                  cx="96"
-                  cy="200"
-                  r="2.5"
-                  fill="white"
-                  opacity="0.35"
-                />
+                <circle cx="304" cy="200" r="4.5" fill="var(--glow)" opacity="0.9" />
+                <circle cx="96" cy="200" r="2.5" fill="white" opacity="0.4" />
               </g>
+
+              {/* pulsing ECG heartbeat line across the midline */}
+              <path
+                d="M40 200 H150 L165 178 L180 222 L192 188 L200 200 H260 L272 184 L284 214 L294 200 H360"
+                stroke="var(--glow)"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                opacity="0.5"
+                strokeDasharray="420"
+                className="motion-safe:animate-[hero-ecg_5s_linear_infinite]"
+              />
             </svg>
           </div>
 
