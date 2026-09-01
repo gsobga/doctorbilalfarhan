@@ -56,6 +56,10 @@ export function Footer() {
               <li>
                 <Link to="/second-opinions" className="hover:text-white">Second Opinions & Revision Care</Link>
               </li>
+              <li>
+                <Link to="/patient-education" className="hover:text-white">Patient Education & Resources</Link>
+              </li>
+
             </ul>
           </div>
 
