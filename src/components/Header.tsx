@@ -18,8 +18,10 @@ const navItems = [
     ],
   },
   { label: "Second Opinions", to: "/second-opinions" },
+  { label: "Patient Education", to: "/patient-education" },
   { label: "About", to: "/about" },
   { label: "Reviews", to: "/reviews" },
+
   { label: "Insurance", to: "/insurance" },
   { label: "Contact", to: "/contact" },
 ];
