@@ -59,6 +59,35 @@ export function HomeHero() {
             aria-hidden="true"
             className="pointer-events-none absolute bottom-[8%] left-1/2 h-[78%] w-[92%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_38%,color-mix(in_oklab,var(--glow)_42%,transparent),transparent_68%)] opacity-60 blur-2xl"
           />
+          {/* graphic ring system behind the portrait */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-[10%] left-1/2 z-[1] w-[95%] max-w-[460px] -translate-x-1/2 opacity-50"
+          >
+            <svg
+              viewBox="0 0 400 400"
+              fill="none"
+              className="h-auto w-full animate-[spin_70s_linear_infinite]"
+            >
+              <defs>
+                <linearGradient id="heroRingGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="var(--glow)" stopOpacity="0.35" />
+                  <stop offset="100%" stopColor="white" stopOpacity="0.08" />
+                </linearGradient>
+              </defs>
+              <circle cx="200" cy="200" r="190" stroke="url(#heroRingGrad)" strokeWidth="1" />
+              <circle
+                cx="200"
+                cy="200"
+                r="150"
+                stroke="url(#heroRingGrad)"
+                strokeWidth="1"
+                strokeDasharray="6 6"
+                opacity="0.7"
+              />
+              <circle cx="200" cy="200" r="110" stroke="white" strokeWidth="0.5" opacity="0.15" />
+            </svg>
+          </div>
           {/* gradient wash that fades the cutout into the background */}
           <div
             aria-hidden="true"
