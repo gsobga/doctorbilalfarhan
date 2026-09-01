@@ -59,35 +59,131 @@ export function HomeHero() {
             aria-hidden="true"
             className="pointer-events-none absolute bottom-[8%] left-1/2 h-[78%] w-[92%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_38%,color-mix(in_oklab,var(--glow)_42%,transparent),transparent_68%)] opacity-60 blur-2xl"
           />
-          {/* graphic ring system behind the portrait */}
+
+          {/* substantial graphic behind the portrait */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute bottom-[10%] left-1/2 z-[1] w-[95%] max-w-[460px] -translate-x-1/2 opacity-50"
+            className="pointer-events-none absolute bottom-[6%] left-1/2 z-[1] w-[110%] max-w-[580px] -translate-x-1/2 opacity-70"
           >
+            {/* blurred color nodes */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="h-[72%] w-[72%] rounded-full bg-[radial-gradient(circle_at_center,color-mix(in_oklab,var(--glow)_30%,transparent),transparent_70%)] blur-2xl" />
+              <div className="absolute h-[46%] w-[46%] rounded-full bg-[radial-gradient(circle_at_center,color-mix(in_oklab,var(--glow)_22%,transparent),transparent_70%)] blur-xl" />
+            </div>
+
             <svg
               viewBox="0 0 400 400"
               fill="none"
-              className="h-auto w-full animate-[spin_70s_linear_infinite]"
+              className="h-auto w-full animate-[spin_90s_linear_infinite]"
             >
               <defs>
                 <linearGradient id="heroRingGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="var(--glow)" stopOpacity="0.35" />
-                  <stop offset="100%" stopColor="white" stopOpacity="0.08" />
+                  <stop offset="0%" stopColor="var(--glow)" stopOpacity="0.5" />
+                  <stop offset="55%" stopColor="var(--glow)" stopOpacity="0.12" />
+                  <stop offset="100%" stopColor="white" stopOpacity="0.06" />
                 </linearGradient>
+                <radialGradient id="heroCoreGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="var(--glow)" stopOpacity="0.22" />
+                  <stop offset="100%" stopColor="var(--glow)" stopOpacity="0" />
+                </radialGradient>
               </defs>
-              <circle cx="200" cy="200" r="190" stroke="url(#heroRingGrad)" strokeWidth="1" />
+
+              {/* central glow disc */}
+              <circle cx="200" cy="200" r="130" fill="url(#heroCoreGrad)" />
+
+              {/* outer solid ring */}
+              <circle cx="200" cy="200" r="192" stroke="url(#heroRingGrad)" strokeWidth="1.5" />
+
+              {/* tick marks on outer ring */}
+              {[...Array(24)].map((_, i) => {
+                const angle = (i * 15 * Math.PI) / 180;
+                const r1 = 184;
+                const r2 = i % 6 === 0 ? 174 : 180;
+                return (
+                  <line
+                    key={i}
+                    x1={200 + r1 * Math.cos(angle)}
+                    y1={200 + r1 * Math.sin(angle)}
+                    x2={200 + r2 * Math.cos(angle)}
+                    y2={200 + r2 * Math.sin(angle)}
+                    stroke="white"
+                    strokeWidth={i % 6 === 0 ? 1 : 0.5}
+                    opacity={i % 6 === 0 ? 0.25 : 0.12}
+                  />
+                );
+              })}
+
+              {/* dashed middle ring */}
               <circle
                 cx="200"
                 cy="200"
-                r="150"
+                r="156"
                 stroke="url(#heroRingGrad)"
                 strokeWidth="1"
-                strokeDasharray="6 6"
-                opacity="0.7"
+                strokeDasharray="6 10"
+                opacity="0.55"
               />
-              <circle cx="200" cy="200" r="110" stroke="white" strokeWidth="0.5" opacity="0.15" />
+
+              {/* inner thin ring */}
+              <circle
+                cx="200"
+                cy="200"
+                r="118"
+                stroke="white"
+                strokeWidth="0.5"
+                strokeDasharray="1 5"
+                opacity="0.18"
+              />
+
+              {/* crosshair guides */}
+              <path
+                d="M200 40 V360 M40 200 H360"
+                stroke="url(#heroRingGrad)"
+                strokeWidth="0.5"
+                opacity="0.12"
+              />
+
+              {/* sweeping accent arc */}
+              <path
+                d="M 60 200 A 140 140 0 0 1 340 200"
+                stroke="var(--glow)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                opacity="0.28"
+              />
+
+              {/* counter-rotating inner ring + orbiting node */}
+              <g
+                className="animate-[spin_45s_linear_infinite_reverse]"
+                style={{ transformOrigin: "200px 200px" }}
+              >
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="104"
+                  stroke="url(#heroRingGrad)"
+                  strokeWidth="1"
+                  strokeDasharray="32 40"
+                  opacity="0.45"
+                />
+                <circle
+                  cx="304"
+                  cy="200"
+                  r="4"
+                  fill="var(--glow)"
+                  opacity="0.85"
+                />
+                <circle
+                  cx="96"
+                  cy="200"
+                  r="2.5"
+                  fill="white"
+                  opacity="0.35"
+                />
+              </g>
             </svg>
           </div>
+
           {/* gradient wash that fades the cutout into the background */}
           <div
             aria-hidden="true"
