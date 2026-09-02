@@ -57,7 +57,25 @@ export function Footer() {
                 <Link to="/second-opinions" className="hover:text-white">Second Opinions & Revision Care</Link>
               </li>
               <li>
-                <Link to="/patient-education" className="hover:text-white">Patient Education & Resources</Link>
+                <Link to="/patient-education" className="hover:text-white">Patient Education</Link>
+              </li>
+              <li>
+                <Link to="/procedures" className="hover:text-white">Procedure Library</Link>
+              </li>
+              <li>
+                <Link to="/preparing-for-your-procedure" className="hover:text-white">Preparing for Your Procedure</Link>
+              </li>
+              <li>
+                <Link to="/videos" className="hover:text-white">Educational Videos</Link>
+              </li>
+              <li>
+                <Link to="/academic-career" className="hover:text-white">Academic Career at UTMB</Link>
+              </li>
+              <li>
+                <Link to="/awards" className="hover:text-white">Awards & Recognition</Link>
+              </li>
+              <li>
+                <Link to="/global-surgery" className="hover:text-white">Global Surgery & Humanitarian Service</Link>
               </li>
 
             </ul>

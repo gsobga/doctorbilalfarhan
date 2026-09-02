@@ -11,17 +11,24 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AcademicCareerRouteImport } from './routes/academic-career'
+import { Route as AwardsRouteImport } from './routes/awards'
 import { Route as BphHolepRouteImport } from './routes/bph-holep'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FemaleUrologyRouteImport } from './routes/female-urology'
+import { Route as GlobalSurgeryRouteImport } from './routes/global-surgery'
 import { Route as InsuranceRouteImport } from './routes/insurance'
 import { Route as KidneyStonesRouteImport } from './routes/kidney-stones'
 import { Route as MaleUrologyRouteImport } from './routes/male-urology'
 import { Route as PatientEducationRouteImport } from './routes/patient-education'
 import { Route as PelvicReconstructionRouteImport } from './routes/pelvic-reconstruction'
+import { Route as PreparingForYourProcedureRouteImport } from './routes/preparing-for-your-procedure'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as SecondOpinionsRouteImport } from './routes/second-opinions'
+import { Route as VideosRouteImport } from './routes/videos'
 import { Route as VoidingDysfunctionRouteImport } from './routes/voiding-dysfunction'
+import { Route as ProceduresIndexRouteImport } from './routes/procedures.index'
+import { Route as ProceduresSlugRouteImport } from './routes/procedures.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -31,6 +38,16 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademicCareerRoute = AcademicCareerRouteImport.update({
+  id: '/academic-career',
+  path: '/academic-career',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BphHolepRoute = BphHolepRouteImport.update({
@@ -46,6 +63,11 @@ const ContactRoute = ContactRouteImport.update({
 const FemaleUrologyRoute = FemaleUrologyRouteImport.update({
   id: '/female-urology',
   path: '/female-urology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlobalSurgeryRoute = GlobalSurgeryRouteImport.update({
+  id: '/global-surgery',
+  path: '/global-surgery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InsuranceRoute = InsuranceRouteImport.update({
@@ -73,6 +95,12 @@ const PelvicReconstructionRoute = PelvicReconstructionRouteImport.update({
   path: '/pelvic-reconstruction',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PreparingForYourProcedureRoute =
+  PreparingForYourProcedureRouteImport.update({
+    id: '/preparing-for-your-procedure',
+    path: '/preparing-for-your-procedure',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
@@ -83,120 +111,184 @@ const SecondOpinionsRoute = SecondOpinionsRouteImport.update({
   path: '/second-opinions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VideosRoute = VideosRouteImport.update({
+  id: '/videos',
+  path: '/videos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VoidingDysfunctionRoute = VoidingDysfunctionRouteImport.update({
   id: '/voiding-dysfunction',
   path: '/voiding-dysfunction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProceduresIndexRoute = ProceduresIndexRouteImport.update({
+  id: '/procedures/',
+  path: '/procedures/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProceduresSlugRoute = ProceduresSlugRouteImport.update({
+  id: '/procedures/$slug',
+  path: '/procedures/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academic-career': typeof AcademicCareerRoute
+  '/awards': typeof AwardsRoute
   '/bph-holep': typeof BphHolepRoute
   '/contact': typeof ContactRoute
   '/female-urology': typeof FemaleUrologyRoute
+  '/global-surgery': typeof GlobalSurgeryRoute
   '/insurance': typeof InsuranceRoute
   '/kidney-stones': typeof KidneyStonesRoute
   '/male-urology': typeof MaleUrologyRoute
   '/patient-education': typeof PatientEducationRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
+  '/preparing-for-your-procedure': typeof PreparingForYourProcedureRoute
   '/reviews': typeof ReviewsRoute
   '/second-opinions': typeof SecondOpinionsRoute
+  '/videos': typeof VideosRoute
   '/voiding-dysfunction': typeof VoidingDysfunctionRoute
+  '/procedures/$slug': typeof ProceduresSlugRoute
+  '/procedures/': typeof ProceduresIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academic-career': typeof AcademicCareerRoute
+  '/awards': typeof AwardsRoute
   '/bph-holep': typeof BphHolepRoute
   '/contact': typeof ContactRoute
   '/female-urology': typeof FemaleUrologyRoute
+  '/global-surgery': typeof GlobalSurgeryRoute
   '/insurance': typeof InsuranceRoute
   '/kidney-stones': typeof KidneyStonesRoute
   '/male-urology': typeof MaleUrologyRoute
   '/patient-education': typeof PatientEducationRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
+  '/preparing-for-your-procedure': typeof PreparingForYourProcedureRoute
   '/reviews': typeof ReviewsRoute
   '/second-opinions': typeof SecondOpinionsRoute
+  '/videos': typeof VideosRoute
   '/voiding-dysfunction': typeof VoidingDysfunctionRoute
+  '/procedures/$slug': typeof ProceduresSlugRoute
+  '/procedures': typeof ProceduresIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academic-career': typeof AcademicCareerRoute
+  '/awards': typeof AwardsRoute
   '/bph-holep': typeof BphHolepRoute
   '/contact': typeof ContactRoute
   '/female-urology': typeof FemaleUrologyRoute
+  '/global-surgery': typeof GlobalSurgeryRoute
   '/insurance': typeof InsuranceRoute
   '/kidney-stones': typeof KidneyStonesRoute
   '/male-urology': typeof MaleUrologyRoute
   '/patient-education': typeof PatientEducationRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
+  '/preparing-for-your-procedure': typeof PreparingForYourProcedureRoute
   '/reviews': typeof ReviewsRoute
   '/second-opinions': typeof SecondOpinionsRoute
+  '/videos': typeof VideosRoute
   '/voiding-dysfunction': typeof VoidingDysfunctionRoute
+  '/procedures/$slug': typeof ProceduresSlugRoute
+  '/procedures/': typeof ProceduresIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/academic-career'
+    | '/awards'
     | '/bph-holep'
     | '/contact'
     | '/female-urology'
+    | '/global-surgery'
     | '/insurance'
     | '/kidney-stones'
     | '/male-urology'
     | '/patient-education'
     | '/pelvic-reconstruction'
+    | '/preparing-for-your-procedure'
     | '/reviews'
     | '/second-opinions'
+    | '/videos'
     | '/voiding-dysfunction'
+    | '/procedures/$slug'
+    | '/procedures/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/academic-career'
+    | '/awards'
     | '/bph-holep'
     | '/contact'
     | '/female-urology'
+    | '/global-surgery'
     | '/insurance'
     | '/kidney-stones'
     | '/male-urology'
     | '/patient-education'
     | '/pelvic-reconstruction'
+    | '/preparing-for-your-procedure'
     | '/reviews'
     | '/second-opinions'
+    | '/videos'
     | '/voiding-dysfunction'
+    | '/procedures/$slug'
+    | '/procedures'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/academic-career'
+    | '/awards'
     | '/bph-holep'
     | '/contact'
     | '/female-urology'
+    | '/global-surgery'
     | '/insurance'
     | '/kidney-stones'
     | '/male-urology'
     | '/patient-education'
     | '/pelvic-reconstruction'
+    | '/preparing-for-your-procedure'
     | '/reviews'
     | '/second-opinions'
+    | '/videos'
     | '/voiding-dysfunction'
+    | '/procedures/$slug'
+    | '/procedures/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AcademicCareerRoute: typeof AcademicCareerRoute
+  AwardsRoute: typeof AwardsRoute
   BphHolepRoute: typeof BphHolepRoute
   ContactRoute: typeof ContactRoute
   FemaleUrologyRoute: typeof FemaleUrologyRoute
+  GlobalSurgeryRoute: typeof GlobalSurgeryRoute
   InsuranceRoute: typeof InsuranceRoute
   KidneyStonesRoute: typeof KidneyStonesRoute
   MaleUrologyRoute: typeof MaleUrologyRoute
   PatientEducationRoute: typeof PatientEducationRoute
   PelvicReconstructionRoute: typeof PelvicReconstructionRoute
+  PreparingForYourProcedureRoute: typeof PreparingForYourProcedureRoute
   ReviewsRoute: typeof ReviewsRoute
   SecondOpinionsRoute: typeof SecondOpinionsRoute
+  VideosRoute: typeof VideosRoute
   VoidingDysfunctionRoute: typeof VoidingDysfunctionRoute
+  ProceduresSlugRoute: typeof ProceduresSlugRoute
+  ProceduresIndexRoute: typeof ProceduresIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -213,6 +305,20 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academic-career': {
+      id: '/academic-career'
+      path: '/academic-career'
+      fullPath: '/academic-career'
+      preLoaderRoute: typeof AcademicCareerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bph-holep': {
@@ -234,6 +340,13 @@ declare module '@tanstack/react-router' {
       path: '/female-urology'
       fullPath: '/female-urology'
       preLoaderRoute: typeof FemaleUrologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/global-surgery': {
+      id: '/global-surgery'
+      path: '/global-surgery'
+      fullPath: '/global-surgery'
+      preLoaderRoute: typeof GlobalSurgeryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/insurance': {
@@ -271,6 +384,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PelvicReconstructionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/preparing-for-your-procedure': {
+      id: '/preparing-for-your-procedure'
+      path: '/preparing-for-your-procedure'
+      fullPath: '/preparing-for-your-procedure'
+      preLoaderRoute: typeof PreparingForYourProcedureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/reviews': {
       id: '/reviews'
       path: '/reviews'
@@ -285,11 +405,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SecondOpinionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/videos': {
+      id: '/videos'
+      path: '/videos'
+      fullPath: '/videos'
+      preLoaderRoute: typeof VideosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/voiding-dysfunction': {
       id: '/voiding-dysfunction'
       path: '/voiding-dysfunction'
       fullPath: '/voiding-dysfunction'
       preLoaderRoute: typeof VoidingDysfunctionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/procedures/': {
+      id: '/procedures/'
+      path: '/procedures'
+      fullPath: '/procedures/'
+      preLoaderRoute: typeof ProceduresIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/procedures/$slug': {
+      id: '/procedures/$slug'
+      path: '/procedures/$slug'
+      fullPath: '/procedures/$slug'
+      preLoaderRoute: typeof ProceduresSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -298,17 +439,24 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AcademicCareerRoute: AcademicCareerRoute,
+  AwardsRoute: AwardsRoute,
   BphHolepRoute: BphHolepRoute,
   ContactRoute: ContactRoute,
   FemaleUrologyRoute: FemaleUrologyRoute,
+  GlobalSurgeryRoute: GlobalSurgeryRoute,
   InsuranceRoute: InsuranceRoute,
   KidneyStonesRoute: KidneyStonesRoute,
   MaleUrologyRoute: MaleUrologyRoute,
   PatientEducationRoute: PatientEducationRoute,
   PelvicReconstructionRoute: PelvicReconstructionRoute,
+  PreparingForYourProcedureRoute: PreparingForYourProcedureRoute,
   ReviewsRoute: ReviewsRoute,
   SecondOpinionsRoute: SecondOpinionsRoute,
+  VideosRoute: VideosRoute,
   VoidingDysfunctionRoute: VoidingDysfunctionRoute,
+  ProceduresSlugRoute: ProceduresSlugRoute,
+  ProceduresIndexRoute: ProceduresIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
