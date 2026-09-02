@@ -62,66 +62,21 @@ export function Header() {
           </div>
         </Link>
 
-
-        {/* Desktop nav */}
-        <nav className="hidden items-center gap-5 xl:flex">
-          {navItems.map((item) =>
-            item.children ? (
-              <div
-                key={item.label}
-                className="group relative"
-                onMouseEnter={() => setOpenDropdown(item.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <Link
-                  to={item.to}
-                  className="flex items-center gap-1 whitespace-nowrap py-2 text-xs font-medium uppercase tracking-wider text-primary-foreground/90 transition-colors hover:text-white"
-                >
-                  {item.label}
-                  <ChevronDown className="h-3.5 w-3.5" />
-                </Link>
-                {openDropdown === item.label && (
-                  <div className="absolute top-full left-0 min-w-[260px] rounded-b-md bg-white py-2 shadow-xl">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        to={child.to}
-                        className="block px-5 py-2.5 text-sm text-foreground transition-colors hover:bg-sand hover:text-primary"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={item.label}
-                to={item.to}
-                activeProps={{ className: "text-white underline underline-offset-8" }}
-                className="whitespace-nowrap py-2 text-xs font-medium uppercase tracking-wider text-primary-foreground/90 transition-colors hover:text-white"
-              >
-                {item.label}
-              </Link>
-            )
-          )}
-        </nav>
-
-        <div className="hidden items-center gap-3 xl:flex">
+        <div className="hidden items-center gap-4 xl:flex">
           <a
             href="tel:3464143426"
-            className="hidden items-center gap-2 whitespace-nowrap text-sm font-medium text-primary-foreground/90 hover:text-white 2xl:flex"
+            className="flex items-center gap-2 whitespace-nowrap text-sm font-medium text-primary-foreground/90 hover:text-white"
           >
-            <Phone className="h-4 w-4" />
-            346-414-3426
+            <Phone className="h-4 w-4 text-accent" />
+            (346) 414-3426
           </a>
           <a
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-primary"
+            className="whitespace-nowrap rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
           >
-            Request Appointment
+            Request a Consultation
           </a>
         </div>
 
@@ -134,6 +89,53 @@ export function Header() {
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
+
+      {/* Desktop nav row */}
+      <nav className="mx-auto hidden max-w-7xl items-center justify-center gap-8 px-4 pb-3 xl:flex">
+        {navItems.map((item) =>
+          item.children ? (
+            <div
+              key={item.label}
+              className="group relative"
+              onMouseEnter={() => setOpenDropdown(item.label)}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <Link
+                to={item.to}
+                className="flex items-center gap-1 whitespace-nowrap py-2 text-xs font-medium uppercase tracking-[0.12em] text-primary-foreground/85 transition-colors hover:text-white"
+              >
+                {item.label}
+                <ChevronDown className="h-3.5 w-3.5" />
+              </Link>
+              {openDropdown === item.label && (
+                <div className="absolute top-full left-0 min-w-[260px] rounded-b-md bg-white py-2 shadow-xl">
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.label}
+                      to={child.to}
+                      className="block px-5 py-2.5 text-sm text-foreground transition-colors hover:bg-sand hover:text-primary"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <Link
+              key={item.label}
+              to={item.to}
+              activeProps={{
+                className: "text-white border-b-2 border-accent",
+              }}
+              className="whitespace-nowrap border-b-2 border-transparent py-2 text-xs font-medium uppercase tracking-[0.12em] text-primary-foreground/85 transition-colors hover:text-white"
+            >
+              {item.label}
+            </Link>
+          )
+        )}
+      </nav>
+
 
       {/* Mobile nav */}
       {mobileOpen && (
