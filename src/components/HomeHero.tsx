@@ -11,6 +11,15 @@ const trustItems = [
   { icon: ShieldCheck, lines: ["Centers of Excellence", "HoLEP • AUS"] },
 ];
 
+const credibility = [
+  { value: "UTMB", label: "Former Associate Professor" },
+  { value: "2023–2025", label: "Texas Super Doctors" },
+  { value: "250+", label: "HoLEP Procedures" },
+  { value: "Award", label: "Teaching Recognition" },
+  { value: "Fellowship", label: "Trained Subspecialist" },
+  { value: "200+", label: "Humanitarian Surgeries in Africa" },
+];
+
 export function HomeHero() {
   return (
     <>
@@ -32,20 +41,21 @@ export function HomeHero() {
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-end gap-8 px-4 pb-0 pt-36 md:grid-cols-[1fr_minmax(0,0.95fr)] lg:px-6 lg:pt-44">
           {/* Copy */}
           <div className="max-w-xl pb-16 lg:pb-24">
-            <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-              <span className="h-px w-8 bg-accent" />
-              Advanced Urologic Care
+            <h1 className="font-serif text-4xl leading-[1.05] text-primary sm:text-5xl lg:text-[3.5rem]">
+              Bilal Farhan, MD, FACS
+            </h1>
+            <p className="mt-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">
+              Urologist &amp; Pelvic Surgeon
             </p>
 
-            <h1 className="mt-6 font-serif text-4xl leading-[1.05] text-primary sm:text-5xl lg:text-[3.5rem]">
-              Advanced expertise.
-              <br />
-              Individualized care.
-            </h1>
+            <p className="mt-6 font-serif text-xl text-primary lg:text-2xl">
+              Advanced urologic care. Academic experience. Individualized treatment.
+            </p>
 
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Specializing in HoLEP, incontinence, reconstruction, and complex kidney stones,
-              from a fellowship-trained surgeon who listens first and plans with you.
+            <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
+              Fellowship-trained urologic surgeon specializing in functional urology, urinary
+              incontinence, voiding dysfunction, pelvic and urethral reconstruction, enlarged
+              prostate and HoLEP, and complex stone disease.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -56,14 +66,14 @@ export function HomeHero() {
                 className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_14px_36px_-16px_color-mix(in_oklab,var(--primary)_80%,transparent)] transition-transform duration-300 hover:-translate-y-0.5"
               >
                 <CalendarDays className="h-4 w-4" />
-                Request a Consultation
+                Request an Appointment
               </a>
               <Link
-                to="/about"
+                to="/patient-education"
                 className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-card/70 px-7 py-3.5 text-sm font-semibold text-primary backdrop-blur transition-colors duration-300 hover:bg-card"
               >
                 <Play className="h-4 w-4" />
-                Meet Dr. Farhan
+                Explore Conditions &amp; Treatments
               </Link>
             </div>
 
@@ -91,6 +101,20 @@ export function HomeHero() {
               height={1118}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Credibility bar */}
+      <section className="border-y border-border bg-primary text-primary-foreground">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-white/10 px-4 lg:grid-cols-6 lg:px-6">
+          {credibility.map((item) => (
+            <div key={item.label} className="px-4 py-6 text-center">
+              <p className="font-serif text-lg text-accent lg:text-xl">{item.value}</p>
+              <p className="mt-1 text-[11px] uppercase tracking-[0.16em] text-primary-foreground/75">
+                {item.label}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 

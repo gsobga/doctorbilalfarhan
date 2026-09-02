@@ -17,11 +17,28 @@ const navItems = [
       { label: "Kidney Stones", to: "/kidney-stones" },
     ],
   },
+  {
+    label: "Patient Education",
+    to: "/patient-education",
+    children: [
+      { label: "Patient Education Home", to: "/patient-education" },
+      { label: "Procedure Library", to: "/procedures" },
+      { label: "Preparing for Your Procedure", to: "/preparing-for-your-procedure" },
+      { label: "Educational Videos", to: "/videos" },
+    ],
+  },
+  {
+    label: "About",
+    to: "/about",
+    children: [
+      { label: "Meet Dr. Farhan", to: "/about" },
+      { label: "Academic Career at UTMB", to: "/academic-career" },
+      { label: "Awards & Recognition", to: "/awards" },
+      { label: "Global Surgery & Humanitarian Service", to: "/global-surgery" },
+    ],
+  },
   { label: "Second Opinions", to: "/second-opinions" },
-  { label: "Patient Education", to: "/patient-education" },
-  { label: "About", to: "/about" },
   { label: "Reviews", to: "/reviews" },
-
   { label: "Insurance", to: "/insurance" },
   { label: "Contact", to: "/contact" },
 ];
