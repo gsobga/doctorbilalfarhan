@@ -53,17 +53,15 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 lg:px-6">
         <Link to="/" className="flex shrink-0 items-center gap-3">
           <div className="flex flex-col leading-none">
-            <span className="whitespace-nowrap text-[9px] uppercase tracking-[0.24em] text-primary-foreground/70">
-              Center for Advanced Urology
-            </span>
-            <span className="mt-1.5 whitespace-nowrap font-serif text-lg tracking-wide lg:text-xl">
+            <span className="whitespace-nowrap font-serif text-xl tracking-wide lg:text-2xl">
               Bilal Farhan, MD, FACS
             </span>
-            <span className="mt-1 hidden whitespace-nowrap text-[9px] uppercase tracking-[0.16em] text-primary-foreground/80 sm:block">
-              Functional • Reconstructive • Minimally Invasive
+            <span className="mt-2 whitespace-nowrap text-[10px] uppercase tracking-[0.24em] text-accent">
+              Center for Advanced Urology
             </span>
           </div>
         </Link>
+
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-5 xl:flex">
