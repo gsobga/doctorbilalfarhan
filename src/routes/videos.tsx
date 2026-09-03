@@ -87,3 +87,54 @@ function VideosPage() {
     </main>
   );
 }
+
+function SurgicalClip() {
+  const [show, setShow] = useState(false);
+
+  return (
+    <Reveal delay={100}>
+      <figure className="mt-12 overflow-hidden rounded-2xl border border-border bg-card">
+        <div className="relative bg-primary/95">
+          {show ? (
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster={clipPoster.url}
+              src={clipAsset.url}
+              className="mx-auto max-h-[520px] w-full bg-black object-contain"
+            />
+          ) : (
+            <button
+              type="button"
+              onClick={() => setShow(true)}
+              className="flex w-full flex-col items-center justify-center gap-4 px-6 py-20 text-center transition-colors hover:bg-primary/80"
+            >
+              <AlertTriangle className="h-10 w-10 text-accent" strokeWidth={1.5} />
+              <span className="max-w-md text-sm leading-relaxed text-primary-foreground/85">
+                This clip contains real intraoperative surgical footage. It is intended for
+                patient education and may be graphic for some viewers.
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-accent-foreground">
+                <PlayCircle className="h-4 w-4" />
+                Watch the procedure clip
+              </span>
+            </button>
+          )}
+        </div>
+        <figcaption className="border-t border-border p-6">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
+            In the Operating Room
+          </p>
+          <h2 className="mt-2 font-serif text-lg text-primary">
+            Surgical procedure footage with Dr. Farhan
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            A short look inside the operating room during a reconstructive urologic procedure.
+            A narrated explanation of this procedure is coming soon.
+          </p>
+        </figcaption>
+      </figure>
+    </Reveal>
+  );
+}
