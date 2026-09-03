@@ -5,9 +5,10 @@ import { Reveal } from "@/components/Reveal";
 import { StatCounter } from "@/components/StatCounter";
 import { BOOKING_URL } from "@/lib/booking";
 import heroBg from "@/assets/hero-bg.jpg";
-import galleryConsult from "@/assets/gallery-consult.jpg";
-import galleryRobotic from "@/assets/gallery-robotic.jpg";
-import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
+import teamFamilies from "@/assets/global-team-families.jpg.asset.json";
+import surgeryOr1 from "@/assets/global-surgery-or-1.jpg.asset.json";
+import postopCare from "@/assets/global-postop-care.jpg.asset.json";
+import surgeryOr2 from "@/assets/global-surgery-or-2.jpg.asset.json";
 
 const description =
   "Global surgery and humanitarian service. Dr. Bilal Farhan has performed more than 200 surgeries across multiple specialties in Africa, working alongside local physicians, nurses, and surgical teams in resource-limited settings.";
