@@ -4,8 +4,54 @@ import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { BOOKING_URL } from "@/lib/booking";
 import heroBg from "@/assets/hero-bg.jpg";
-import galleryConsult from "@/assets/gallery-consult.jpg";
-import galleryLaser from "@/assets/gallery-laser.jpg";
+import teachingSimulationAsset from "@/assets/teaching-simulation.jpg.asset.json";
+import researchPosterAsset from "@/assets/research-poster-student.jpg.asset.json";
+import lectureAswanAsset from "@/assets/lecture-aswan-2026.jpg.asset.json";
+import teachingFasciaAsset from "@/assets/teaching-fascia-panel.jpg.asset.json";
+import lectureIncontinenceAsset from "@/assets/lecture-incontinence-slide.jpg.asset.json";
+import workshopAusAsset from "@/assets/workshop-aus-sling.jpg.asset.json";
+import panelAswanAsset from "@/assets/panel-aswan-2025.jpg.asset.json";
+import lectureIcsAsset from "@/assets/lecture-ics-abudhabi.jpg.asset.json";
+import researchUciAsset from "@/assets/research-poster-uci.jpg.asset.json";
+import conferenceAswanAsset from "@/assets/conference-aswan-2024.jpg.asset.json";
+
+const teachingSimulation = teachingSimulationAsset.url;
+const researchPoster = researchPosterAsset.url;
+const lectureAswan = lectureAswanAsset.url;
+const teachingFascia = teachingFasciaAsset.url;
+
+const lectures = [
+  {
+    src: lectureIcsAsset.url,
+    alt: "Dr. Farhan presenting at the ICS-EUS 2025 meeting in Abu Dhabi",
+    caption: "Podium presentation at ICS-EUS 2025, Abu Dhabi.",
+  },
+  {
+    src: lectureIncontinenceAsset.url,
+    alt: "Dr. Farhan lecturing on urinary incontinence management at the Aswan Urology Conference",
+    caption: "Lecturing on incontinence management, Aswan Urology Conference 2026.",
+  },
+  {
+    src: workshopAusAsset.url,
+    alt: "Dr. Farhan leading a workshop on AUS and sling procedures for male incontinence",
+    caption: "Leading a workshop on AUS and sling procedures for male incontinence.",
+  },
+  {
+    src: panelAswanAsset.url,
+    alt: "Dr. Farhan speaking on an expert panel at the Aswan Urology Conference",
+    caption: "Expert panel discussion, Aswan Urology Conference 2025.",
+  },
+  {
+    src: researchUciAsset.url,
+    alt: "Dr. Farhan mentoring a student presenting urology research at UC Irvine",
+    caption: "Research mentorship during fellowship training at UC Irvine.",
+  },
+  {
+    src: conferenceAswanAsset.url,
+    alt: "Dr. Farhan attending the Aswan Urology Annual Conference",
+    caption: "Aswan Urology Annual Conference, Winter 2024.",
+  },
+];
 
 const description =
   "Academic medicine at UTMB, 2019 to 2026. Dr. Bilal Farhan served as Associate Professor of Urology and Program Director of Neurourology and Pelvic Reconstruction, and established the UTMB HoLEP program and surgical training curriculum.";
@@ -165,33 +211,64 @@ function AcademicCareerPage() {
               <div className="grid gap-4">
                 <figure>
                   <img
-                    src={galleryLaser}
-                    alt="Laser enucleation equipment in the operating room"
+                    src={teachingSimulation}
+                    alt="Dr. Farhan leading hands-on sacral neuromodulation simulation training with residents and faculty"
                     className="h-56 w-full rounded-lg object-cover"
                     width={1200}
                     height={800}
                     loading="lazy"
                   />
                   <figcaption className="mt-2 text-xs text-muted-foreground">
-                    Photo placeholder: UTMB HoLEP milestone or team photograph.
+                    Hands-on simulation training with residents and faculty at UTMB.
                   </figcaption>
                 </figure>
                 <figure>
                   <img
-                    src={galleryConsult}
-                    alt="Surgical teaching and simulation session"
+                    src={researchPoster}
+                    alt="Dr. Farhan mentoring a medical student presenting a UTMB urology research poster"
                     className="h-56 w-full rounded-lg object-cover"
                     width={1200}
                     height={800}
                     loading="lazy"
                   />
                   <figcaption className="mt-2 text-xs text-muted-foreground">
-                    Photo placeholder: Dr. Farhan teaching HoLEP or leading simulation training.
+                    Mentoring medical student research in urology.
                   </figcaption>
                 </figure>
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* Lectures & research gallery */}
+      <section className="mx-auto max-w-6xl px-4 py-20 lg:px-6">
+        <Reveal>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+            Lectures &amp; Research
+          </p>
+          <h2 className="mt-4 max-w-3xl font-serif text-3xl text-primary lg:text-4xl">
+            Sharing knowledge at home and abroad
+          </h2>
+        </Reveal>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {lectures.map((photo, i) => (
+            <Reveal key={photo.src} delay={i * 60}>
+              <figure>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-60 w-full rounded-lg object-cover"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                />
+                <figcaption className="mt-2 text-xs text-muted-foreground">
+                  {photo.caption}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
         </div>
       </section>
 
@@ -221,6 +298,34 @@ function AcademicCareerPage() {
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="mx-auto max-w-5xl px-4 lg:px-6">
           <Reveal>
+            <div className="mb-10 grid gap-4 md:grid-cols-2">
+              <figure>
+                <img
+                  src={lectureAswan}
+                  alt="Dr. Farhan delivering an invited urology lecture at an international conference"
+                  className="h-64 w-full rounded-lg object-cover"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                />
+                <figcaption className="mt-2 text-xs text-primary-foreground/70">
+                  Invited international lecture on urology.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src={teachingFascia}
+                  alt="Dr. Farhan teaching surgical technique during a panel discussion"
+                  className="h-64 w-full rounded-lg object-cover"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                />
+                <figcaption className="mt-2 text-xs text-primary-foreground/70">
+                  Teaching surgical technique during an expert panel discussion.
+                </figcaption>
+              </figure>
+            </div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
               Teaching &amp; Academic Medicine
             </p>
