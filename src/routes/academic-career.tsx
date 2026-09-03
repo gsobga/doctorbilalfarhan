@@ -4,8 +4,15 @@ import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { BOOKING_URL } from "@/lib/booking";
 import heroBg from "@/assets/hero-bg.jpg";
-import galleryConsult from "@/assets/gallery-consult.jpg";
-import galleryLaser from "@/assets/gallery-laser.jpg";
+import teachingSimulationAsset from "@/assets/teaching-simulation.jpg.asset.json";
+import researchPosterAsset from "@/assets/research-poster-student.jpg.asset.json";
+import lectureAswanAsset from "@/assets/lecture-aswan-2026.jpg.asset.json";
+import teachingFasciaAsset from "@/assets/teaching-fascia-panel.jpg.asset.json";
+
+const teachingSimulation = teachingSimulationAsset.url;
+const researchPoster = researchPosterAsset.url;
+const lectureAswan = lectureAswanAsset.url;
+const teachingFascia = teachingFasciaAsset.url;
 
 const description =
   "Academic medicine at UTMB, 2019 to 2026. Dr. Bilal Farhan served as Associate Professor of Urology and Program Director of Neurourology and Pelvic Reconstruction, and established the UTMB HoLEP program and surgical training curriculum.";
@@ -165,28 +172,28 @@ function AcademicCareerPage() {
               <div className="grid gap-4">
                 <figure>
                   <img
-                    src={galleryLaser}
-                    alt="Laser enucleation equipment in the operating room"
+                    src={teachingSimulation}
+                    alt="Dr. Farhan leading hands-on sacral neuromodulation simulation training with residents and faculty"
                     className="h-56 w-full rounded-lg object-cover"
                     width={1200}
                     height={800}
                     loading="lazy"
                   />
                   <figcaption className="mt-2 text-xs text-muted-foreground">
-                    Photo placeholder: UTMB HoLEP milestone or team photograph.
+                    Hands-on simulation training with residents and faculty at UTMB.
                   </figcaption>
                 </figure>
                 <figure>
                   <img
-                    src={galleryConsult}
-                    alt="Surgical teaching and simulation session"
+                    src={researchPoster}
+                    alt="Dr. Farhan mentoring a medical student presenting a UTMB urology research poster"
                     className="h-56 w-full rounded-lg object-cover"
                     width={1200}
                     height={800}
                     loading="lazy"
                   />
                   <figcaption className="mt-2 text-xs text-muted-foreground">
-                    Photo placeholder: Dr. Farhan teaching HoLEP or leading simulation training.
+                    Mentoring medical student research in urology.
                   </figcaption>
                 </figure>
               </div>
