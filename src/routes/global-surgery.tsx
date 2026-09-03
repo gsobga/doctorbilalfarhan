@@ -96,46 +96,61 @@ function GlobalSurgeryPage() {
         <Reveal>
           <figure>
             <img
-              src={galleryConsult}
-              alt="Surgical team collaborating during a humanitarian mission"
-              className="h-[380px] w-full rounded-lg object-cover"
+              src={teamFamilies.url}
+              alt="Dr. Farhan with local medical team and families during a humanitarian surgical mission"
+              className="h-[420px] w-full rounded-lg object-cover"
               width={1600}
               height={900}
               loading="lazy"
             />
             <figcaption className="mt-2 text-xs text-muted-foreground">
-              Photo placeholder: Dr. Farhan with the local medical and surgical team.
+              Dr. Farhan with local physicians, nurses, and families during a humanitarian surgical mission.
             </figcaption>
           </figure>
         </Reveal>
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
           <Reveal delay={80}>
             <figure>
               <img
-                src={galleryRobotic}
-                alt="Operating room during a surgical mission"
-                className="h-64 w-full rounded-lg object-cover"
-                width={1200}
-                height={800}
+                src={surgeryOr1.url}
+                alt="Operating room during a humanitarian surgical mission"
+                className="h-72 w-full rounded-lg object-cover"
+                width={800}
+                height={1067}
                 loading="lazy"
               />
               <figcaption className="mt-2 text-xs text-muted-foreground">
-                Photo placeholder: operating room during a surgical mission.
+                Operating alongside local surgical teams.
               </figcaption>
             </figure>
           </Reveal>
           <Reveal delay={140}>
             <figure>
               <img
-                src={galleryDiagnostics}
-                alt="Community and team photograph from a surgical mission"
-                className="h-64 w-full rounded-lg object-cover"
-                width={1200}
+                src={postopCare.url}
+                alt="Dr. Farhan providing postoperative care to a young patient"
+                className="h-72 w-full rounded-lg object-cover"
+                width={800}
                 height={800}
                 loading="lazy"
               />
               <figcaption className="mt-2 text-xs text-muted-foreground">
-                Photo placeholder: community or team photograph.
+                Postoperative care and recovery on the surgical mission.
+              </figcaption>
+            </figure>
+          </Reveal>
+          <Reveal delay={200}>
+            <figure>
+              <img
+                src={surgeryOr2.url}
+                alt="Dr. Farhan operating with a local surgeon during a humanitarian mission"
+                className="h-72 w-full rounded-lg object-cover"
+                width={800}
+                height={1067}
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-xs text-muted-foreground">
+                Collaborative surgery with local colleagues.
               </figcaption>
             </figure>
           </Reveal>
