@@ -241,6 +241,37 @@ function AcademicCareerPage() {
         </div>
       </section>
 
+      {/* Lectures & research gallery */}
+      <section className="mx-auto max-w-6xl px-4 py-20 lg:px-6">
+        <Reveal>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+            Lectures &amp; Research
+          </p>
+          <h2 className="mt-4 max-w-3xl font-serif text-3xl text-primary lg:text-4xl">
+            Sharing knowledge at home and abroad
+          </h2>
+        </Reveal>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {lectures.map((photo, i) => (
+            <Reveal key={photo.src} delay={i * 60}>
+              <figure>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-60 w-full rounded-lg object-cover"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                />
+                <figcaption className="mt-2 text-xs text-muted-foreground">
+                  {photo.caption}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       {/* Timeline */}
       <section className="mx-auto max-w-4xl px-4 py-20 lg:px-6">
         <Reveal>
