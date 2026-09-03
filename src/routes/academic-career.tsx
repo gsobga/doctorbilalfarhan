@@ -228,6 +228,34 @@ function AcademicCareerPage() {
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="mx-auto max-w-5xl px-4 lg:px-6">
           <Reveal>
+            <div className="mb-10 grid gap-4 md:grid-cols-2">
+              <figure>
+                <img
+                  src={lectureAswan}
+                  alt="Dr. Farhan delivering an invited urology lecture at an international conference"
+                  className="h-64 w-full rounded-lg object-cover"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                />
+                <figcaption className="mt-2 text-xs text-primary-foreground/70">
+                  Invited international lecture on urology.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src={teachingFascia}
+                  alt="Dr. Farhan teaching surgical technique during a panel discussion"
+                  className="h-64 w-full rounded-lg object-cover"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                />
+                <figcaption className="mt-2 text-xs text-primary-foreground/70">
+                  Teaching surgical technique during an expert panel discussion.
+                </figcaption>
+              </figure>
+            </div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
               Teaching &amp; Academic Medicine
             </p>
