@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { AlertTriangle, ArrowRight, PlayCircle } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { BOOKING_URL } from "@/lib/booking";
 import { procedures } from "@/lib/procedures";
 import heroBg from "@/assets/hero-bg.jpg";
+import clipAsset from "@/assets/procedure-clip.mp4.asset.json";
+import clipPoster from "@/assets/procedure-clip-poster.jpg.asset.json";
+
 
 const description =
   "Short educational videos from Dr. Bilal Farhan explaining urologic conditions and procedures, including HoLEP, incontinence surgery, overactive bladder treatment, reconstruction, and kidney stone surgery.";
@@ -46,8 +50,11 @@ function VideosPage() {
           </p>
         </Reveal>
 
+        <SurgicalClip />
+
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {procedures.map((p, i) => (
+
             <Reveal key={p.slug} delay={i * 50}>
               <Link
                 to="/procedures/$slug"
