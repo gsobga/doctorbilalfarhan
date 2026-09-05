@@ -181,8 +181,8 @@ const treatments = [
 const metrics = [
   { value: 250, suffix: "+", label: "HoLEP procedures performed" },
   { value: 4, suffix: "", label: "Centers of Excellence" },
-  { value: 1, suffix: "", label: "HoLEP program established at UTMB" },
-  { value: 2, suffix: "", label: "Languages: English & Arabic" },
+  { value: 7, suffix: "+", label: "Years at UTMB, Associate Professor" },
+  { value: 200, suffix: "+", label: "Humanitarian surgeries in Africa" },
 ];
 
 const marqueeItems = [
