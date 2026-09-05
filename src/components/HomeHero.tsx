@@ -15,8 +15,8 @@ const credibility = [
   { value: "UTMB", label: "Former Associate Professor" },
   { value: "2023–2025", label: "Texas Super Doctors" },
   { value: "250+", label: "HoLEP Procedures" },
-  { value: "Award", label: "Teaching Recognition" },
-  { value: "Fellowship", label: "Trained Subspecialist" },
+  { value: "Teaching Awards", label: "UTMB Recognized Educator" },
+  { value: "Patient Reviews", label: "Trusted Patient Care" },
   { value: "200+", label: "Humanitarian Surgeries in Africa" },
 ];
 
