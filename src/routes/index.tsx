@@ -8,7 +8,7 @@ import drFarhanImg from "@/assets/dr-farhan.jpg";
 import femaleUrologyImg from "@/assets/female-urology.jpg";
 import maleUrologyImg from "@/assets/male-urology.jpg";
 import voidingImg from "@/assets/voiding-dysfunction.jpg";
-import pelvicImg from "@/assets/pelvic-reconstruction.jpg";
+import galleryLaser from "@/assets/gallery-laser.jpg";
 import galleryLaser from "@/assets/gallery-laser.jpg";
 import conditionBphImg from "@/assets/condition-bph.jpg";
 import conditionMeshImg from "@/assets/condition-mesh.jpg";

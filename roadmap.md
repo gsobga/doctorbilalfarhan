@@ -1,28 +1,25 @@
-# Dr. Farhan feedback — 2026-09-06 meeting
+# Roadmap — Dr. Farhan Website
 
-## Done when all checked
-- [ ] Header: rename "Center for Advanced Urology" to "Advanced Urology Clinic", bigger brand text, bigger nav font
-- [ ] Remove Reviews page (nav, route, sitemap, homepage links) until real reviews exist
-- [ ] Bigger blue eyebrow labels on all sections (site-wide)
-- [ ] Homepage: remove 01/02/03 numbers on treatment cards; add "60+ publications" to track record; bigger "Your physician" label
-- [ ] Rename care pages: Men's Health & Continence, Women's Health
-- [ ] Condition pages: clickable procedure links to patient guides
-- [ ] Female page: remove duplicate/removed procedure items, add fistula + urethral diverticulum, urgency wording, remove InterStim/Axonics brand names
-- [ ] Voiding dysfunction: add PTNS and implantable tibial nerve stimulation
-- [ ] Pelvic reconstruction: remove "revision urology" heading, rephrase prolapse sentence
-- [ ] Kidney stones: remove "routine", add plain-language stone prevention section
-- [ ] BPH page: fix "Is HoLEP right for every enlarged prostate?" answer per Dr. Farhan
-- [ ] Preparing page: anesthesia call note, catheter care wording, "general recommendations" label
-- [ ] Procedure guides: HoLEP "small scope", sling 60 min/overnight/voiding trial + 3 approaches + recovery details, AUS penile clamp + pump care, urethroplasty two catheters 4–6 weeks + dye study, PCNL tube wording
-- [ ] Procedure pages: back link at bottom
-- [ ] Patient education: smaller two-line hero title; add fillable symptom questionnaires (IPSS, OAB) with print/save
-- [ ] Second opinions: remove 01–04 numbers
-- [ ] Distinct images for repeated condition images (mesh, urethral stricture, BPH)
+## Completed (meeting transcript changes)
+- [x] Header/Footer: "Advanced Urology Clinic" branding, larger name/nav text
+- [x] Reviews page removed (nav, sitemap, route) — restore when authentic reviews exist
+- [x] Numbered treatment/step cards de-numbered
+- [x] All section labels enlarged site-wide
+- [x] Homepage: 60+ publications metric, distinct condition-card images (BPH, mesh, stricture)
+- [x] Pages renamed: Men's Health & Continence / Women's Health, with clickable procedure links
+- [x] Voiding dysfunction: PTNS + implantable tibial stimulation, brand names removed
+- [x] Pelvic reconstruction: renamed + patient-friendly rewrite
+- [x] Kidney stones: prevention section, "routine" removed
+- [x] Procedure guides corrected per Dr. Farhan: HoLEP, female sling (3 approaches, overnight, voiding trial), AUS (penile clamp, pump positioning), urethroplasty (2 catheters, 4–6 weeks, dye study), PCNL tube wording
+- [x] Procedure pages: back-to-library links
+- [x] Patient Education: compact hero + interactive IPSS and OAB-V8 questionnaires (score, print/save)
+- [x] Preparing for Your Procedure: anesthesia call, fasting, catheter care updates
 
-## Waiting on Dr. Farhan
-- Photos he wants to send (condition images, animations)
-- Validated questionnaire PDFs (BPH/OAB) to confirm exact wording; Spanish versions
-- Recorded 1-minute landscape educational videos per procedure
-- Downloadable PDF patient guides per procedure
-- Real patient reviews (Google/CLS) to restore Reviews page later
-- WhatsApp Business / patient messaging option research
+## Pending (need from Dr. Farhan)
+- [ ] Authentic patient reviews + written permissions
+- [ ] Exact award titles/years, Academy of Master Clinicians wording
+- [ ] Centers of Excellence verification wording
+- [ ] Insurance list + financing provider confirmation
+- [ ] Contact form wiring (currently cosmetic)
+- [ ] Identify which procedure the OR video clip shows
+- [ ] Convert remaining HEIC photos to JPG/PNG
