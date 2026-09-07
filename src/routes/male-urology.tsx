@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
@@ -12,13 +13,13 @@ import maleUrologyImg from "@/assets/male-urology.jpg";
 export const Route = createFileRoute("/male-urology")({
   head: () => ({
     meta: [
-      { title: "Male Urology — Bilal Farhan, MD" },
+      { title: "Men's Health & Continence — Bilal Farhan, MD" },
       {
         name: "description",
         content:
-          "Advanced male urology care in Houston, TX. Dr. Bilal Farhan specializes in BPH, urinary incontinence, erectile dysfunction, urethral stricture, and male prosthetic urology.",
+          "Advanced men's urology care in Houston, TX. Dr. Bilal Farhan specializes in BPH, urinary incontinence, erectile dysfunction, urethral stricture, and male prosthetic urology.",
       },
-      { property: "og:title", content: "Male Urology — Bilal Farhan, MD" },
+      { property: "og:title", content: "Men's Health & Continence — Bilal Farhan, MD" },
       {
         property: "og:description",
         content:
@@ -76,8 +77,8 @@ function MaleUrologyPage() {
   return (
     <main>
       <Hero
-        eyebrow="Male Continence & Prostate Care"
-        title="Male Urology"
+        eyebrow="Urology for Men"
+        title="Men's Health & Continence"
         subtitle="Artificial urinary sphincter, male sling, post-prostatectomy incontinence, BPH, and complex or revision continence reconstruction."
         image={maleUrologyImg}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
@@ -88,7 +89,7 @@ function MaleUrologyPage() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
-              Male Urology & Continence
+              Men&apos;s Health &amp; Continence
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
               Male urinary incontinence after prostate surgery, radiation, or previous procedures is treatable, and more than one option usually exists. Treatment is individualized to the degree of leakage, hand function, prior surgery, anatomy, and personal goals.
@@ -98,19 +99,31 @@ function MaleUrologyPage() {
             </p>
           </div>
           <div className="rounded-2xl bg-card p-8 shadow-sm">
-            <h3 className="font-serif text-2xl">Procedures & Treatments</h3>
+            <h3 className="font-serif text-2xl">Procedures &amp; Treatments</h3>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-              {[
-                  "Artificial Urinary Sphincter (AUS)",
-                  "Male Sling",
-                  "Complex male continence reconstruction",
-                  "Revision of previous continence procedures",
-                  "BPH treatment including HoLEP and GreenLight",
-                  "Urethral stricture and reconstructive surgery",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+              {(
+                [
+                  { label: "Artificial Urinary Sphincter (AUS)", to: "/procedures/artificial-urinary-sphincter" },
+                  { label: "Male Sling", to: "/procedures/male-sling" },
+                  { label: "Complex male continence reconstruction" },
+                  { label: "Revision of previous continence procedures" },
+                  { label: "BPH treatment including HoLEP and GreenLight", to: "/procedures/holep" },
+                  { label: "Urethral stricture and reconstructive surgery", to: "/procedures/urethroplasty" },
+                ] as { label: string; to?: string }[]
+              ).map((item) => (
+                <li key={item.label} className="flex items-start gap-2 text-sm text-foreground">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                  {item}
+                  {item.to ? (
+                    <Link
+                      to={item.to as string}
+                      className="group inline-flex items-center gap-1 font-medium text-primary underline-offset-4 transition-colors hover:text-accent hover:underline"
+                    >
+                      {item.label}
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0 text-accent transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  ) : (
+                    item.label
+                  )}
                 </li>
               ))}
             </ul>
