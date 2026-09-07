@@ -8,11 +8,11 @@ import drFarhanImg from "@/assets/dr-farhan.jpg";
 import femaleUrologyImg from "@/assets/female-urology.jpg";
 import maleUrologyImg from "@/assets/male-urology.jpg";
 import voidingImg from "@/assets/voiding-dysfunction.jpg";
-import galleryLaser from "@/assets/gallery-laser.jpg";
+import galleryLaser from "@/assets/feature-holep.jpg";
 import conditionBphImg from "@/assets/condition-bph.jpg";
 import conditionMeshImg from "@/assets/condition-mesh.jpg";
 import conditionStrictureImg from "@/assets/condition-stricture.jpg";
-import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
+import galleryDiagnostics from "@/assets/condition-kidney-stones.jpg";
 import { Star, Phone, ArrowRight, ArrowUpRight } from "lucide-react";
 
 const description =

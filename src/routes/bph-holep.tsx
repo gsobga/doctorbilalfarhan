@@ -4,10 +4,10 @@ import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
-import galleryLaser from "@/assets/gallery-laser.jpg";
-import galleryRobotic from "@/assets/gallery-robotic.jpg";
-import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
-import galleryConsult from "@/assets/gallery-consult.jpg";
+import galleryLaser from "@/assets/bph-holep-laser.jpg";
+import galleryRobotic from "@/assets/bph-greenlight.jpg";
+import galleryDiagnostics from "@/assets/bph-urodynamics.jpg";
+import galleryConsult from "@/assets/bph-consult.jpg";
 import maleUrologyImg from "@/assets/male-urology.jpg";
 
 const description =
