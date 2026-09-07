@@ -87,7 +87,7 @@ const faqs = [
   {
     question: "Is HoLEP right for every enlarged prostate?",
     answer:
-      "No. HoLEP is one excellent option among several. The right treatment depends on prostate anatomy, symptom severity, bladder function, medical history, previous treatment, goals, and patient preference. Some men do best with medication, some with GreenLight or another endoscopic option, and some with HoLEP.",
+      "HoLEP is an excellent, guideline-recommended option for enlarged prostates of any size. It is size-independent, meaning it can be performed whether the prostate is small or very large, and it is often the best choice for very large prostates. HoLEP is performed without any incision, through the urine channel (urethra), usually with one overnight stay and a catheter for one to two days, and it can be performed safely even for patients on blood thinners. That said, the right treatment still depends on your anatomy, symptoms, bladder function, medical history, and goals, which is why options from medication to GreenLight to HoLEP are reviewed together before recommending any procedure.",
   },
   {
     question: "My prostate is very large, am I still a candidate?",
@@ -162,6 +162,13 @@ function BphPage() {
                 selected according to prostate anatomy, symptom severity, urinary function,
                 medical history, goals, and patient preference.
               </p>
+              <Link
+                to="/procedures/$slug"
+                params={{ slug: "holep" }}
+                className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                Read the HoLEP patient guide
+              </Link>
             </div>
           </Reveal>
         </div>

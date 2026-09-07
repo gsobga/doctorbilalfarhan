@@ -57,7 +57,8 @@ const before = [
     icon: Syringe,
     title: "Preparing for Anesthesia",
     points: [
-      "Nothing to eat after midnight; clear liquids may be allowed until a set time.",
+      "You will receive a call from the anesthesia team before surgery with exact instructions on when to stop eating and drinking.",
+      "In general, nothing to eat after midnight; clear liquids may be allowed until a set time.",
       "Take approved morning medications with a small sip of water.",
       "Tell the team about sleep apnea, prior anesthesia problems, or loose teeth.",
       "Use your CPAP machine as usual the night before and bring it if you are staying overnight.",
@@ -92,8 +93,8 @@ const after = [
     title: "Catheter Care",
     points: [
       "Keep the drainage bag below the level of the bladder at all times.",
-      "Wash the area where the catheter exits with soap and water daily.",
-      "Secure the catheter to your leg so it is not pulled.",
+      "Keep the catheter and drainage bag clean; rinse away any debris with plain water.",
+      "Secure the catheter to your leg or thigh with a fixation pad so it cannot be pulled.",
       "Pink or lightly blood-tinged urine is expected; bright red urine with clots is not.",
       "Call immediately if the catheter stops draining or falls out.",
     ],
@@ -169,7 +170,7 @@ function PreparingPage() {
       <section className="bg-secondary/50 py-20">
         <div className="mx-auto max-w-6xl px-4 lg:px-6">
           <Reveal>
-            <h2 className="font-serif text-3xl text-primary lg:text-4xl">After Surgery</h2>
+            <h2 className="font-serif text-3xl text-primary lg:text-4xl">After Surgery: General Recommendations</h2>
             <span className="mt-3 block h-px w-16 bg-accent" />
           </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
