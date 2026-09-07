@@ -176,6 +176,27 @@ function ProcedurePage() {
 
       <FaqSection heading={`${procedure.shortName}: Frequently Asked Questions`} faqs={procedure.faqs} />
 
+      {/* Back to library */}
+      <section className="border-t border-border bg-secondary/40">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+          <Link
+            to="/procedures"
+            className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-card px-6 py-3 text-sm font-semibold text-primary transition-colors hover:border-accent/50"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to the Procedure Library
+          </Link>
+          <Link
+            to="/patient-education"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-accent"
+          >
+            Back to Patient Education
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
+
       {related.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 pb-20 lg:px-6">
           <Reveal>
