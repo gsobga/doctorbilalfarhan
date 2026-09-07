@@ -65,7 +65,7 @@ function VideosPage() {
                   <PlayCircle className="h-12 w-12 text-accent" strokeWidth={1.2} />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
                     {p.category}
                   </p>
                   <h2 className="mt-2 font-serif text-lg text-primary">
@@ -123,7 +123,7 @@ function SurgicalClip() {
           )}
         </div>
         <figcaption className="border-t border-border p-6">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
             In the Operating Room
           </p>
           <h2 className="mt-2 font-serif text-lg text-primary">

@@ -9,12 +9,12 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="mb-6">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-background/60">
-                CLS Health
-              </p>
-              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-accent">
-                Center for Advanced Urology
-              </p>
+            <p className="text-xs uppercase tracking-[0.3em] text-background/60">
+              CLS Health
+            </p>
+            <p className="mt-1 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+              Advanced Urology Clinic
+            </p>
               <span className="mt-3 block font-serif text-2xl tracking-wide">
                 Bilal Farhan, MD, FACS
               </span>
@@ -39,10 +39,10 @@ export function Footer() {
                 <Link to="/bph-holep" className="hover:text-white">BPH & HoLEP</Link>
               </li>
               <li>
-                <Link to="/male-urology" className="hover:text-white">Male Urology & Continence</Link>
+                <Link to="/male-urology" className="hover:text-white">Men's Health &amp; Continence</Link>
               </li>
               <li>
-                <Link to="/female-urology" className="hover:text-white">Female Urology & Mesh Complications</Link>
+                <Link to="/female-urology" className="hover:text-white">Women's Health</Link>
               </li>
               <li>
                 <Link to="/voiding-dysfunction" className="hover:text-white">Voiding Dysfunction & OAB</Link>

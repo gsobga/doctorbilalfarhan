@@ -114,8 +114,7 @@ function SecondOpinionsPage() {
           {steps.map((s, i) => (
             <Reveal key={s.title} delay={i * 110} className="h-full">
               <div className="h-full rounded-2xl glass p-8 lift">
-                <p className="font-serif text-4xl text-accent/70">0{i + 1}</p>
-                <h3 className="mt-4 font-serif text-xl text-foreground">{s.title}</h3>
+                <h3 className="font-serif text-xl text-foreground">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {s.body}
                 </p>

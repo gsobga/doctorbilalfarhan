@@ -76,7 +76,7 @@ function ProcedurePage() {
             <ArrowLeft className="h-3.5 w-3.5" />
             Procedure Library
           </Link>
-          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-accent">
             {procedure.category}
           </p>
           <h1 className="mt-4 font-serif text-3xl leading-tight lg:text-5xl">{procedure.name}</h1>
@@ -137,7 +137,7 @@ function ProcedurePage() {
         {/* Sidebar */}
         <aside className="lg:sticky lg:top-32 lg:self-start">
           <nav className="rounded-lg border border-border bg-card p-5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
               On this page
             </p>
             <ul className="mt-4 space-y-2">

@@ -121,7 +121,7 @@ export function HomeHero() {
       {/* Trust strip */}
       <section className="border-t border-border bg-secondary/50">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center lg:px-6">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">
             Trusted Urology Care
           </p>
           <h2 className="mx-auto mt-4 max-w-2xl font-serif text-3xl text-primary lg:text-4xl">

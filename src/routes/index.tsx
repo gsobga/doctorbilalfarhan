@@ -182,6 +182,7 @@ const metrics = [
   { value: 250, suffix: "+", label: "HoLEP procedures performed" },
   { value: 4, suffix: "", label: "Centers of Excellence" },
   { value: 7, suffix: "+", label: "Years at UTMB, Associate Professor" },
+  { value: 60, suffix: "+", label: "Peer-reviewed publications" },
   { value: 200, suffix: "+", label: "Humanitarian surgeries in Africa" },
 ];
 
@@ -198,9 +199,9 @@ const marqueeItems = [
 
 const insights = [
   {
-    kicker: "Article · Patient Story",
-    title: "Complex reconstruction after years of failed treatment",
-    to: "/reviews",
+    kicker: "Article · Patient Guides",
+    title: "What to expect before and after your procedure",
+    to: "/preparing-for-your-procedure",
   },
   {
     kicker: "Article · BPH",
@@ -270,7 +271,7 @@ function HomePage() {
       <section className="relative bg-background">
         <div className="mx-auto max-w-7xl px-4 pt-24 lg:px-6">
           <Reveal className="max-w-2xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.34em] text-accent">
               Conditions
             </p>
             <h2 className="mt-4 font-serif text-4xl uppercase tracking-wide text-foreground lg:text-5xl">
@@ -299,7 +300,7 @@ function HomePage() {
                   width={480}
                   height={360}
                 />
-                <span className="absolute left-4 top-4 rounded-full bg-primary/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur">
+                <span className="absolute left-4 top-4 rounded-full bg-primary/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur">
                   {String(i + 1).padStart(2, "0")} / {String(conditions.length).padStart(2, "0")}
                 </span>
               </div>
@@ -307,7 +308,7 @@ function HomePage() {
                 {c.title}
               </h3>
               <div className="mt-3 rounded-2xl bg-primary/5 p-5 transition-colors duration-500 group-hover:bg-primary/10">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-accent">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
                   Overview
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.body}</p>
@@ -325,7 +326,7 @@ function HomePage() {
       <section className="bg-sand">
         <div className="mx-auto max-w-7xl px-4 py-24 lg:px-6">
           <Reveal className="max-w-2xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.34em] text-accent">
               Treatments
             </p>
             <h2 className="mt-4 font-serif text-4xl uppercase tracking-wide text-foreground lg:text-5xl">
@@ -356,7 +357,7 @@ function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-primary/70" />
               </div>
               <div className="p-10 lg:p-14">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-accent">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
                   Featured treatment
                 </p>
                 <h3 className="mt-4 font-serif text-3xl uppercase tracking-wide lg:text-4xl">
@@ -390,10 +391,7 @@ function HomePage() {
                   to={t.to}
                   className="group flex h-full flex-col rounded-2xl bg-card p-8 shadow-sm transition-transform duration-500 hover:-translate-y-1"
                 >
-                  <span className="font-serif text-3xl text-accent">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-4 font-serif text-xl uppercase tracking-wide text-foreground">
+                  <h3 className="font-serif text-xl uppercase tracking-wide text-foreground">
                     {t.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t.body}</p>
@@ -434,7 +432,7 @@ function HomePage() {
               />
             </Reveal>
             <Reveal delay={120}>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-accent">
+              <p className="text-sm font-semibold uppercase tracking-[0.34em] text-accent">
                 Your physician
               </p>
               <h2 className="mt-4 font-serif text-3xl uppercase tracking-wide text-foreground lg:text-4xl">
@@ -478,7 +476,7 @@ function HomePage() {
               Training, surgical volume, and recognition that reflect how the practice works.
             </p>
           </Reveal>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {metrics.map((m, i) => (
               <Reveal key={m.label} delay={i * 90}>
                 <div className="border-t border-border pt-6">
@@ -532,7 +530,7 @@ function HomePage() {
       <section className="bg-background">
         <div className="mx-auto max-w-7xl px-4 py-24 lg:px-6">
           <Reveal className="max-w-2xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.34em] text-accent">
               Media & insights
             </p>
             <h2 className="mt-4 font-serif text-4xl uppercase tracking-wide text-foreground lg:text-5xl">
@@ -549,7 +547,7 @@ function HomePage() {
                   to={item.to}
                   className="group flex h-full flex-col justify-between bg-card p-8 transition-colors duration-500 hover:bg-sand"
                 >
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-accent">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
                     {item.kicker}
                   </p>
                   <div className="mt-6 flex items-start justify-between gap-6">
@@ -569,7 +567,7 @@ function HomePage() {
       <section className="bg-sand">
         <div className="mx-auto max-w-7xl px-4 py-24 lg:px-6">
           <Reveal className="mb-14 max-w-2xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.34em] text-accent">
               Patient experiences
             </p>
             <h2 className="mt-4 font-serif text-4xl uppercase tracking-wide text-foreground lg:text-5xl">
@@ -597,14 +595,6 @@ function HomePage() {
               </Reveal>
             ))}
           </div>
-          <Reveal delay={120} className="mt-12">
-            <Link
-              to="/reviews"
-              className="inline-block rounded-full border border-primary px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary transition-all duration-500 hover:-translate-y-1 hover:bg-primary hover:text-primary-foreground"
-            >
-              Read more reviews
-            </Link>
-          </Reveal>
         </div>
       </section>
 

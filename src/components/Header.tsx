@@ -10,8 +10,8 @@ const navItems = [
     to: "/bph-holep",
     children: [
       { label: "BPH & HoLEP", to: "/bph-holep" },
-      { label: "Male Urology & Continence", to: "/male-urology" },
-      { label: "Female Urology & Mesh", to: "/female-urology" },
+      { label: "Men's Health & Continence", to: "/male-urology" },
+      { label: "Women's Health", to: "/female-urology" },
       { label: "Voiding Dysfunction & OAB", to: "/voiding-dysfunction" },
       { label: "Urethral & Pelvic Reconstruction", to: "/pelvic-reconstruction" },
       { label: "Kidney Stones", to: "/kidney-stones" },
@@ -38,7 +38,7 @@ const navItems = [
     ],
   },
   { label: "Second Opinions", to: "/second-opinions" },
-  { label: "Reviews", to: "/reviews" },
+  
   { label: "Insurance", to: "/insurance" },
   { label: "Contact", to: "/contact" },
 ];
@@ -70,11 +70,11 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 lg:px-6">
         <Link to="/" className="flex shrink-0 items-center gap-3">
           <div className="flex flex-col leading-none">
-            <span className="whitespace-nowrap font-serif text-xl tracking-wide lg:text-2xl">
+            <span className="whitespace-nowrap font-serif text-2xl tracking-wide lg:text-3xl">
               Bilal Farhan, MD, FACS
             </span>
-            <span className="mt-2 whitespace-nowrap text-[10px] uppercase tracking-[0.24em] text-accent">
-              Center for Advanced Urology
+            <span className="mt-1.5 whitespace-nowrap text-xs font-semibold uppercase tracking-[0.2em] text-accent lg:text-sm">
+              Advanced Urology Clinic
             </span>
           </div>
         </Link>
@@ -108,7 +108,7 @@ export function Header() {
       </div>
 
       {/* Desktop nav row */}
-      <nav className="mx-auto hidden max-w-7xl items-center justify-center gap-8 px-4 pb-3 xl:flex">
+      <nav className="mx-auto hidden max-w-7xl items-center justify-center gap-6 px-4 pb-3 xl:flex">
         {navItems.map((item) =>
           item.children ? (
             <div
@@ -119,7 +119,7 @@ export function Header() {
             >
               <Link
                 to={item.to}
-                className="flex items-center gap-1 whitespace-nowrap py-2 text-xs font-medium uppercase tracking-[0.12em] text-primary-foreground/85 transition-colors hover:text-white"
+                className="flex items-center gap-1 whitespace-nowrap py-2 text-sm font-medium uppercase tracking-[0.1em] text-primary-foreground/85 transition-colors hover:text-white"
               >
                 {item.label}
                 <ChevronDown className="h-3.5 w-3.5" />
@@ -145,7 +145,7 @@ export function Header() {
               activeProps={{
                 className: "text-white border-b-2 border-accent",
               }}
-              className="whitespace-nowrap border-b-2 border-transparent py-2 text-xs font-medium uppercase tracking-[0.12em] text-primary-foreground/85 transition-colors hover:text-white"
+              className="whitespace-nowrap border-b-2 border-transparent py-2 text-sm font-medium uppercase tracking-[0.1em] text-primary-foreground/85 transition-colors hover:text-white"
             >
               {item.label}
             </Link>

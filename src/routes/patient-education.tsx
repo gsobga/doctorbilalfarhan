@@ -209,7 +209,7 @@ function PatientEducationPage() {
       <section id="conditions" className="scroll-mt-32 bg-secondary/50 py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-6">
           <Reveal>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
               Conditions
             </p>
             <h2 className="mt-4 font-serif text-3xl text-primary lg:text-4xl">
@@ -252,7 +252,7 @@ function PatientEducationPage() {
       {/* Procedures */}
       <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
         <Reveal>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
             Procedures
           </p>
           <h2 className="mt-4 font-serif text-3xl text-primary lg:text-4xl">
