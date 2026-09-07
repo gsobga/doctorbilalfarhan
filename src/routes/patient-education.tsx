@@ -14,12 +14,12 @@ import { FaqSection } from "@/components/FaqSection";
 import { BOOKING_URL } from "@/lib/booking";
 import { procedures } from "@/lib/procedures";
 import heroBg from "@/assets/hero-bg.jpg";
-import maleUrologyImg from "@/assets/male-urology.jpg";
-import femaleUrologyImg from "@/assets/female-urology.jpg";
-import voidingImg from "@/assets/voiding-dysfunction.jpg";
-import pelvicImg from "@/assets/pelvic-reconstruction.jpg";
-import galleryLaser from "@/assets/gallery-laser.jpg";
-import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
+import maleUrologyImg from "@/assets/edu-mens.jpg";
+import femaleUrologyImg from "@/assets/edu-womens.jpg";
+import voidingImg from "@/assets/edu-bladder.jpg";
+import pelvicImg from "@/assets/edu-reconstruction.jpg";
+import galleryLaser from "@/assets/edu-prostate.jpg";
+import galleryDiagnostics from "@/assets/edu-preparing.jpg";
 
 const description =
   "Urology patient education organized by condition and procedure: BPH and HoLEP, overactive bladder, urinary incontinence, urethral stricture, pelvic organ prolapse, and kidney stones, plus procedure guides, preparation instructions, and educational videos.";

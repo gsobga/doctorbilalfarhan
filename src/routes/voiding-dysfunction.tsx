@@ -4,10 +4,10 @@ import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
-import galleryRobotic from "@/assets/gallery-robotic.jpg";
-import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
-import galleryConsult from "@/assets/gallery-consult.jpg";
-import galleryLaser from "@/assets/gallery-laser.jpg";
+import galleryRobotic from "@/assets/voiding-neuromodulation.jpg";
+import galleryDiagnostics from "@/assets/voiding-urodynamics.jpg";
+import galleryConsult from "@/assets/voiding-cystoscopy.jpg";
+import galleryLaser from "@/assets/voiding-botox.jpg";
 import voidingImg from "@/assets/voiding-dysfunction.jpg";
 
 export const Route = createFileRoute("/voiding-dysfunction")({

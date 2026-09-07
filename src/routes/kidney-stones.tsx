@@ -5,10 +5,10 @@ import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
-import galleryLaser from "@/assets/gallery-laser.jpg";
-import galleryRobotic from "@/assets/gallery-robotic.jpg";
-import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
-import galleryConsult from "@/assets/gallery-consult.jpg";
+import galleryLaser from "@/assets/stones-ureteroscopy.jpg";
+import galleryRobotic from "@/assets/stones-pcnl.jpg";
+import galleryDiagnostics from "@/assets/stones-diagnostics.jpg";
+import galleryConsult from "@/assets/stones-prevention.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const description =

@@ -3,7 +3,7 @@ import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { FaqSection } from "@/components/FaqSection";
-import galleryConsult from "@/assets/gallery-consult.jpg";
+import galleryConsult from "@/assets/second-opinion.jpg";
 
 const description =
   "Second opinions, complex cases, and revision urologic surgery in Houston. Dr. Bilal Farhan evaluates recurrent stricture, failed continence surgery, mesh complications, refractory OAB, and complex BPH.";
