@@ -161,7 +161,7 @@ function AcademicCareerPage() {
       <section className="bg-secondary/50 py-20">
         <div className="mx-auto max-w-6xl px-4 lg:px-6">
           <Reveal>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
               Building the HoLEP Program
             </p>
             <h2 className="mt-4 max-w-3xl font-serif text-3xl text-primary lg:text-4xl">
@@ -244,7 +244,7 @@ function AcademicCareerPage() {
       {/* Lectures & research gallery */}
       <section className="mx-auto max-w-6xl px-4 py-20 lg:px-6">
         <Reveal>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
             Lectures &amp; Research
           </p>
           <h2 className="mt-4 max-w-3xl font-serif text-3xl text-primary lg:text-4xl">
@@ -326,7 +326,7 @@ function AcademicCareerPage() {
                 </figcaption>
               </figure>
             </div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
               Teaching &amp; Academic Medicine
             </p>
             <h2 className="mt-4 font-serif text-3xl lg:text-4xl">Teaching the next generation</h2>

@@ -73,7 +73,7 @@ export const procedures: Procedure[] = [
       },
       {
         heading: "How is the procedure performed?",
-        body: "HoLEP is performed under general or spinal anesthesia. A telescope is passed through the urethra, the laser enucleates the obstructing tissue into the bladder, and a small instrument called a morcellator removes it. Most procedures take one to three hours depending on prostate size. Most patients stay overnight or go home the same day.",
+        body: "HoLEP is performed under general or spinal anesthesia. A small scope is passed through the urethra, the laser enucleates the obstructing tissue into the bladder, and a small instrument called a morcellator removes it. Most procedures take one to three hours depending on prostate size. Most patients stay overnight or go home the same day.",
       },
       {
         heading: "What are the benefits?",
@@ -187,7 +187,7 @@ export const procedures: Procedure[] = [
       },
       {
         heading: "What are the alternatives?",
-        body: "Pelvic floor physical therapy, lifestyle and fluid management, condom or absorbent products, urethral bulking, and a male sling. A sling is generally best for mild to moderate leakage without prior radiation; the AUS is preferred for heavier leakage.",
+        body: "Pelvic floor physical therapy, lifestyle and fluid management, a penile clamp (such as a Cunningham clamp) or absorbent products, urethral bulking, and a male sling. A sling is generally best for mild to moderate leakage without prior radiation; the AUS is preferred for heavier leakage.",
       },
       {
         heading: "What are the risks?",
@@ -214,6 +214,7 @@ export const procedures: Procedure[] = [
           "The device stays deactivated for about six weeks so tissues can heal, so you will keep leaking during that time.",
           "Scrotal swelling and bruising are expected and settle over two to three weeks.",
           "No heavy lifting, cycling, or straddling activity for six weeks.",
+          "Once the swelling settles, gently pull the pump down in the scrotum once a day so it stays in a good, easy-to-reach position.",
           "At the activation visit you are taught to use the pump.",
         ],
       },
@@ -330,7 +331,7 @@ export const procedures: Procedure[] = [
     sections: [
       {
         heading: "What is a midurethral sling?",
-        body: "A thin supportive strip is placed under the middle of the urethra through a small vaginal incision. When abdominal pressure rises, the sling provides a backboard that keeps the urethra closed. Slings can be made from synthetic mesh or from your own fascia when preferred or when mesh is not appropriate.",
+        body: "A thin supportive strip is placed under the middle of the urethra through a small vaginal incision. When abdominal pressure rises, the sling provides a backboard that keeps the urethra closed. There are three approved, standard-of-care approaches: retropubic (passed behind the pubic bone, also called TVT), transobturator (passed through the natural openings on each side of the pelvis, also called TOT), and single-incision. Slings can be made from synthetic mesh or from your own fascia when preferred or when mesh is not appropriate.",
       },
       {
         heading: "Who may benefit from a sling?",
@@ -342,7 +343,7 @@ export const procedures: Procedure[] = [
       },
       {
         heading: "How is the procedure performed?",
-        body: "Under general or regional anesthesia, a small vaginal incision and two tiny exit sites are used to position and tension the sling. The procedure takes about 30 minutes and is performed as an outpatient.",
+        body: "Under general anesthesia, a small vaginal incision is used to position the sling using one of the three approaches, and the sling is adjusted to support the urethra without tension. The procedure takes about 60 minutes. Most women stay one night with a catheter and go home the next day.",
       },
       {
         heading: "What are the benefits?",
@@ -362,6 +363,7 @@ export const procedures: Procedure[] = [
           "Difficulty emptying the bladder, usually temporary.",
           "New or worsened urgency.",
           "Urinary tract infection.",
+          "Bladder injury, which is uncommon.",
           "Mesh exposure or pain in a small number of patients, which can require revision.",
           "Recurrent or persistent leakage.",
         ],
@@ -369,17 +371,20 @@ export const procedures: Procedure[] = [
       commonPrep,
       {
         heading: "What happens on the day of surgery?",
-        body: "You go home the same day, usually after demonstrating you can empty your bladder.",
+        body: "The procedure is performed under general anesthesia. Most women stay one night with a catheter. The next morning the catheter is removed and a voiding trial is performed: if you urinate without difficulty, you go home without a catheter. If emptying is incomplete, the catheter is replaced and the voiding trial is repeated in the clinic about five days later.",
       },
       {
         heading: "Will I have a catheter?",
-        body: "Usually not. A catheter is used during surgery and removed before you go home. A small number of women go home briefly with a catheter or are taught intermittent catheterization for a few days.",
+        body: "Usually yes, overnight. The catheter placed during surgery is removed the next day, followed by the voiding trial described above. A small number of women go home briefly with a catheter or are taught intermittent catheterization for a few days.",
       },
       {
         heading: "What should I expect during recovery?",
         bullets: [
-          "Light spotting and mild discomfort for one to two weeks.",
-          "No lifting over ten pounds, intercourse, or tampons for six weeks.",
+          "Mild urgency, burning, and light spotting are expected in the first days and settle quickly.",
+          "No lifting over ten pounds (about a gallon of milk) for six weeks.",
+          "Nothing in the vagina for six weeks: no intercourse, tampons, or pelvic exams.",
+          "A follow-up visit at about two weeks checks your symptoms and bladder emptying.",
+          "A pelvic exam at about six weeks confirms healing.",
           "Most women return to desk work within a week.",
         ],
       },
@@ -668,7 +673,7 @@ export const procedures: Procedure[] = [
       commonPrep,
       {
         heading: "Will I have a catheter?",
-        body: "Yes. A catheter stays in place for roughly two to three weeks. Before it is removed, an x-ray study is performed to confirm the repair has healed and is watertight.",
+        body: "Yes. You will typically have two catheters: one through the urethra (the urine channel) and one through the lower belly, called a suprapubic catheter. They usually stay in place for four to six weeks depending on the stricture length, location, and complexity of the repair. Before removal, a small amount of contrast dye is used to study the urethra (a urethrogram) to confirm the repair has healed without leakage. The suprapubic catheter is then capped and your voiding is followed in the clinic.",
       },
       {
         heading: "What should I expect during recovery?",
@@ -820,7 +825,7 @@ export const procedures: Procedure[] = [
       commonPrep,
       {
         heading: "Will I have a tube?",
-        body: "You may wake with a nephrostomy tube in the flank, a ureteral stent, or both. They are removed within days depending on how the procedure went.",
+        body: "You may wake with a nephrostomy tube in the flank, a ureteral stent, or both, and sometimes a catheter in the urethra. These are removed within days depending on how the procedure went.",
       },
       {
         heading: "What should I expect during recovery?",

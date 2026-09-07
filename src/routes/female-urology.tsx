@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
@@ -12,13 +13,13 @@ import femaleUrologyImg from "@/assets/female-urology.jpg";
 export const Route = createFileRoute("/female-urology")({
   head: () => ({
     meta: [
-      { title: "Female Urology — Bilal Farhan, MD" },
+      { title: "Women's Health — Bilal Farhan, MD" },
       {
         name: "description",
         content:
-          "Expert female urology care in Houston, TX. Dr. Bilal Farhan treats urinary incontinence, pelvic organ prolapse, overactive bladder, and other pelvic health conditions.",
+          "Expert women's urology care in Houston, TX. Dr. Bilal Farhan treats urinary incontinence, pelvic organ prolapse, overactive bladder, and other pelvic health conditions.",
       },
-      { property: "og:title", content: "Female Urology — Bilal Farhan, MD" },
+      { property: "og:title", content: "Women's Health — Bilal Farhan, MD" },
       {
         property: "og:description",
         content:
@@ -44,7 +45,7 @@ const slides = [
   },
   {
     title: "Sacral Neuromodulation",
-    category: "InterStim / Axonics",
+    category: "Minimally Invasive Therapy",
     description: "A small implanted device gently modulates the sacral nerves that coordinate bladder function. Patients trial the therapy before committing to the full implant.",
     image: galleryDiagnostics,
     facts: ["Two-stage test-then-implant approach", "Treats urgency incontinence and retention", "MRI-conditional, rechargeable options"],
@@ -54,7 +55,7 @@ const slides = [
     category: "Outpatient Surgery",
     description: "Mesh and native-tissue sling options restore support beneath the urethra for stress urinary incontinence caused by childbirth, aging, or prior surgery.",
     image: galleryRobotic,
-    facts: ["Same-day outpatient procedure", "Mesh and mesh-free options discussed", "Most patients resume light activity in days"],
+    facts: ["About one hour; outpatient or overnight", "Mesh and mesh-free options discussed", "Most patients resume light activity in days"],
   },
   {
     title: "Prolapse Repair & Reconstruction",
@@ -76,8 +77,8 @@ function FemaleUrologyPage() {
   return (
     <main>
       <Hero
-        eyebrow="Female Urology & Pelvic Health"
-        title="Female Urology"
+        eyebrow="Women's Health & Pelvic Care"
+        title="Women's Health"
         subtitle="Incontinence, prolapse, mesh-related complications, and complex revision care, with mesh, non-mesh, and non-surgical options discussed openly."
         image={femaleUrologyImg}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
@@ -98,21 +99,31 @@ function FemaleUrologyPage() {
             </p>
           </div>
           <div className="rounded-2xl bg-card p-8 shadow-sm">
-            <h3 className="font-serif text-2xl">Procedures & Treatments</h3>
+            <h3 className="font-serif text-2xl">Procedures &amp; Treatments</h3>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-              {[
-                  "Midurethral sling (mesh)",
-                  "Autologous fascial sling (non-mesh)",
-                  "Urethral bulking agent injection",
-                  "Evaluation and management of mesh-related complications",
-                  "Mesh revision or excision when clinically appropriate",
-                  "Persistent or recurrent stress urinary incontinence",
-                  "Revision of previous continence surgery",
-                  "Complex female continence and reconstructive surgery",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+              {(
+                [
+                  { label: "Midurethral sling (mesh)", to: "/procedures/midurethral-sling" },
+                  { label: "Autologous fascial sling (non-mesh)", to: "/procedures/midurethral-sling" },
+                  { label: "Urethral bulking agent injection" },
+                  { label: "Evaluation and management of mesh-related complications" },
+                  { label: "Persistent or recurrent stress urinary incontinence" },
+                  { label: "Complex female continence and reconstructive surgery" },
+                ] as { label: string; to?: string }[]
+              ).map((item) => (
+                <li key={item.label} className="flex items-start gap-2 text-sm text-foreground">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                  {item}
+                  {item.to ? (
+                    <Link
+                      to={item.to as string}
+                      className="group inline-flex items-center gap-1 font-medium text-primary underline-offset-4 transition-colors hover:text-accent hover:underline"
+                    >
+                      {item.label}
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0 text-accent transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  ) : (
+                    item.label
+                  )}
                 </li>
               ))}
             </ul>
@@ -140,7 +151,7 @@ function FemaleUrologyPage() {
             <p className="mt-4 leading-relaxed text-muted-foreground">
               With fellowship training in female urology and pelvic reconstruction, Dr.
               Farhan offers both surgical and non-surgical options, including bladder Botox,
-              sacral neuromodulation (InterStim/Axonics), female sling procedures, and
+              sacral neuromodulation therapy, female sling procedures, and
               pelvic organ prolapse repair.
             </p>
           </div>
@@ -149,14 +160,15 @@ function FemaleUrologyPage() {
             <ul className="grid gap-3 sm:grid-cols-2">
               {[
                 "Stress urinary incontinence",
-                "Urge urinary incontinence",
+                "Urgency urinary incontinence",
                 "Overactive bladder",
                 "Pelvic organ prolapse",
                 "Recurrent UTIs",
-                "Interstitial cystitis / bladder pain",
+                "Interstitial cystitis / bladder pain syndrome",
                 "Voiding dysfunction",
                 "Urethral stricture disease",
-                "Genitourinary fistula",
+                "Urinary fistula (vesicovaginal, urethrovaginal)",
+                "Urethral diverticulum",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-foreground">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
@@ -183,7 +195,7 @@ function FemaleUrologyPage() {
               {
                 title: "Sacral Neuromodulation",
                 description:
-                  "InterStim and Axonics therapies to help restore bladder control.",
+                  "A minimally invasive therapy that gently restores communication between the bladder and the nerves that control it.",
               },
               {
                 title: "Female Sling Surgery",

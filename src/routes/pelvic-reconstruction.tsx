@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
@@ -88,32 +89,51 @@ function PelvicReconstructionPage() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
-              Reconstructive & Revision Urology
+              Pelvic &amp; Urethral Reconstruction
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Particular emphasis is placed on recurrent strictures, previous failed procedures, complex anatomy, and patients seeking a definitive reconstructive opinion. Prolapse care considers symptoms, anatomy, sexual function, previous surgery, and goals.
+              Reconstructive urology treats narrowing and scar tissue anywhere in the urinary
+              system, from the ureters (the tubes between the kidney and bladder) to the
+              bladder and the urethra (the urine channel). Treatment ranges from
+              urethroplasty and graft-based reconstruction to repair of the ureter, and the
+              plan is individualized to your symptoms, anatomy, function, and goals.
+              Particular emphasis is placed on recurrent strictures, previous failed
+              procedures, complex anatomy, and patients seeking a definitive reconstructive
+              opinion.
             </p>
             <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
               Complex problems deserve a thoughtful second look. The best next step may be reconstruction, or it may be a non-surgical plan with clear expectations.
             </p>
           </div>
           <div className="rounded-2xl bg-card p-8 shadow-sm">
-            <h3 className="font-serif text-2xl">Procedures & Treatments</h3>
+            <h3 className="font-serif text-2xl">Procedures &amp; Treatments</h3>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-              {[
-                  "Urethroplasty",
-                  "Buccal mucosal graft urethroplasty",
-                  "Endoscopic stricture treatment when appropriate",
-                  "Urinary fistula repair",
-                  "Bladder diverticulectomy",
-                  "Vaginal pelvic organ prolapse repair",
-                  "Robotic pelvic organ prolapse repair",
-                  "Robotic urinary tract reconstruction",
-                  "Complex revision surgery",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+              {(
+                [
+                  { label: "Urethroplasty", to: "/procedures/urethroplasty" },
+                  { label: "Buccal mucosal graft urethroplasty", to: "/procedures/urethroplasty" },
+                  { label: "Endoscopic stricture treatment when appropriate" },
+                  { label: "Urinary fistula repair" },
+                  { label: "Bladder diverticulectomy" },
+                  { label: "Vaginal pelvic organ prolapse repair" },
+                  { label: "Robotic pelvic organ prolapse repair" },
+                  { label: "Robotic urinary tract reconstruction" },
+                  { label: "Complex revision surgery" },
+                ] as { label: string; to?: string }[]
+              ).map((item) => (
+                <li key={item.label} className="flex items-start gap-2 text-sm text-foreground">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                  {item}
+                  {item.to ? (
+                    <Link
+                      to={item.to as string}
+                      className="group inline-flex items-center gap-1 font-medium text-primary underline-offset-4 transition-colors hover:text-accent hover:underline"
+                    >
+                      {item.label}
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0 text-accent transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  ) : (
+                    item.label
+                  )}
                 </li>
               ))}
             </ul>

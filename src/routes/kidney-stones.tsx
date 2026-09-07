@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
@@ -11,7 +12,7 @@ import galleryConsult from "@/assets/gallery-consult.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const description =
-  "Advanced kidney stone surgery in Houston: ureteroscopy, laser lithotripsy, standard PCNL, mini-PCNL, and supine PCNL for routine, large, recurrent, and complex stones.";
+  "Advanced kidney stone surgery in Houston: ureteroscopy, laser lithotripsy, standard PCNL, mini-PCNL, and supine PCNL for large, recurrent, and complex stones, plus a plan to prevent the next stone.";
 
 export const Route = createFileRoute("/kidney-stones")({
   head: () => ({
@@ -107,7 +108,7 @@ function StonesPage() {
       <Hero
         eyebrow="Advanced Endourology"
         title="Kidney Stone Disease"
-        subtitle="Routine, recurrent, large, and complex kidney and ureteral stones, treated with the approach that fits your anatomy, not a single default technique."
+        subtitle="Recurrent, large, and complex kidney and ureteral stones, treated with the approach that fits your anatomy, not a single default technique."
         image={heroBg}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
@@ -134,22 +135,105 @@ function StonesPage() {
             <div className="rounded-2xl glass p-8">
               <h3 className="font-serif text-2xl text-foreground">Procedures Offered</h3>
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                {[
-                  "Ureteroscopy",
-                  "Laser lithotripsy",
-                  "Advanced flexible ureteroscopy",
-                  "Standard PCNL",
-                  "Mini-PCNL",
-                  "Supine PCNL",
-                ].map((p) => (
-                  <li key={p} className="flex items-start gap-2 text-sm text-foreground">
+                {(
+                  [
+                    { label: "Ureteroscopy", to: "/procedures/ureteroscopy" },
+                    { label: "Laser lithotripsy", to: "/procedures/ureteroscopy" },
+                    { label: "Advanced flexible ureteroscopy", to: "/procedures/ureteroscopy" },
+                    { label: "Standard PCNL", to: "/procedures/pcnl" },
+                    { label: "Mini-PCNL", to: "/procedures/pcnl" },
+                    { label: "Supine PCNL", to: "/procedures/pcnl" },
+                  ] as { label: string; to?: string }[]
+                ).map((item) => (
+                  <li key={item.label} className="flex items-start gap-2 text-sm text-foreground">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                    {p}
+                    <Link
+                      to={item.to as string}
+                      className="group inline-flex items-center gap-1 font-medium text-primary underline-offset-4 transition-colors hover:text-accent hover:underline"
+                    >
+                      {item.label}
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0 text-accent transition-transform group-hover:translate-x-0.5" />
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Prevention */}
+      <section className="bg-secondary/50 py-20">
+        <div className="mx-auto max-w-6xl px-4 lg:px-6">
+          <Reveal>
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
+              Prevention
+            </p>
+            <h2 className="mt-4 font-serif text-3xl text-foreground lg:text-4xl">
+              Lowering your chance of another stone
+            </h2>
+            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+              Removing a stone treats today&apos;s problem. The next step is understanding why
+              stones form for you, so the same cycle is less likely to repeat.
+            </p>
+          </Reveal>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <Reveal>
+              <div className="h-full rounded-lg border border-border bg-card p-7">
+                <h3 className="font-serif text-xl text-foreground">Everyday habits</h3>
+                <ul className="mt-4 space-y-2.5">
+                  {[
+                    "Drink enough water to keep your urine light in color, usually about two and a half to three liters a day.",
+                    "Cut back on salt; salty food pushes more calcium into the urine.",
+                    "Keep a normal amount of calcium from food. Cutting out calcium can actually raise stone risk.",
+                    "Go easy on oxalate-rich foods such as spinach, nuts, and dark chocolate if your stones are the oxalate type.",
+                    "Limit sodas and sugary drinks; water, and citrus drinks like lemonade, are kinder to the kidneys.",
+                  ].map((p) => (
+                    <li key={p} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+            <Reveal delay={80}>
+              <div className="h-full rounded-lg border border-border bg-card p-7">
+                <h3 className="font-serif text-xl text-foreground">Finding the cause</h3>
+                <ul className="mt-4 space-y-2.5">
+                  {[
+                    "Stone analysis: any stone or fragment you pass or we remove is sent to the lab to learn exactly what it is made of.",
+                    "A 24-hour urine collection shows how much calcium, oxalate, uric acid, and citrate your kidneys pass in a day.",
+                    "Simple blood tests check for contributing conditions.",
+                    "Together, these results explain why your stones form and which changes will actually help you.",
+                  ].map((p) => (
+                    <li key={p} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+            <Reveal delay={160}>
+              <div className="h-full rounded-lg border border-border bg-card p-7">
+                <h3 className="font-serif text-xl text-foreground">Your prevention plan</h3>
+                <ul className="mt-4 space-y-2.5">
+                  {[
+                    "A plan tailored to your stone type, which may include diet changes, medication, or both.",
+                    "Follow-up imaging at sensible intervals to confirm nothing new is forming.",
+                    "Adjustments over time as your results change.",
+                    "Prevention works: most patients who follow a plan form far fewer stones.",
+                  ].map((p) => (
+                    <li key={p} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

@@ -112,7 +112,7 @@ function AwardsPage() {
       <section className="bg-secondary/50 py-20">
         <div className="mx-auto max-w-6xl px-4 lg:px-6">
           <Reveal>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
               Clinical Designations
             </p>
             <h2 className="mt-4 font-serif text-3xl text-primary lg:text-4xl">

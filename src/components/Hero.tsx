@@ -11,6 +11,7 @@ interface HeroProps {
   phone?: string;
   align?: "left" | "center";
   scrollHint?: boolean;
+  compact?: boolean;
 }
 
 export function Hero({
@@ -22,6 +23,7 @@ export function Hero({
   phone,
   align = "center",
   scrollHint = false,
+  compact = false,
 }: HeroProps) {
   return (
     <section className="relative flex min-h-[88vh] items-center justify-center overflow-hidden pt-24">
@@ -64,7 +66,9 @@ export function Hero({
           </div>
         )}
         <h1
-          className={`font-serif text-4xl font-normal uppercase leading-[1.05] tracking-wide text-gradient-light md:text-6xl lg:text-7xl ${
+          className={`font-serif font-normal uppercase leading-[1.08] tracking-wide text-gradient-light ${
+            compact ? "text-3xl md:text-4xl lg:text-5xl" : "text-4xl md:text-6xl lg:text-7xl"
+          } ${
             align === "center" ? "mx-auto max-w-5xl" : "max-w-4xl"
           }`}
         >

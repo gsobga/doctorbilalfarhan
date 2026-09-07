@@ -76,7 +76,7 @@ function ProcedurePage() {
             <ArrowLeft className="h-3.5 w-3.5" />
             Procedure Library
           </Link>
-          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-accent">
             {procedure.category}
           </p>
           <h1 className="mt-4 font-serif text-3xl leading-tight lg:text-5xl">{procedure.name}</h1>
@@ -137,7 +137,7 @@ function ProcedurePage() {
         {/* Sidebar */}
         <aside className="lg:sticky lg:top-32 lg:self-start">
           <nav className="rounded-lg border border-border bg-card p-5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
               On this page
             </p>
             <ul className="mt-4 space-y-2">
@@ -175,6 +175,27 @@ function ProcedurePage() {
       </section>
 
       <FaqSection heading={`${procedure.shortName}: Frequently Asked Questions`} faqs={procedure.faqs} />
+
+      {/* Back to library */}
+      <section className="border-t border-border bg-secondary/40">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+          <Link
+            to="/procedures"
+            className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-card px-6 py-3 text-sm font-semibold text-primary transition-colors hover:border-accent/50"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to the Procedure Library
+          </Link>
+          <Link
+            to="/patient-education"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-accent"
+          >
+            Back to Patient Education
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
 
       {related.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 pb-20 lg:px-6">

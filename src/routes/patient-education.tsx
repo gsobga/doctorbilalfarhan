@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
+import { SymptomQuestionnaires } from "@/components/SymptomQuestionnaires";
 import { FaqSection } from "@/components/FaqSection";
 import { BOOKING_URL } from "@/lib/booking";
 import { procedures } from "@/lib/procedures";
@@ -182,6 +183,7 @@ function PatientEducationPage() {
         subtitle="Education organized by condition and procedure, so you can prepare for your visit, understand your choices, and know what to expect afterward."
         image={heroBg}
         align="left"
+        compact
         cta={{ label: "Request an Appointment", to: BOOKING_URL }}
       />
 
@@ -209,7 +211,7 @@ function PatientEducationPage() {
       <section id="conditions" className="scroll-mt-32 bg-secondary/50 py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-6">
           <Reveal>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
               Conditions
             </p>
             <h2 className="mt-4 font-serif text-3xl text-primary lg:text-4xl">
@@ -249,10 +251,31 @@ function PatientEducationPage() {
         </div>
       </section>
 
+      {/* Symptom questionnaires */}
+      <section id="questionnaires" className="scroll-mt-32 mx-auto max-w-6xl px-4 py-20 lg:px-6">
+        <Reveal>
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
+            Symptom Questionnaires
+          </p>
+          <h2 className="mt-4 font-serif text-3xl text-primary lg:text-4xl">
+            Score your symptoms before your visit
+          </h2>
+          <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+            These are the same validated questionnaires used in urology clinics. Fill one in
+            online, print or save it to your device, and bring it to your appointment.
+          </p>
+        </Reveal>
+        <Reveal delay={100}>
+          <div className="mt-8">
+            <SymptomQuestionnaires />
+          </div>
+        </Reveal>
+      </section>
+
       {/* Procedures */}
       <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
         <Reveal>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
             Procedures
           </p>
           <h2 className="mt-4 font-serif text-3xl text-primary lg:text-4xl">

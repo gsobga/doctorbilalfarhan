@@ -23,7 +23,6 @@ import { Route as MaleUrologyRouteImport } from './routes/male-urology'
 import { Route as PatientEducationRouteImport } from './routes/patient-education'
 import { Route as PelvicReconstructionRouteImport } from './routes/pelvic-reconstruction'
 import { Route as PreparingForYourProcedureRouteImport } from './routes/preparing-for-your-procedure'
-import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as SecondOpinionsRouteImport } from './routes/second-opinions'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as VoidingDysfunctionRouteImport } from './routes/voiding-dysfunction'
@@ -101,11 +100,6 @@ const PreparingForYourProcedureRoute =
     path: '/preparing-for-your-procedure',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ReviewsRoute = ReviewsRouteImport.update({
-  id: '/reviews',
-  path: '/reviews',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SecondOpinionsRoute = SecondOpinionsRouteImport.update({
   id: '/second-opinions',
   path: '/second-opinions',
@@ -147,7 +141,6 @@ export interface FileRoutesByFullPath {
   '/patient-education': typeof PatientEducationRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
   '/preparing-for-your-procedure': typeof PreparingForYourProcedureRoute
-  '/reviews': typeof ReviewsRoute
   '/second-opinions': typeof SecondOpinionsRoute
   '/videos': typeof VideosRoute
   '/voiding-dysfunction': typeof VoidingDysfunctionRoute
@@ -169,7 +162,6 @@ export interface FileRoutesByTo {
   '/patient-education': typeof PatientEducationRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
   '/preparing-for-your-procedure': typeof PreparingForYourProcedureRoute
-  '/reviews': typeof ReviewsRoute
   '/second-opinions': typeof SecondOpinionsRoute
   '/videos': typeof VideosRoute
   '/voiding-dysfunction': typeof VoidingDysfunctionRoute
@@ -192,7 +184,6 @@ export interface FileRoutesById {
   '/patient-education': typeof PatientEducationRoute
   '/pelvic-reconstruction': typeof PelvicReconstructionRoute
   '/preparing-for-your-procedure': typeof PreparingForYourProcedureRoute
-  '/reviews': typeof ReviewsRoute
   '/second-opinions': typeof SecondOpinionsRoute
   '/videos': typeof VideosRoute
   '/voiding-dysfunction': typeof VoidingDysfunctionRoute
@@ -216,7 +207,6 @@ export interface FileRouteTypes {
     | '/patient-education'
     | '/pelvic-reconstruction'
     | '/preparing-for-your-procedure'
-    | '/reviews'
     | '/second-opinions'
     | '/videos'
     | '/voiding-dysfunction'
@@ -238,7 +228,6 @@ export interface FileRouteTypes {
     | '/patient-education'
     | '/pelvic-reconstruction'
     | '/preparing-for-your-procedure'
-    | '/reviews'
     | '/second-opinions'
     | '/videos'
     | '/voiding-dysfunction'
@@ -260,7 +249,6 @@ export interface FileRouteTypes {
     | '/patient-education'
     | '/pelvic-reconstruction'
     | '/preparing-for-your-procedure'
-    | '/reviews'
     | '/second-opinions'
     | '/videos'
     | '/voiding-dysfunction'
@@ -283,7 +271,6 @@ export interface RootRouteChildren {
   PatientEducationRoute: typeof PatientEducationRoute
   PelvicReconstructionRoute: typeof PelvicReconstructionRoute
   PreparingForYourProcedureRoute: typeof PreparingForYourProcedureRoute
-  ReviewsRoute: typeof ReviewsRoute
   SecondOpinionsRoute: typeof SecondOpinionsRoute
   VideosRoute: typeof VideosRoute
   VoidingDysfunctionRoute: typeof VoidingDysfunctionRoute
@@ -391,13 +378,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PreparingForYourProcedureRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/reviews': {
-      id: '/reviews'
-      path: '/reviews'
-      fullPath: '/reviews'
-      preLoaderRoute: typeof ReviewsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/second-opinions': {
       id: '/second-opinions'
       path: '/second-opinions'
@@ -451,7 +431,6 @@ const rootRouteChildren: RootRouteChildren = {
   PatientEducationRoute: PatientEducationRoute,
   PelvicReconstructionRoute: PelvicReconstructionRoute,
   PreparingForYourProcedureRoute: PreparingForYourProcedureRoute,
-  ReviewsRoute: ReviewsRoute,
   SecondOpinionsRoute: SecondOpinionsRoute,
   VideosRoute: VideosRoute,
   VoidingDysfunctionRoute: VoidingDysfunctionRoute,

@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
@@ -100,17 +101,30 @@ function VoidingDysfunctionPage() {
           <div className="rounded-2xl bg-card p-8 shadow-sm">
             <h3 className="font-serif text-2xl">Procedures & Treatments</h3>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-              {[
-                  "Behavioral and medical therapy",
-                  "Bladder Botox",
-                  "Sacral neuromodulation",
-                  "Percutaneous nerve evaluation / neuromodulation trial",
-                  "Urodynamic testing",
-                  "Treatment of complex voiding dysfunction and urinary retention",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+              {(
+                [
+                  { label: "Behavioral and medical therapy" },
+                  { label: "Bladder Botox", to: "/procedures/bladder-botox" },
+                  { label: "Sacral neuromodulation", to: "/procedures/sacral-neuromodulation" },
+                  { label: "Percutaneous tibial nerve stimulation (PTNS)" },
+                  { label: "Implantable tibial nerve stimulation" },
+                  { label: "Urodynamic testing", to: "/procedures/urodynamics" },
+                  { label: "Treatment of complex voiding dysfunction and urinary retention" },
+                ] as { label: string; to?: string }[]
+              ).map((item) => (
+                <li key={item.label} className="flex items-start gap-2 text-sm text-foreground">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                  {item}
+                  {item.to ? (
+                    <Link
+                      to={item.to as string}
+                      className="group inline-flex items-center gap-1 font-medium text-primary underline-offset-4 transition-colors hover:text-accent hover:underline"
+                    >
+                      {item.label}
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0 text-accent transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  ) : (
+                    item.label
+                  )}
                 </li>
               ))}
             </ul>
@@ -185,7 +199,7 @@ function VoidingDysfunctionPage() {
               {
                 title: "Sacral Neuromodulation",
                 description:
-                  "InterStim and Axonics therapies to restore bladder and bowel control.",
+                  "A small implant that gently restores bladder and bowel control.",
               },
               {
                 title: "Bladder Botox",
