@@ -10,6 +10,9 @@ import maleUrologyImg from "@/assets/male-urology.jpg";
 import voidingImg from "@/assets/voiding-dysfunction.jpg";
 import pelvicImg from "@/assets/pelvic-reconstruction.jpg";
 import galleryLaser from "@/assets/gallery-laser.jpg";
+import conditionBphImg from "@/assets/condition-bph.jpg";
+import conditionMeshImg from "@/assets/condition-mesh.jpg";
+import conditionStrictureImg from "@/assets/condition-stricture.jpg";
 import galleryDiagnostics from "@/assets/gallery-diagnostics.jpg";
 import { Star, Phone, ArrowRight, ArrowUpRight } from "lucide-react";
 
@@ -104,7 +107,7 @@ const conditions = [
   {
     title: "Enlarged Prostate (BPH)",
     body: "Weak stream, incomplete emptying, night-time urination, and urinary retention.",
-    image: galleryLaser,
+    image: conditionBphImg,
     to: "/bph-holep",
   },
   {
@@ -122,7 +125,7 @@ const conditions = [
   {
     title: "Mesh Complications",
     body: "Pain, erosion, exposure, and obstruction after sling or prolapse mesh placement.",
-    image: pelvicImg,
+    image: conditionMeshImg,
     to: "/female-urology",
   },
   {
@@ -134,7 +137,7 @@ const conditions = [
   {
     title: "Urethral Stricture",
     body: "Recurrent narrowing, failed dilation, and reconstruction after prior surgery.",
-    image: pelvicImg,
+    image: conditionStrictureImg,
     to: "/pelvic-reconstruction",
   },
   {
