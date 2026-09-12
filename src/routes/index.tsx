@@ -293,11 +293,11 @@ function HomePage() {
               to={c.to}
               className="group w-[280px] shrink-0 snap-start sm:w-[320px]"
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-muted">
                 <img
                   src={c.image}
                   alt={c.title}
-                  className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                  className="max-h-full max-w-full object-contain transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                   loading="lazy"
                   width={480}
                   height={360}
@@ -347,16 +347,15 @@ function HomePage() {
               to={featuredTreatment.to}
               className="group grid overflow-hidden rounded-3xl bg-primary text-primary-foreground lg:grid-cols-2"
             >
-              <div className="relative min-h-[280px] overflow-hidden">
+              <div className="relative flex min-h-[280px] items-center justify-center overflow-hidden bg-primary/10">
                 <img
                   src={featuredTreatment.image}
                   alt={featuredTreatment.title}
-                  className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
+                  className="max-h-full max-w-full object-contain transition-transform duration-[1400ms] ease-out group-hover:scale-105"
                   loading="lazy"
                   width={800}
                   height={600}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-primary/70" />
               </div>
               <div className="p-10 lg:p-14">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
@@ -427,7 +426,7 @@ function HomePage() {
               <img
                 src={drFarhanImg}
                 alt="Dr. Bilal Farhan, fellowship-trained functional and reconstructive urologist in Houston"
-                className="w-full rounded-3xl object-cover shadow-xl"
+                className="w-full rounded-3xl object-contain shadow-xl"
                 width={600}
                 height={600}
                 loading="lazy"

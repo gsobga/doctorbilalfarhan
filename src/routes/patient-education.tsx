@@ -225,15 +225,17 @@ function PatientEducationPage() {
                   to={c.to}
                   className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/50"
                 >
-                  <img
-                    src={c.image}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-40 w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    width={1200}
-                    height={800}
-                    loading="lazy"
-                  />
+                  <div className="flex h-40 w-full items-center justify-center bg-muted">
+                    <img
+                      src={c.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-105"
+                      width={1200}
+                      height={800}
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="flex flex-1 flex-col p-6">
                     <h3 className="font-serif text-xl text-primary">{c.title}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">

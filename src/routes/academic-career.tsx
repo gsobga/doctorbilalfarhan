@@ -210,27 +210,31 @@ function AcademicCareerPage() {
             <Reveal delay={100}>
               <div className="grid gap-4">
                 <figure>
-                  <img
-                    src={teachingSimulation}
-                    alt="Dr. Farhan leading hands-on sacral neuromodulation simulation training with residents and faculty"
-                    className="h-56 w-full rounded-lg object-cover"
-                    width={1200}
-                    height={800}
-                    loading="lazy"
-                  />
+                  <div className="flex h-56 w-full items-center justify-center rounded-lg bg-muted">
+                    <img
+                      src={teachingSimulation}
+                      alt="Dr. Farhan leading hands-on sacral neuromodulation simulation training with residents and faculty"
+                      className="max-h-full max-w-full rounded-lg object-contain"
+                      width={1200}
+                      height={800}
+                      loading="lazy"
+                    />
+                  </div>
                   <figcaption className="mt-2 text-xs text-muted-foreground">
                     Hands-on simulation training with residents and faculty at UTMB.
                   </figcaption>
                 </figure>
                 <figure>
-                  <img
-                    src={researchPoster}
-                    alt="Dr. Farhan mentoring a medical student presenting a UTMB urology research poster"
-                    className="h-56 w-full rounded-lg object-cover"
-                    width={1200}
-                    height={800}
-                    loading="lazy"
-                  />
+                  <div className="flex h-56 w-full items-center justify-center rounded-lg bg-muted">
+                    <img
+                      src={researchPoster}
+                      alt="Dr. Farhan mentoring a medical student presenting a UTMB urology research poster"
+                      className="max-h-full max-w-full rounded-lg object-contain"
+                      width={1200}
+                      height={800}
+                      loading="lazy"
+                    />
+                  </div>
                   <figcaption className="mt-2 text-xs text-muted-foreground">
                     Mentoring medical student research in urology.
                   </figcaption>
@@ -255,14 +259,16 @@ function AcademicCareerPage() {
           {lectures.map((photo, i) => (
             <Reveal key={photo.src} delay={i * 60}>
               <figure>
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="h-60 w-full rounded-lg object-cover"
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                />
+                <div className="flex h-60 w-full items-center justify-center rounded-lg bg-muted">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="max-h-full max-w-full rounded-lg object-contain"
+                    width={1200}
+                    height={800}
+                    loading="lazy"
+                  />
+                </div>
                 <figcaption className="mt-2 text-xs text-muted-foreground">
                   {photo.caption}
                 </figcaption>
@@ -300,27 +306,31 @@ function AcademicCareerPage() {
           <Reveal>
             <div className="mb-10 grid gap-4 md:grid-cols-2">
               <figure>
-                <img
-                  src={lectureAswan}
-                  alt="Dr. Farhan delivering an invited urology lecture at an international conference"
-                  className="h-64 w-full rounded-lg object-cover"
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                />
+                <div className="flex h-64 w-full items-center justify-center rounded-lg bg-white/10">
+                  <img
+                    src={lectureAswan}
+                    alt="Dr. Farhan delivering an invited urology lecture at an international conference"
+                    className="max-h-full max-w-full rounded-lg object-contain"
+                    width={1200}
+                    height={800}
+                    loading="lazy"
+                  />
+                </div>
                 <figcaption className="mt-2 text-xs text-primary-foreground/70">
                   Invited international lecture on urology.
                 </figcaption>
               </figure>
               <figure>
-                <img
-                  src={teachingFascia}
-                  alt="Dr. Farhan teaching surgical technique during a panel discussion"
-                  className="h-64 w-full rounded-lg object-cover"
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                />
+                <div className="flex h-64 w-full items-center justify-center rounded-lg bg-white/10">
+                  <img
+                    src={teachingFascia}
+                    alt="Dr. Farhan teaching surgical technique during a panel discussion"
+                    className="max-h-full max-w-full rounded-lg object-contain"
+                    width={1200}
+                    height={800}
+                    loading="lazy"
+                  />
+                </div>
                 <figcaption className="mt-2 text-xs text-primary-foreground/70">
                   Teaching surgical technique during an expert panel discussion.
                 </figcaption>

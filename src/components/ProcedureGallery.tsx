@@ -112,15 +112,15 @@ export function ProcedureGallery({
                   aria-hidden={i !== index}
                   className="grid w-full shrink-0 gap-0 md:grid-cols-2"
                 >
-                  <div className="relative h-56 overflow-hidden sm:h-72 md:h-full md:min-h-[360px]">
+                  <div className="relative flex h-56 items-center justify-center overflow-hidden bg-black/20 sm:h-72 md:h-full md:min-h-[360px]">
                     <img
                       src={slide.image}
                       alt={slide.title}
                       loading="lazy"
                       width={1280}
                       height={960}
-                      className={`h-full w-full object-cover transition-transform duration-[6000ms] ease-out ${
-                        i === index && !reduced ? "scale-110" : "scale-100"
+                      className={`max-h-full max-w-full object-contain transition-transform duration-[6000ms] ease-out ${
+                        i === index && !reduced ? "scale-105" : "scale-100"
                       }`}
                     />
                     <span
