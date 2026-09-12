@@ -4,9 +4,9 @@ import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
-import galleryLaser from "@/assets/bph-holep-laser.jpg";
+import holepImage from "@/assets/bilal-holep.png.asset.json";
 import galleryRobotic from "@/assets/bph-greenlight.jpg";
-import galleryDiagnostics from "@/assets/bph-urodynamics.jpg";
+import urodynamicsImage from "@/assets/bilal-urodynamics.webp.asset.json";
 import galleryConsult from "@/assets/bph-consult.jpg";
 import maleUrologyImg from "@/assets/male-urology.jpg";
 
@@ -38,7 +38,7 @@ const slides = [
     category: "Holmium Laser Enucleation of the Prostate",
     description:
       "A size-independent, tissue-removing laser treatment for the enlarged prostate. HoLEP is well suited to large glands, patients in urinary retention, and men who want a durable result.",
-    image: galleryLaser,
+    image: holepImage.url,
     facts: [
       "250+ HoLEP procedures performed",
       "Effective for very large and complex prostates",
@@ -62,7 +62,7 @@ const slides = [
     category: "Diagnostics First",
     description:
       "Symptom scoring, uroflow, post-void residual, cystoscopy, imaging, and urodynamic testing when needed clarify whether obstruction, bladder dysfunction, or both are driving symptoms.",
-    image: galleryDiagnostics,
+    image: urodynamicsImage.url,
     facts: [
       "Distinguishes obstruction from bladder dysfunction",
       "Guides procedure selection",

@@ -9,7 +9,7 @@ import galleryLaser from "@/assets/stones-ureteroscopy.jpg";
 import galleryRobotic from "@/assets/stones-pcnl.jpg";
 import galleryDiagnostics from "@/assets/stones-diagnostics.jpg";
 import galleryConsult from "@/assets/stones-prevention.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+import kidneyStonesImage from "@/assets/bilal-kidney-stones.webp.asset.json";
 
 const description =
   "Advanced kidney stone surgery in Houston: ureteroscopy, laser lithotripsy, standard PCNL, mini-PCNL, and supine PCNL for large, recurrent, and complex stones, plus a plan to prevent the next stone.";
@@ -109,7 +109,7 @@ function StonesPage() {
         eyebrow="Advanced Endourology"
         title="Kidney Stone Disease"
         subtitle="Recurrent, large, and complex kidney and ureteral stones, treated with the approach that fits your anatomy, not a single default technique."
-        image={heroBg}
+        image={kidneyStonesImage.url}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
       />

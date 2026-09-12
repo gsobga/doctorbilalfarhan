@@ -6,9 +6,8 @@ import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
 import galleryRobotic from "@/assets/male-greenlight.jpg";
 import galleryDiagnostics from "@/assets/male-reconstruction.jpg";
-import galleryConsult from "@/assets/male-implant.jpg";
-import galleryLaser from "@/assets/male-holep.jpg";
-import maleUrologyImg from "@/assets/male-urology.jpg";
+import maleIncontinenceImage from "@/assets/bilal-male-incontinence.webp.asset.json";
+import holepImage from "@/assets/bilal-holep.png.asset.json";
 
 export const Route = createFileRoute("/male-urology")({
   head: () => ({
@@ -40,7 +39,7 @@ const slides = [
     title: "HoLEP",
     category: "Laser Prostate Surgery",
     description: "Holmium laser enucleation removes obstructing prostate tissue regardless of gland size, delivering durable relief with a very low retreatment rate. Dr. Farhan established the HoLEP service program at UTMB.",
-    image: galleryLaser,
+    image: holepImage.url,
     facts: ["Size-independent alternative to TURP", "Often a single overnight stay", "Low risk of needing repeat surgery"],
   },
   {
@@ -54,7 +53,7 @@ const slides = [
     title: "Artificial Urinary Sphincter & Male Sling",
     category: "Prosthetic Urology",
     description: "For post-prostatectomy or moderate-to-severe incontinence, an implanted sphincter or sling restores control and independence from pads.",
-    image: galleryConsult,
+    image: maleIncontinenceImage.url,
     facts: ["AUS for moderate to severe leakage", "Sling for mild to moderate cases", "Revision of failed prior implants"],
   },
   {
@@ -80,7 +79,7 @@ function MaleUrologyPage() {
         eyebrow="Urology for Men"
         title="Men's Health & Continence"
         subtitle="Artificial urinary sphincter, male sling, post-prostatectomy incontinence, BPH, and complex or revision continence reconstruction."
-        image={maleUrologyImg}
+        image={maleIncontinenceImage.url}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
         phone="346-414-3426"
       />
