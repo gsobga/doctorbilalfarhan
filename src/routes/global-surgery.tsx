@@ -94,15 +94,17 @@ function GlobalSurgeryPage() {
       {/* Photo layout */}
       <section className="mx-auto max-w-6xl px-4 pb-20 lg:px-6">
         <Reveal>
-          <figure className="flex h-[420px] w-full items-center justify-center rounded-lg bg-muted">
-            <img
-              src={teamFamilies.url}
-              alt="Dr. Farhan with local medical team and families during a humanitarian surgical mission"
-              className="max-h-full max-w-full rounded-lg object-contain"
-              width={1600}
-              height={900}
-              loading="lazy"
-            />
+          <figure>
+            <div className="flex h-[420px] w-full items-center justify-center rounded-lg bg-muted">
+              <img
+                src={teamFamilies.url}
+                alt="Dr. Farhan with local medical team and families during a humanitarian surgical mission"
+                className="max-h-full max-w-full rounded-lg object-contain"
+                width={1600}
+                height={900}
+                loading="lazy"
+              />
+            </div>
             <figcaption className="mt-2 text-xs text-muted-foreground">
               Dr. Farhan with local physicians, nurses, and families during a humanitarian surgical mission.
             </figcaption>
@@ -110,45 +112,51 @@ function GlobalSurgeryPage() {
         </Reveal>
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           <Reveal delay={80}>
-            <figure className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
-              <img
-                src={surgeryOr1.url}
-                alt="Operating room during a humanitarian surgical mission"
-                className="max-h-full max-w-full rounded-lg object-contain"
-                width={800}
-                height={1067}
-                loading="lazy"
-              />
+            <figure>
+              <div className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
+                <img
+                  src={surgeryOr1.url}
+                  alt="Operating room during a humanitarian surgical mission"
+                  className="max-h-full max-w-full rounded-lg object-contain"
+                  width={800}
+                  height={1067}
+                  loading="lazy"
+                />
+              </div>
               <figcaption className="mt-2 text-xs text-muted-foreground">
                 Operating alongside local surgical teams.
               </figcaption>
             </figure>
           </Reveal>
           <Reveal delay={140}>
-            <figure className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
-              <img
-                src={postopCare.url}
-                alt="Dr. Farhan providing postoperative care to a young patient"
-                className="max-h-full max-w-full rounded-lg object-contain"
-                width={800}
-                height={800}
-                loading="lazy"
-              />
+            <figure>
+              <div className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
+                <img
+                  src={postopCare.url}
+                  alt="Dr. Farhan providing postoperative care to a young patient"
+                  className="max-h-full max-w-full rounded-lg object-contain"
+                  width={800}
+                  height={800}
+                  loading="lazy"
+                />
+              </div>
               <figcaption className="mt-2 text-xs text-muted-foreground">
                 Postoperative care and recovery on the surgical mission.
               </figcaption>
             </figure>
           </Reveal>
           <Reveal delay={200}>
-            <figure className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
-              <img
-                src={surgeryOr2.url}
-                alt="Dr. Farhan operating with a local surgeon during a humanitarian mission"
-                className="max-h-full max-w-full rounded-lg object-contain"
-                width={800}
-                height={1067}
-                loading="lazy"
-              />
+            <figure>
+              <div className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
+                <img
+                  src={surgeryOr2.url}
+                  alt="Dr. Farhan operating with a local surgeon during a humanitarian mission"
+                  className="max-h-full max-w-full rounded-lg object-contain"
+                  width={800}
+                  height={1067}
+                  loading="lazy"
+                />
+              </div>
               <figcaption className="mt-2 text-xs text-muted-foreground">
                 Collaborative surgery with local colleagues.
               </figcaption>
