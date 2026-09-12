@@ -293,11 +293,11 @@ function HomePage() {
               to={c.to}
               className="group w-[280px] shrink-0 snap-start sm:w-[320px]"
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-muted">
                 <img
                   src={c.image}
                   alt={c.title}
-                  className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                  className="max-h-full max-w-full object-contain transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                   loading="lazy"
                   width={480}
                   height={360}
