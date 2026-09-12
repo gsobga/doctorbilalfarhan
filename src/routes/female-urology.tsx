@@ -4,9 +4,9 @@ import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
-import galleryRobotic from "@/assets/female-sling.jpg";
-import galleryDiagnostics from "@/assets/female-neuromodulation.jpg";
-import galleryConsult from "@/assets/female-botox.jpg";
+import femaleSlingImage from "@/assets/bilal-female-sling.webp.asset.json";
+import neuromodulationImage from "@/assets/bilal-sacral-neuromodulation.webp.asset.json";
+import bladderBotoxImage from "@/assets/bilal-bladder-botox.webp.asset.json";
 import galleryLaser from "@/assets/female-prolapse.jpg";
 import femaleUrologyImg from "@/assets/female-urology.jpg";
 
@@ -40,21 +40,21 @@ const slides = [
     title: "Bladder Botox",
     category: "In-Office Therapy",
     description: "OnabotulinumtoxinA injected into the bladder wall calms involuntary contractions that drive urgency, frequency, and leakage when medications fall short.",
-    image: galleryConsult,
+    image: bladderBotoxImage.url,
     facts: ["Performed in office under local anesthesia", "Typically 15-20 minutes", "Effect generally lasts 6-9 months"],
   },
   {
     title: "Sacral Neuromodulation",
     category: "Minimally Invasive Therapy",
     description: "A small implanted device gently modulates the sacral nerves that coordinate bladder function. Patients trial the therapy before committing to the full implant.",
-    image: galleryDiagnostics,
+    image: neuromodulationImage.url,
     facts: ["Two-stage test-then-implant approach", "Treats urgency incontinence and retention", "MRI-conditional, rechargeable options"],
   },
   {
     title: "Female Sling Surgery",
     category: "Outpatient Surgery",
     description: "Mesh and native-tissue sling options restore support beneath the urethra for stress urinary incontinence caused by childbirth, aging, or prior surgery.",
-    image: galleryRobotic,
+    image: femaleSlingImage.url,
     facts: ["About one hour; outpatient or overnight", "Mesh and mesh-free options discussed", "Most patients resume light activity in days"],
   },
   {
@@ -89,7 +89,7 @@ function FemaleUrologyPage() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
-              Female Continence, Prolapse & Mesh Complications
+              Female Urinary Incontinence and Pelvic Organ Prolapse
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
               Treatment includes surgical and non-surgical approaches individualized according to the type and severity of incontinence, anatomy, previous treatment or surgery, goals, and preferences.

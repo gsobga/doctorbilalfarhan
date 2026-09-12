@@ -5,14 +5,14 @@ import { Reveal } from "@/components/Reveal";
 import { AuroraBackground } from "@/components/AuroraBackground";
 import { StatCounter } from "@/components/StatCounter";
 import drFarhanImg from "@/assets/dr-farhan.jpg";
-import femaleUrologyImg from "@/assets/female-urology.jpg";
-import maleUrologyImg from "@/assets/male-urology.jpg";
 import voidingImg from "@/assets/voiding-dysfunction.jpg";
-import galleryLaser from "@/assets/feature-holep.jpg";
-import conditionBphImg from "@/assets/condition-bph.jpg";
-import conditionMeshImg from "@/assets/condition-mesh.jpg";
-import conditionStrictureImg from "@/assets/condition-stricture.jpg";
-import galleryDiagnostics from "@/assets/condition-kidney-stones.jpg";
+import holepImage from "@/assets/bilal-holep.png.asset.json";
+import bphImage from "@/assets/bilal-bph.webp.asset.json";
+import maleIncontinenceImage from "@/assets/bilal-male-incontinence.webp.asset.json";
+import femaleIncontinenceImage from "@/assets/bilal-female-incontinence.webp.asset.json";
+import meshImage from "@/assets/bilal-mesh-complications.webp.asset.json";
+import strictureImage from "@/assets/bilal-urethral-stricture.webp.asset.json";
+import kidneyStonesImage from "@/assets/bilal-kidney-stones.webp.asset.json";
 import { Star, Phone, ArrowRight, ArrowUpRight } from "lucide-react";
 
 const description =
@@ -106,25 +106,25 @@ const conditions = [
   {
     title: "Enlarged Prostate (BPH)",
     body: "Weak stream, incomplete emptying, night-time urination, and urinary retention.",
-    image: conditionBphImg,
+    image: bphImage.url,
     to: "/bph-holep",
   },
   {
-    title: "Male Incontinence",
+    title: "Male Urinary Incontinence",
     body: "Leakage after prostate surgery or radiation, and failed prior continence procedures.",
-    image: maleUrologyImg,
+    image: maleIncontinenceImage.url,
     to: "/male-urology",
   },
   {
-    title: "Female Incontinence",
+    title: "Female Urinary Incontinence",
     body: "Stress and mixed incontinence, recurrent leakage, and complex continence problems.",
-    image: femaleUrologyImg,
+    image: femaleIncontinenceImage.url,
     to: "/female-urology",
   },
   {
     title: "Mesh Complications",
     body: "Pain, erosion, exposure, and obstruction after sling or prolapse mesh placement.",
-    image: conditionMeshImg,
+    image: meshImage.url,
     to: "/female-urology",
   },
   {
@@ -136,13 +136,13 @@ const conditions = [
   {
     title: "Urethral Stricture",
     body: "Recurrent narrowing, failed dilation, and reconstruction after prior surgery.",
-    image: conditionStrictureImg,
+    image: strictureImage.url,
     to: "/pelvic-reconstruction",
   },
   {
     title: "Kidney Stones",
     body: "Routine, recurrent, and complex or large-volume stone disease.",
-    image: galleryDiagnostics,
+    image: kidneyStonesImage.url,
     to: "/kidney-stones",
   },
 ];
@@ -155,7 +155,7 @@ const featuredTreatment = {
     "HoLEP Center of Excellence",
     "Catheter-free for most patients within days",
   ],
-  image: galleryLaser,
+  image: holepImage.url,
   to: "/bph-holep",
 };
 

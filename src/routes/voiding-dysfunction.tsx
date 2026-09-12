@@ -5,7 +5,7 @@ import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
 import galleryRobotic from "@/assets/voiding-neuromodulation.jpg";
-import galleryDiagnostics from "@/assets/voiding-urodynamics.jpg";
+import urodynamicsImage from "@/assets/bilal-urodynamics.webp.asset.json";
 import galleryConsult from "@/assets/voiding-cystoscopy.jpg";
 import galleryLaser from "@/assets/voiding-botox.jpg";
 import voidingImg from "@/assets/voiding-dysfunction.jpg";
@@ -40,7 +40,7 @@ const slides = [
     title: "Urodynamic Testing",
     category: "Diagnostics",
     description: "Pressure-flow studies measure how the bladder stores and empties, distinguishing obstruction from underactivity and guiding treatment precisely.",
-    image: galleryDiagnostics,
+    image: urodynamicsImage.url,
     facts: ["Objective pressure and flow data", "Clarifies neurogenic vs obstructive causes", "Performed in office in under an hour"],
   },
   {

@@ -14,6 +14,8 @@
 - [x] Procedure pages: back-to-library links
 - [x] Patient Education: compact hero + interactive IPSS and OAB-V8 questionnaires (score, print/save)
 - [x] Preparing for Your Procedure: anesthesia call, fasting, catheter care updates
+- [x] Bilal-approved medical visuals added for HoLEP, BPH, male and female urinary incontinence, mesh complications, urethral stricture, kidney stones, urodynamics, bladder Botox, sacral neuromodulation, and female sling surgery
+- [x] Female section heading changed to "Female Urinary Incontinence and Pelvic Organ Prolapse"
 
 ## Pending (need from Dr. Farhan)
 - [ ] Authentic patient reviews + written permissions
