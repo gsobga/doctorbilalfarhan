@@ -347,11 +347,11 @@ function HomePage() {
               to={featuredTreatment.to}
               className="group grid overflow-hidden rounded-3xl bg-primary text-primary-foreground lg:grid-cols-2"
             >
-              <div className="relative min-h-[280px] overflow-hidden">
+              <div className="relative flex min-h-[280px] items-center justify-center overflow-hidden bg-primary/20">
                 <img
                   src={featuredTreatment.image}
                   alt={featuredTreatment.title}
-                  className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
+                  className="max-h-full max-w-full object-contain transition-transform duration-[1400ms] ease-out group-hover:scale-105"
                   loading="lazy"
                   width={800}
                   height={600}
