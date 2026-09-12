@@ -7,7 +7,7 @@ import { FaqSection } from "@/components/FaqSection";
 import femaleSlingImage from "@/assets/bilal-female-sling.webp.asset.json";
 import neuromodulationImage from "@/assets/bilal-sacral-neuromodulation.webp.asset.json";
 import bladderBotoxImage from "@/assets/bilal-bladder-botox.webp.asset.json";
-import galleryLaser from "@/assets/female-prolapse.jpg";
+import meshComplicationsImage from "@/assets/bilal-mesh-complications.webp.asset.json";
 import femaleUrologyImg from "@/assets/female-urology.jpg";
 
 export const Route = createFileRoute("/female-urology")({
@@ -61,7 +61,7 @@ const slides = [
     title: "Prolapse Repair & Reconstruction",
     category: "Advanced Surgery",
     description: "Vaginal, laparoscopic, and robotic approaches rebuild pelvic support for cystocele, rectocele, uterine, and vault prolapse, including revision of failed prior repairs.",
-    image: galleryLaser,
+    image: meshComplicationsImage.url,
     facts: ["Native tissue and graft-based techniques", "Robotic sacrocolpopexy available", "Combined continence repair when indicated"],
   },
 ];
