@@ -128,7 +128,7 @@ function AboutPage() {
             <img
               src={drFarhanImg}
               alt="Dr. Bilal Farhan, MD, FACS"
-              className="w-full rounded-2xl object-cover shadow-xl"
+              className="w-full rounded-2xl object-contain shadow-xl"
               width={600}
               height={600}
             />
