@@ -94,11 +94,11 @@ function GlobalSurgeryPage() {
       {/* Photo layout */}
       <section className="mx-auto max-w-6xl px-4 pb-20 lg:px-6">
         <Reveal>
-          <figure>
+          <figure className="flex h-[420px] w-full items-center justify-center rounded-lg bg-muted">
             <img
               src={teamFamilies.url}
               alt="Dr. Farhan with local medical team and families during a humanitarian surgical mission"
-              className="h-[420px] w-full rounded-lg object-cover"
+              className="max-h-full max-w-full rounded-lg object-contain"
               width={1600}
               height={900}
               loading="lazy"
@@ -110,11 +110,11 @@ function GlobalSurgeryPage() {
         </Reveal>
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           <Reveal delay={80}>
-            <figure>
+            <figure className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
               <img
                 src={surgeryOr1.url}
                 alt="Operating room during a humanitarian surgical mission"
-                className="h-72 w-full rounded-lg object-cover"
+                className="max-h-full max-w-full rounded-lg object-contain"
                 width={800}
                 height={1067}
                 loading="lazy"
@@ -125,11 +125,11 @@ function GlobalSurgeryPage() {
             </figure>
           </Reveal>
           <Reveal delay={140}>
-            <figure>
+            <figure className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
               <img
                 src={postopCare.url}
                 alt="Dr. Farhan providing postoperative care to a young patient"
-                className="h-72 w-full rounded-lg object-cover"
+                className="max-h-full max-w-full rounded-lg object-contain"
                 width={800}
                 height={800}
                 loading="lazy"
@@ -140,11 +140,11 @@ function GlobalSurgeryPage() {
             </figure>
           </Reveal>
           <Reveal delay={200}>
-            <figure>
+            <figure className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
               <img
                 src={surgeryOr2.url}
                 alt="Dr. Farhan operating with a local surgeon during a humanitarian mission"
-                className="h-72 w-full rounded-lg object-cover"
+                className="max-h-full max-w-full rounded-lg object-contain"
                 width={800}
                 height={1067}
                 loading="lazy"
