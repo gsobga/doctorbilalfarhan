@@ -426,7 +426,7 @@ function HomePage() {
               <img
                 src={drFarhanImg}
                 alt="Dr. Bilal Farhan, fellowship-trained functional and reconstructive urologist in Houston"
-                className="w-full rounded-3xl object-cover shadow-xl"
+                className="w-full rounded-3xl object-contain shadow-xl"
                 width={600}
                 height={600}
                 loading="lazy"
