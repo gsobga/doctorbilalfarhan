@@ -209,11 +209,11 @@ function AcademicCareerPage() {
 
             <Reveal delay={100}>
               <div className="grid gap-4">
-                <figure>
+                <figure className="flex h-56 w-full items-center justify-center rounded-lg bg-muted">
                   <img
                     src={teachingSimulation}
                     alt="Dr. Farhan leading hands-on sacral neuromodulation simulation training with residents and faculty"
-                    className="h-56 w-full rounded-lg object-cover"
+                    className="max-h-full max-w-full rounded-lg object-contain"
                     width={1200}
                     height={800}
                     loading="lazy"
@@ -222,11 +222,11 @@ function AcademicCareerPage() {
                     Hands-on simulation training with residents and faculty at UTMB.
                   </figcaption>
                 </figure>
-                <figure>
+                <figure className="flex h-56 w-full items-center justify-center rounded-lg bg-muted">
                   <img
                     src={researchPoster}
                     alt="Dr. Farhan mentoring a medical student presenting a UTMB urology research poster"
-                    className="h-56 w-full rounded-lg object-cover"
+                    className="max-h-full max-w-full rounded-lg object-contain"
                     width={1200}
                     height={800}
                     loading="lazy"
