@@ -4,10 +4,10 @@ import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
-import galleryRobotic from "@/assets/voiding-neuromodulation.jpg";
 import urodynamicsImage from "@/assets/bilal-urodynamics.webp.asset.json";
 import galleryConsult from "@/assets/voiding-cystoscopy.jpg";
-import galleryLaser from "@/assets/voiding-botox.jpg";
+import bladderBotoxImage from "@/assets/bilal-bladder-botox.webp.asset.json";
+import neuromodulationImage from "@/assets/bilal-sacral-neuromodulation.webp.asset.json";
 import voidingImg from "@/assets/voiding-dysfunction.jpg";
 
 export const Route = createFileRoute("/voiding-dysfunction")({
@@ -51,18 +51,18 @@ const slides = [
     facts: ["Local anesthetic, office based", "Immediate visual diagnosis", "Guides same-day treatment planning"],
   },
   {
-    title: "Neuromodulation & Bladder Botox",
+    title: "Bladder Botox",
     category: "Therapy",
-    description: "Sacral neuromodulation and bladder Botox retrain or relax an overactive or poorly coordinated bladder, often reducing or eliminating catheter dependence.",
-    image: galleryLaser,
-    facts: ["Test phase before permanent implant", "Botox repeated every 6-9 months", "Also helps refractory urgency and retention"],
+    description: "Targeted injections relax an overactive or poorly coordinated bladder, helping reduce urgency, frequency, and leakage when medications are not enough.",
+    image: bladderBotoxImage.url,
+    facts: ["Performed through a small cystoscope", "Typically completed in the office", "Effects commonly last 6-9 months"],
   },
   {
-    title: "Reconstruction & Catheter-Free Solutions",
-    category: "Surgery",
-    description: "When outlet obstruction, stricture, or neurogenic disease limits emptying, reconstructive surgery and diversion options restore safe, independent voiding.",
-    image: galleryRobotic,
-    facts: ["Urethroplasty for stricture disease", "Options to reduce catheter dependence", "Long-term monitoring of kidney safety"],
+    title: "Sacral Neuromodulation",
+    category: "Therapy",
+    description: "A small implanted device gently modulates the sacral nerves that coordinate bladder function, with a test phase before the full implant.",
+    image: neuromodulationImage.url,
+    facts: ["Test phase before permanent implant", "Used for urgency, leakage, and retention", "Reversible therapy"],
   },
 ];
 

@@ -9,6 +9,8 @@ import galleryDiagnostics from "@/assets/pelvic-imaging.jpg";
 import galleryConsult from "@/assets/pelvic-endoscopic.jpg";
 import galleryLaser from "@/assets/pelvic-urethroplasty.jpg";
 import pelvicImg from "@/assets/pelvic-reconstruction.jpg";
+import strictureImage from "@/assets/bilal-urethral-stricture.webp.asset.json";
+import meshImage from "@/assets/bilal-mesh-complications.webp.asset.json";
 
 export const Route = createFileRoute("/pelvic-reconstruction")({
   head: () => ({
@@ -40,7 +42,7 @@ const slides = [
     title: "Urethroplasty",
     category: "Urethral Reconstruction",
     description: "Excisional and buccal mucosal graft repairs rebuild the urethra for stricture disease, trauma, and failed prior endoscopic treatment.",
-    image: galleryRobotic,
+    image: strictureImage.url,
     facts: ["Durable alternative to repeat dilation", "Graft harvested from inner cheek", "Tailored to stricture length and location"],
   },
   {
@@ -54,7 +56,7 @@ const slides = [
     title: "Revision Sling & Mesh Surgery",
     category: "Complication Care",
     description: "Excision and revision for pain, erosion, obstruction, or recurrent leakage after prior sling or mesh procedures performed elsewhere.",
-    image: galleryLaser,
+    image: meshImage.url,
     facts: ["Partial or complete mesh excision", "Simultaneous continence restoration", "Second-opinion evaluations welcome"],
   },
   {
