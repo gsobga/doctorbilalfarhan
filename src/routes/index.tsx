@@ -347,7 +347,7 @@ function HomePage() {
               to={featuredTreatment.to}
               className="group grid overflow-hidden rounded-3xl bg-primary text-primary-foreground lg:grid-cols-2"
             >
-              <div className="relative flex min-h-[280px] items-center justify-center overflow-hidden bg-primary/20">
+              <div className="relative flex min-h-[280px] items-center justify-center overflow-hidden bg-primary/10">
                 <img
                   src={featuredTreatment.image}
                   alt={featuredTreatment.title}
@@ -356,7 +356,6 @@ function HomePage() {
                   width={800}
                   height={600}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-primary/70" />
               </div>
               <div className="p-10 lg:p-14">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
