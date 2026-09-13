@@ -14,11 +14,13 @@ import panelAswanAsset from "@/assets/panel-aswan-2025.jpg.asset.json";
 import lectureIcsAsset from "@/assets/lecture-ics-abudhabi.jpg.asset.json";
 import researchUciAsset from "@/assets/research-poster-uci.jpg.asset.json";
 import conferenceAswanAsset from "@/assets/conference-aswan-2024.jpg.asset.json";
+import teachingAwardAsset from "@/assets/utmb-teaching-award.jpg.asset.json";
 
 const teachingSimulation = teachingSimulationAsset.url;
 const researchPoster = researchPosterAsset.url;
 const lectureAswan = lectureAswanAsset.url;
 const teachingFascia = teachingFasciaAsset.url;
+const teachingAward = teachingAwardAsset.url;
 
 const lectures = [
   {
@@ -308,8 +310,8 @@ function AcademicCareerPage() {
               <figure>
                 <div className="flex h-64 w-full items-center justify-center rounded-lg bg-white/10">
                   <img
-                    src={lectureAswan}
-                    alt="Dr. Farhan delivering an invited urology lecture at an international conference"
+                    src={teachingAward}
+                    alt="Dr. Farhan holding a UTMB Outstanding Urology Teacher award plaque with colleagues"
                     className="max-h-full max-w-full rounded-lg object-contain"
                     width={1200}
                     height={800}
@@ -317,7 +319,7 @@ function AcademicCareerPage() {
                   />
                 </div>
                 <figcaption className="mt-2 text-xs text-primary-foreground/70">
-                  Invited international lecture on urology.
+                  UTMB teaching award, Academy of Master Clinicians recognition.
                 </figcaption>
               </figure>
               <figure>
@@ -358,12 +360,20 @@ function AcademicCareerPage() {
               </blockquote>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/awards"
+              <a
+                href="https://www.utmb.edu/fgp/newsletter/article/newsletter/2023/03/09/amc-clinician-of-the-month-bilal-farhan-md-facs"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground"
               >
+                Read UTMB&apos;s Clinician of the Month feature
+                <ExternalLink className="h-4 w-4" />
+              </a>
+              <Link
+                to="/awards"
+                className="inline-flex items-center gap-2 rounded-md border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              >
                 Awards &amp; Recognition
-                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/global-surgery"

@@ -1,9 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Award, BadgeCheck, GraduationCap, ShieldCheck, Star } from "lucide-react";
+import { Award, BadgeCheck, ExternalLink, GraduationCap, ShieldCheck, Star } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { BOOKING_URL } from "@/lib/booking";
 import heroBg from "@/assets/hero-bg.jpg";
+import teachingAwardAsset from "@/assets/utmb-teaching-award.jpg.asset.json";
+
+const teachingAward = teachingAwardAsset.url;
 
 const description =
   "Awards and recognition for Bilal Farhan, MD, FACS: Texas Super Doctors 2023, 2024, and 2025, UTMB teaching recognition, Academy of Master Clinicians, and Centers of Excellence in HoLEP, artificial urinary sphincter, GreenLight, and female sling.";
@@ -90,6 +93,51 @@ function AwardsPage() {
         align="left"
         cta={{ label: "Request an Appointment", to: BOOKING_URL }}
       />
+
+      {/* Featured UTMB recognition */}
+      <section className="bg-secondary/50 py-20">
+        <div className="mx-auto max-w-6xl px-4 lg:px-6">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <Reveal>
+              <div className="flex h-80 w-full items-center justify-center rounded-lg bg-muted">
+                <img
+                  src={teachingAward}
+                  alt="Dr. Farhan holding a UTMB Outstanding Urology Teacher award plaque with colleagues"
+                  className="max-h-full max-w-full rounded-lg object-contain"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                />
+              </div>
+              <p className="mt-2 text-xs text-muted-foreground">
+                Dr. Farhan recognized by UTMB&apos;s Academy of Master Clinicians.
+              </p>
+            </Reveal>
+            <Reveal delay={100}>
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
+                Featured Recognition
+              </p>
+              <h2 className="mt-4 font-serif text-3xl text-primary lg:text-4xl">
+                Academy of Master Clinicians — Clinician of the Month
+              </h2>
+              <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
+                In March 2023, UTMB&apos;s Faculty Group Practice highlighted Dr. Farhan as the
+                Academy of Master Clinicians&apos; Clinician of the Month, recognizing his clinical
+                excellence and dedication to patient care.
+              </p>
+              <a
+                href="https://www.utmb.edu/fgp/newsletter/article/newsletter/2023/03/09/amc-clinician-of-the-month-bilal-farhan-md-facs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
+              >
+                Read the UTMB feature
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </Reveal>
+          </div>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-4 py-20 lg:px-6">
         <div className="grid gap-6 md:grid-cols-2">
