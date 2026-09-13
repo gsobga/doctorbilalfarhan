@@ -14,11 +14,13 @@ import panelAswanAsset from "@/assets/panel-aswan-2025.jpg.asset.json";
 import lectureIcsAsset from "@/assets/lecture-ics-abudhabi.jpg.asset.json";
 import researchUciAsset from "@/assets/research-poster-uci.jpg.asset.json";
 import conferenceAswanAsset from "@/assets/conference-aswan-2024.jpg.asset.json";
+import teachingAwardAsset from "@/assets/utmb-teaching-award.jpg.asset.json";
 
 const teachingSimulation = teachingSimulationAsset.url;
 const researchPoster = researchPosterAsset.url;
 const lectureAswan = lectureAswanAsset.url;
 const teachingFascia = teachingFasciaAsset.url;
+const teachingAward = teachingAwardAsset.url;
 
 const lectures = [
   {

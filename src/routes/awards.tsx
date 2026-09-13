@@ -4,6 +4,9 @@ import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { BOOKING_URL } from "@/lib/booking";
 import heroBg from "@/assets/hero-bg.jpg";
+import teachingAwardAsset from "@/assets/utmb-teaching-award.jpg.asset.json";
+
+const teachingAward = teachingAwardAsset.url;
 
 const description =
   "Awards and recognition for Bilal Farhan, MD, FACS: Texas Super Doctors 2023, 2024, and 2025, UTMB teaching recognition, Academy of Master Clinicians, and Centers of Excellence in HoLEP, artificial urinary sphincter, GreenLight, and female sling.";
