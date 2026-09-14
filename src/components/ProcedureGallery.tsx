@@ -72,14 +72,7 @@ export function ProcedureGallery({
 
   return (
     <section className="relative overflow-hidden bg-hero py-20 text-hero-foreground">
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 grid-field opacity-40 motion-safe:animate-grid"
-      />
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 aurora-field opacity-30 motion-safe:animate-aurora"
-      />
+      <span aria-hidden="true" className="pointer-events-none absolute inset-0 grid-field opacity-20" />
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-6">
         <p className="text-[11px] uppercase tracking-[0.35em] text-hero-foreground/70">
@@ -99,7 +92,7 @@ export function ProcedureGallery({
           onKeyDown={onKeyDown}
           onMouseEnter={() => setPlaying(false)}
           onMouseLeave={() => setPlaying(true)}
-          className="mt-10 rounded-lg glass-dark p-3 outline-none focus-visible:ring-2 focus-visible:ring-glow/70 sm:p-4"
+          className="mt-10 rounded-lg border border-hero-foreground/15 bg-hero p-3 outline-none focus-visible:ring-2 focus-visible:ring-accent sm:p-4"
         >
           <div className="relative overflow-hidden rounded-md">
             <div
@@ -119,15 +112,15 @@ export function ProcedureGallery({
                       loading="lazy"
                       width={1280}
                       height={960}
-                      className={`max-h-full max-w-full object-contain transition-transform duration-[6000ms] ease-out ${
-                        i === index && !reduced ? "scale-105" : "scale-100"
+                      className={`max-h-full max-w-full object-contain transition-transform duration-700 ease-out ${
+                        i === index && !reduced ? "scale-[1.02]" : "scale-100"
                       }`}
                     />
                     <span
                       aria-hidden="true"
                       className="pointer-events-none absolute inset-0 bg-gradient-to-t from-hero/80 via-hero/10 to-transparent"
                     />
-                    <span className="absolute left-4 top-4 rounded-full bg-black/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+                    <span className="absolute left-4 top-4 rounded-full bg-hero/80 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-hero-foreground backdrop-blur-sm">
                       {slide.category}
                     </span>
                   </div>
@@ -160,7 +153,7 @@ export function ProcedureGallery({
               type="button"
               onClick={() => go(index - 1)}
               aria-label="Previous procedure"
-              className="rounded-full border border-white/25 p-2 text-white/90 transition-colors hover:bg-white/15"
+              className="min-h-11 min-w-11 rounded-full border border-hero-foreground/25 p-2 text-hero-foreground transition-colors hover:bg-hero-foreground/10"
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
@@ -168,7 +161,7 @@ export function ProcedureGallery({
               type="button"
               onClick={() => go(index + 1)}
               aria-label="Next procedure"
-              className="rounded-full border border-white/25 p-2 text-white/90 transition-colors hover:bg-white/15"
+              className="min-h-11 min-w-11 rounded-full border border-hero-foreground/25 p-2 text-hero-foreground transition-colors hover:bg-hero-foreground/10"
             >
               <ArrowRight className="h-4 w-4" />
             </button>
@@ -203,7 +196,7 @@ export function ProcedureGallery({
                 type="button"
                 onClick={() => setPlaying((p) => !p)}
                 aria-label={playing ? "Pause gallery" : "Play gallery"}
-                className="rounded-full border border-white/25 p-2 text-white/90 transition-colors hover:bg-white/15"
+                  className="min-h-11 min-w-11 rounded-full border border-hero-foreground/25 p-2 text-hero-foreground transition-colors hover:bg-hero-foreground/10"
               >
                 {playing ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
               </button>

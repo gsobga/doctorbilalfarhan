@@ -13,7 +13,7 @@ export function Footer() {
               CLS Health
             </p>
             <p className="mt-1 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Advanced Urology Clinic
+              Center for Advanced Urology · CLS Health
             </p>
               <span className="mt-3 block font-serif text-2xl tracking-wide">
                 Bilal Farhan, MD, FACS
@@ -39,7 +39,7 @@ export function Footer() {
                 <Link to="/bph-holep" className="hover:text-white">BPH & HoLEP</Link>
               </li>
               <li>
-                <Link to="/male-urology" className="hover:text-white">Men's Health &amp; Continence</Link>
+                <Link to="/male-urology" className="hover:text-white">Male Urinary Incontinence</Link>
               </li>
               <li>
                 <Link to="/female-urology" className="hover:text-white">Women's Health</Link>
@@ -69,7 +69,7 @@ export function Footer() {
                 <Link to="/videos" className="hover:text-white">Educational Videos</Link>
               </li>
               <li>
-                <Link to="/academic-career" className="hover:text-white">Academic Career at UTMB</Link>
+                 <Link to="/academic-career" className="hover:text-white">Academic Career</Link>
               </li>
               <li>
                 <Link to="/awards" className="hover:text-white">Awards & Recognition</Link>
@@ -129,7 +129,7 @@ export function Footer() {
                 <span>In-person and telehealth appointments available</span>
               </li>
               <li className="text-background/60">
-                Mon–Fri 7 AM–7 PM · Sat 9 AM–1 PM · Sun closed
+                Mon–Fri 7 AM–5 PM · Sat 9 AM–1 PM · Sun closed
               </li>
             </ul>
             <div className="mt-8">

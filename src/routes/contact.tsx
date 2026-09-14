@@ -135,7 +135,7 @@ function ContactPage() {
                 <div>
                   <p className="font-medium text-foreground">Office Hours</p>
                   <p className="text-sm text-muted-foreground">
-                    Monday – Friday: 7:00 AM – 7:00 PM
+                    Monday – Friday: 7:00 AM – 5:00 PM
                     <br />
                     Saturday: 9:00 AM – 1:00 PM
                     <br />
