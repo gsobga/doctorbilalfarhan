@@ -176,24 +176,25 @@ function MaleUrologyPage() {
                 title: "Artificial Urinary Sphincter",
                 description:
                   "Implanted control for moderate to severe urinary leakage.",
-                to: "/procedures/artificial-urinary-sphincter",
+                slug: "artificial-urinary-sphincter",
               },
               {
                 title: "Male Sling Surgery",
                 description:
                   "A pump-free option for selected mild to moderate stress incontinence.",
-                to: "/procedures/male-sling",
+                slug: "male-sling",
               },
               {
                 title: "Urethroplasty",
                 description:
                   "Complex reconstructive surgery for urethral stricture disease.",
-                to: "/procedures/urethroplasty",
+                slug: "urethroplasty",
               },
             ] as const).map((treatment) => (
               <Link
                 key={treatment.title}
-                to={treatment.to}
+                to="/procedures/$slug"
+                params={{ slug: treatment.slug }}
                 className="group rounded-sm border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-md"
               >
                 <h3 className="font-serif text-xl text-foreground">{treatment.title}</h3>

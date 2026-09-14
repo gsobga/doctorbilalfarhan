@@ -191,24 +191,25 @@ function FemaleUrologyPage() {
                 title: "Bladder Botox",
                 description:
                   "Injections to calm an overactive bladder and reduce urgency and leakage.",
-                to: "/procedures/bladder-botox",
+                slug: "bladder-botox",
               },
               {
                 title: "Sacral Neuromodulation",
                 description:
                   "A minimally invasive therapy that gently restores communication between the bladder and the nerves that control it.",
-                to: "/procedures/sacral-neuromodulation",
+                slug: "sacral-neuromodulation",
               },
               {
                 title: "Female Sling Surgery",
                 description:
                   "Mesh and non-mesh sling options for stress urinary incontinence.",
-                to: "/procedures/midurethral-sling",
+                slug: "midurethral-sling",
               },
             ] as const).map((treatment) => (
               <Link
                 key={treatment.title}
-                to={treatment.to}
+                to="/procedures/$slug"
+                params={{ slug: treatment.slug }}
                 className="group rounded-sm border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-md"
               >
                 <h3 className="font-serif text-xl text-foreground">{treatment.title}</h3>

@@ -190,24 +190,25 @@ function VoidingDysfunctionPage() {
                 title: "Urodynamic Testing",
                 description:
                   "Comprehensive bladder function studies to pinpoint the cause of symptoms.",
-                to: "/procedures/urodynamics",
+                slug: "urodynamics",
               },
               {
                 title: "Sacral Neuromodulation",
                 description:
                   "A small implant that gently restores bladder and bowel control.",
-                to: "/procedures/sacral-neuromodulation",
+                slug: "sacral-neuromodulation",
               },
               {
                 title: "Bladder Botox",
                 description:
                   "Targeted injections to relax an overactive or spastic bladder.",
-                to: "/procedures/bladder-botox",
+                slug: "bladder-botox",
               },
             ] as const).map((treatment) => (
               <Link
                 key={treatment.title}
-                to={treatment.to}
+                to="/procedures/$slug"
+                params={{ slug: treatment.slug }}
                 className="group rounded-sm border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-md"
               >
                 <h3 className="font-serif text-xl text-foreground">{treatment.title}</h3>
