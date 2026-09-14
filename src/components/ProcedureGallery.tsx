@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { useMotion } from "@/components/MotionProvider";
+import { Button } from "@/components/ui/button";
 
 export type ProcedureSlide = {
   title: string;
@@ -149,32 +150,37 @@ export function ProcedureGallery({
 
           {/* Controls */}
           <div className="mt-4 flex flex-wrap items-center gap-3 px-1">
-            <button
+            <Button
               type="button"
               onClick={() => go(index - 1)}
               aria-label="Previous procedure"
+              variant="ghost"
+              size="icon"
               className="min-h-11 min-w-11 rounded-full border border-hero-foreground/25 p-2 text-hero-foreground transition-colors hover:bg-hero-foreground/10"
             >
               <ArrowLeft className="h-4 w-4" />
-            </button>
-            <button
+            </Button>
+            <Button
               type="button"
               onClick={() => go(index + 1)}
               aria-label="Next procedure"
+              variant="ghost"
+              size="icon"
               className="min-h-11 min-w-11 rounded-full border border-hero-foreground/25 p-2 text-hero-foreground transition-colors hover:bg-hero-foreground/10"
             >
               <ArrowRight className="h-4 w-4" />
-            </button>
+            </Button>
 
             <div className="flex flex-1 items-center gap-2">
               {slides.map((slide, i) => (
-                <button
+                <Button
                   key={slide.title}
                   type="button"
                   onClick={() => go(i)}
                   aria-label={`Show ${slide.title}`}
                   aria-current={i === index}
-                  className="group relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/20"
+                  variant="ghost"
+                  className="group relative min-h-11 flex-1 overflow-hidden rounded-full bg-hero-foreground/20 p-0"
                 >
                   <span
                     className="absolute inset-y-0 left-0 rounded-full bg-accent"
@@ -187,19 +193,21 @@ export function ProcedureGallery({
                             : "0%",
                     }}
                   />
-                </button>
+                </Button>
               ))}
             </div>
 
             {!reduced && (
-              <button
+              <Button
                 type="button"
                 onClick={() => setPlaying((p) => !p)}
                 aria-label={playing ? "Pause gallery" : "Play gallery"}
+                  variant="ghost"
+                  size="icon"
                   className="min-h-11 min-w-11 rounded-full border border-hero-foreground/25 p-2 text-hero-foreground transition-colors hover:bg-hero-foreground/10"
               >
                 {playing ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-              </button>
+              </Button>
             )}
           </div>
         </div>

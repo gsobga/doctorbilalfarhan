@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
+import { Button } from "@/components/ui/button";
 
 const navItems = [
   { label: "Home", to: "/" },
@@ -109,15 +110,17 @@ export function Header() {
         </div>
 
         {/* Mobile menu button */}
-        <button
+        <Button
           onClick={() => setMobileOpen(!mobileOpen)}
           type="button"
+          variant="ghost"
+          size="icon"
           className="min-h-11 min-w-11 p-2 text-primary-foreground xl:hidden"
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        </Button>
       </div>
 
       {/* Desktop nav row */}
@@ -169,7 +172,9 @@ export function Header() {
             {navItems.map((item) =>
               item.children ? (
                 <div key={item.label}>
-                  <button
+                  <Button
+                    type="button"
+                    variant="ghost"
                     onClick={() =>
                       setOpenDropdown(openDropdown === item.label ? null : item.label)
                     }
@@ -180,7 +185,7 @@ export function Header() {
                     <ChevronDown
                       className={`h-4 w-4 transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`}
                     />
-                  </button>
+                  </Button>
                   {openDropdown === item.label && (
                     <div className="pl-4">
                       {item.children.map((child) => (
