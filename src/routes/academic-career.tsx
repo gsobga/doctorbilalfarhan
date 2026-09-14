@@ -284,15 +284,13 @@ function AcademicCareerPage() {
         </Reveal>
         <ol className="mt-10 space-y-8 border-l border-border pl-8">
           {timeline.map((item, i) => (
-            <Reveal key={item.year} delay={i * 60} as="li">
-              <li className="relative">
+            <Reveal key={item.year} delay={i * 60} as="li" className="relative">
                 <span className="absolute -left-[41px] top-2 h-3 w-3 rounded-full border-2 border-accent bg-background" />
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                   {item.year}
                 </p>
                 <h3 className="mt-2 font-serif text-xl text-primary">{item.title}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{item.body}</p>
-              </li>
             </Reveal>
           ))}
         </ol>
