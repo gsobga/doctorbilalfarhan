@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ExternalLink, Globe2, HeartHandshake, Users } from "lucide-react";
+import { Globe2, HeartHandshake, Users } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { StatCounter } from "@/components/StatCounter";
@@ -9,6 +9,7 @@ import teamFamilies from "@/assets/global-team-families.jpg.asset.json";
 import surgeryOr1 from "@/assets/global-surgery-or-1.jpg.asset.json";
 import postopCare from "@/assets/global-postop-care.jpg.asset.json";
 import surgeryOr2 from "@/assets/global-surgery-or-2.jpg.asset.json";
+import { ImageLightbox } from "@/components/ImageLightbox";
 
 const description =
   "Global surgery and humanitarian service. Dr. Bilal Farhan has performed more than 200 surgeries across multiple specialties in Africa, working alongside local physicians, nurses, and surgical teams in resource-limited settings.";
@@ -95,16 +96,13 @@ function GlobalSurgeryPage() {
       <section className="mx-auto max-w-6xl px-4 pb-20 lg:px-6">
         <Reveal>
           <figure>
-            <div className="flex h-[420px] w-full items-center justify-center rounded-lg bg-muted">
-              <img
-                src={teamFamilies.url}
-                alt="Dr. Farhan with local medical team and families during a humanitarian surgical mission"
-                className="max-h-full max-w-full rounded-lg object-contain"
-                width={1600}
-                height={900}
-                loading="lazy"
-              />
-            </div>
+            <ImageLightbox
+              src={teamFamilies.url}
+              alt="Dr. Farhan with local medical team and families during a humanitarian surgical mission"
+              width={1600}
+              height={900}
+              className="h-[420px]"
+            />
             <figcaption className="mt-2 text-xs text-muted-foreground">
               Dr. Farhan with local physicians, nurses, and families during a humanitarian surgical mission.
             </figcaption>
@@ -113,16 +111,7 @@ function GlobalSurgeryPage() {
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           <Reveal delay={80}>
             <figure>
-              <div className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
-                <img
-                  src={surgeryOr1.url}
-                  alt="Operating room during a humanitarian surgical mission"
-                  className="max-h-full max-w-full rounded-lg object-contain"
-                  width={800}
-                  height={1067}
-                  loading="lazy"
-                />
-              </div>
+              <ImageLightbox src={surgeryOr1.url} alt="Operating room during a humanitarian surgical mission" width={800} height={1067} />
               <figcaption className="mt-2 text-xs text-muted-foreground">
                 Operating alongside local surgical teams.
               </figcaption>
@@ -130,16 +119,7 @@ function GlobalSurgeryPage() {
           </Reveal>
           <Reveal delay={140}>
             <figure>
-              <div className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
-                <img
-                  src={postopCare.url}
-                  alt="Dr. Farhan providing postoperative care to a young patient"
-                  className="max-h-full max-w-full rounded-lg object-contain"
-                  width={800}
-                  height={800}
-                  loading="lazy"
-                />
-              </div>
+              <ImageLightbox src={postopCare.url} alt="Dr. Farhan providing postoperative care to a young patient" width={800} height={800} />
               <figcaption className="mt-2 text-xs text-muted-foreground">
                 Postoperative care and recovery on the surgical mission.
               </figcaption>
@@ -147,16 +127,7 @@ function GlobalSurgeryPage() {
           </Reveal>
           <Reveal delay={200}>
             <figure>
-              <div className="flex h-72 w-full items-center justify-center rounded-lg bg-muted">
-                <img
-                  src={surgeryOr2.url}
-                  alt="Dr. Farhan operating with a local surgeon during a humanitarian mission"
-                  className="max-h-full max-w-full rounded-lg object-contain"
-                  width={800}
-                  height={1067}
-                  loading="lazy"
-                />
-              </div>
+              <ImageLightbox src={surgeryOr2.url} alt="Dr. Farhan operating with a local surgeon during a humanitarian mission" width={800} height={1067} />
               <figcaption className="mt-2 text-xs text-muted-foreground">
                 Collaborative surgery with local colleagues.
               </figcaption>
@@ -167,15 +138,6 @@ function GlobalSurgeryPage() {
           <p className="mt-6 text-xs text-muted-foreground">
             Identifiable patient photographs are published only where appropriate consent exists.
           </p>
-          <a
-            href="https://www.utmb.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 hover:underline"
-          >
-            Read the UTMB feature on Dr. Farhan&rsquo;s global work
-            <ExternalLink className="h-4 w-4" />
-          </a>
         </Reveal>
       </section>
 

@@ -13,7 +13,7 @@ import femaleIncontinenceImage from "@/assets/bilal-female-incontinence.webp.ass
 import meshImage from "@/assets/bilal-mesh-complications.webp.asset.json";
 import strictureImage from "@/assets/bilal-urethral-stricture.webp.asset.json";
 import kidneyStonesImage from "@/assets/bilal-kidney-stones.webp.asset.json";
-import { Star, Phone, ArrowRight, ArrowUpRight } from "lucide-react";
+import { Phone, ArrowRight, ArrowUpRight } from "lucide-react";
 
 const description =
   "Bilal Farhan, MD, FACS, fellowship-trained functional and reconstructive urologist in Houston. Advanced expertise and individualized care for BPH and HoLEP, male and female incontinence, mesh complications, voiding dysfunction, urethral reconstruction, and complex kidney stones.";
@@ -152,8 +152,8 @@ const featuredTreatment = {
   body: "Holmium laser enucleation of the prostate, a durable, size-independent treatment for enlarged prostate, performed by a surgeon who established a hospital HoLEP program.",
   points: [
     "250+ HoLEP procedures performed",
-    "HoLEP Center of Excellence",
-    "Catheter-free for most patients within days",
+    "Size-independent treatment for enlarged prostate",
+    "Tissue is available for pathology review",
   ],
   image: holepImage.url,
   to: "/bph-holep",
@@ -163,7 +163,7 @@ const treatments = [
   {
     title: "Continence Surgery",
     body: "Artificial urinary sphincter, male sling, female slings, and urethral bulking.",
-    points: ["AUS Center of Excellence", "Female Sling Center of Excellence"],
+    points: ["Male and female continence care", "Primary and revision procedures"],
     to: "/male-urology",
   },
   {
@@ -182,8 +182,7 @@ const treatments = [
 
 const metrics = [
   { value: 250, suffix: "+", label: "HoLEP procedures performed" },
-  { value: 4, suffix: "", label: "Centers of Excellence" },
-  { value: 7, suffix: "+", label: "Years at UTMB, Associate Professor" },
+  { value: 7, suffix: "+", label: "Years in academic urology" },
   { value: 60, suffix: "+", label: "Peer-reviewed publications" },
   { value: 200, suffix: "+", label: "Humanitarian surgeries in Africa" },
 ];
@@ -191,12 +190,9 @@ const metrics = [
 const marqueeItems = [
   "Fellowship-Trained Functional & Reconstructive Urology",
   "Former Associate Professor of Urology",
-  "HoLEP Center of Excellence",
-  "AUS Center of Excellence",
-  "Female Sling Center of Excellence",
-  "GreenLight Center of Excellence",
   "250+ HoLEP Procedures",
-  "Academy of Master Clinicians 2023",
+  "60+ Peer-Reviewed Publications",
+  "Academic Urologist & Educator",
 ];
 
 const insights = [
@@ -219,21 +215,6 @@ const insights = [
     kicker: "Article · Access",
     title: "Insurance, self-pay, and financing at the practice",
     to: "/insurance",
-  },
-];
-
-const reviews = [
-  {
-    text: "Dr. Farhan is truly exceptional. From the very first consultation, he takes the time to listen carefully, answer every question, and make you feel completely comfortable.",
-    author: "Verified Patient",
-  },
-  {
-    text: "The entire team is welcoming and supportive, creating a seamless experience from start to finish. If you're looking for a urologist you can fully trust, Dr. Farhan is an outstanding choice.",
-    author: "Verified Patient",
-  },
-  {
-    text: "After years of dealing with urinary issues, I finally found a doctor who listened. Dr. Farhan's expertise in voiding dysfunction gave me my quality of life back.",
-    author: "Verified Patient",
   },
 ];
 
@@ -564,42 +545,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* 6. Patient experiences */}
-      <section className="bg-sand">
-        <div className="mx-auto max-w-7xl px-4 py-24 lg:px-6">
-          <Reveal className="mb-14 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.34em] text-accent">
-              Patient experiences
-            </p>
-            <h2 className="mt-4 font-serif text-4xl uppercase tracking-wide text-foreground lg:text-5xl">
-              What patients say
-            </h2>
-          </Reveal>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {reviews.map((review, i) => (
-              <Reveal key={i} delay={i * 120} className="h-full">
-                <div className="h-full rounded-2xl bg-card p-8 shadow-sm">
-                  <div className="mb-4 flex gap-1">
-                    {Array.from({ length: 5 }).map((_, j) => (
-                      <Star
-                        key={j}
-                        className="h-4 w-4 fill-accent text-accent"
-                        aria-hidden="true"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-sm leading-relaxed text-foreground">{review.text}</p>
-                  <p className="mt-5 text-sm font-medium text-muted-foreground">
-                    {review.author}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Areas served */}
+      {/* 6. Areas served */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <AuroraBackground variant="dark" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 lg:px-6">

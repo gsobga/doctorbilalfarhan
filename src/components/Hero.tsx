@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, ArrowRight, ChevronDown } from "lucide-react";
-import { AuroraBackground } from "@/components/AuroraBackground";
 
 interface HeroProps {
   eyebrow?: string;
@@ -39,13 +38,7 @@ export function Hero({
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,color-mix(in_oklab,black_55%,transparent))]" />
       </div>
 
-      <AuroraBackground variant="dark" />
-
-      {/* scanning light beam */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-0 w-1/3 -skew-x-12 bg-[var(--gradient-sheen)] opacity-[0.07] animate-sheen"
-      />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 grid-field opacity-20" />
 
       <div
         className={`relative z-10 mx-auto w-full max-w-7xl px-4 py-24 lg:px-6 ${
@@ -56,11 +49,7 @@ export function Hero({
           <div
             className={`mb-6 flex ${align === "center" ? "justify-center" : "justify-start"}`}
           >
-            <span className="inline-flex items-center gap-2 rounded-full glass-dark px-4 py-2 text-[11px] font-medium uppercase tracking-[0.25em] text-white/85">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-glow animate-pulse-ring" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-glow" />
-              </span>
+            <span className="inline-flex items-center gap-2 border-l-2 border-accent px-4 py-1 text-[11px] font-medium uppercase tracking-[0.25em] text-primary-foreground/85">
               {eyebrow}
             </span>
           </div>
@@ -76,7 +65,7 @@ export function Hero({
         </h1>
         {subtitle && (
           <p
-            className={`mt-6 max-w-2xl text-lg font-light leading-relaxed text-white/85 md:text-xl ${
+            className={`mt-6 max-w-2xl text-lg font-light leading-relaxed text-primary-foreground/85 md:text-xl ${
               align === "center" ? "mx-auto" : ""
             }`}
           >
@@ -94,7 +83,7 @@ export function Hero({
                 href={cta.to}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary glow-ring transition-transform duration-500 hover:-translate-y-1"
+                className="group relative inline-flex min-h-11 items-center gap-2 overflow-hidden rounded-full bg-background px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <span className="relative z-10">{cta.label}</span>
                 <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -103,7 +92,7 @@ export function Hero({
             ) : (
               <Link
                 to={cta.to}
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary glow-ring transition-transform duration-500 hover:-translate-y-1"
+                className="group relative inline-flex min-h-11 items-center gap-2 overflow-hidden rounded-full bg-background px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <span className="relative z-10">{cta.label}</span>
                 <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -114,7 +103,7 @@ export function Hero({
           {phone && (
             <a
               href={`tel:${phone.replace(/\D/g, "")}`}
-              className="inline-flex items-center justify-center gap-2 rounded-full glass-dark px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-500 hover:-translate-y-1 hover:bg-white/15"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full glass-dark px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all duration-300 hover:-translate-y-0.5"
             >
               <Phone className="h-4 w-4" />
               {phone}

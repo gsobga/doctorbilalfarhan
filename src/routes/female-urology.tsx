@@ -95,7 +95,7 @@ function FemaleUrologyPage() {
               Treatment includes surgical and non-surgical approaches individualized according to the type and severity of incontinence, anatomy, previous treatment or surgery, goals, and preferences.
             </p>
             <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
-              A mesh-related complication does not automatically mean complete mesh removal. Treatment is individualized according to symptoms, examination findings, anatomy, previous procedures, and patient goals. Female Sling / Continence Surgery Center of Excellence recognition.
+              A mesh-related complication does not automatically mean complete mesh removal. Treatment is individualized according to symptoms, examination findings, anatomy, previous procedures, and patient goals.
             </p>
           </div>
           <div className="rounded-2xl bg-card p-8 shadow-sm">
@@ -186,47 +186,41 @@ function FemaleUrologyPage() {
             Advanced Treatment Options
           </h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
+            {([
               {
                 title: "Bladder Botox",
                 description:
                   "Injections to calm an overactive bladder and reduce urgency and leakage.",
+                slug: "bladder-botox",
               },
               {
                 title: "Sacral Neuromodulation",
                 description:
                   "A minimally invasive therapy that gently restores communication between the bladder and the nerves that control it.",
+                slug: "sacral-neuromodulation",
               },
               {
                 title: "Female Sling Surgery",
                 description:
                   "Mesh and non-mesh sling options for stress urinary incontinence.",
+                slug: "midurethral-sling",
               },
-              {
-                title: "Pelvic Organ Prolapse Repair",
-                description:
-                  "Reconstructive surgery to restore pelvic support and function.",
-              },
-              {
-                title: "Urethroplasty & Fistula Repair",
-                description:
-                  "Specialized reconstructive procedures for complex urethral and fistula conditions.",
-              },
-              {
-                title: "Robotic-Assisted Surgery",
-                description:
-                  "Minimally invasive techniques for faster recovery and less discomfort.",
-              },
-            ].map((treatment) => (
-              <div
+            ] as const).map((treatment) => (
+              <Link
                 key={treatment.title}
-                className="rounded-sm bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                to="/procedures/$slug"
+                params={{ slug: treatment.slug }}
+                className="group rounded-sm border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-md"
               >
                 <h3 className="font-serif text-xl text-foreground">{treatment.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {treatment.description}
                 </p>
-              </div>
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                  Read the patient guide
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>

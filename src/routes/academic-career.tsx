@@ -56,14 +56,14 @@ const lectures = [
 ];
 
 const description =
-  "Academic medicine at UTMB, 2019 to 2026. Dr. Bilal Farhan served as Associate Professor of Urology and Program Director of Neurourology and Pelvic Reconstruction, and established the UTMB HoLEP program and surgical training curriculum.";
+  "Seven years in academic urology. Dr. Bilal Farhan served as Associate Professor of Urology, taught trainees, contributed to research, and developed advanced clinical programs.";
 
 export const Route = createFileRoute("/academic-career")({
   head: () => ({
     meta: [
-      { title: "Academic Career at UTMB — Bilal Farhan, MD, FACS" },
+      { title: "Academic Career — Bilal Farhan, MD, FACS" },
       { name: "description", content: description },
-      { property: "og:title", content: "Academic Career at UTMB — Bilal Farhan, MD, FACS" },
+      { property: "og:title", content: "Academic Career — Bilal Farhan, MD, FACS" },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -104,6 +104,11 @@ const timeline = [
     body: "Developed a referral practice in neurourology, voiding dysfunction, incontinence, and pelvic and urethral reconstruction while teaching residents in clinic and in the operating room.",
   },
   {
+    year: "February 2023",
+    title: "HoLEP program established",
+    body: "Established an academic HoLEP service designed around advanced BPH care and surgical education.",
+  },
+  {
     year: "2023–2025",
     title: "Academic and program leadership",
     body: "Served as Program Director of Neurourology and Pelvic Reconstruction and advanced to Associate Professor of Urology.",
@@ -125,7 +130,7 @@ function AcademicCareerPage() {
     <main>
       <Hero
         eyebrow="Academic Medicine"
-        title="Academic Medicine at UTMB"
+        title="Seven Years in Academic Urology"
         subtitle="2019 to 2026. Seven years of complex surgical care, resident and medical student education, research, and program development."
         image={heroBg}
         align="left"
@@ -188,15 +193,6 @@ function AcademicCareerPage() {
                   and live operative training.
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
-                  <a
-                    href="https://www.utmb.edu/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 hover:underline"
-                  >
-                    Read UTMB&rsquo;s HoLEP milestone feature
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
                   <Link
                     to="/procedures/$slug"
                     params={{ slug: "holep" }}
@@ -283,20 +279,18 @@ function AcademicCareerPage() {
       {/* Timeline */}
       <section className="mx-auto max-w-4xl px-4 py-20 lg:px-6">
         <Reveal>
-          <h2 className="font-serif text-3xl text-primary">Seven years at UTMB</h2>
+            <h2 className="font-serif text-3xl text-primary">Seven years in academic urology</h2>
           <span className="mt-3 block h-px w-16 bg-accent" />
         </Reveal>
         <ol className="mt-10 space-y-8 border-l border-border pl-8">
           {timeline.map((item, i) => (
-            <Reveal key={item.year} delay={i * 60} as="li">
-              <li className="relative">
+            <Reveal key={item.year} delay={i * 60} as="li" className="relative">
                 <span className="absolute -left-[41px] top-2 h-3 w-3 rounded-full border-2 border-accent bg-background" />
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                   {item.year}
                 </p>
                 <h3 className="mt-2 font-serif text-xl text-primary">{item.title}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{item.body}</p>
-              </li>
             </Reveal>
           ))}
         </ol>

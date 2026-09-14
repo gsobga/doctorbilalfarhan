@@ -1,9 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, CalendarDays, Download, PlayCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarDays, PlayCircle } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { FaqSection } from "@/components/FaqSection";
 import { BOOKING_URL } from "@/lib/booking";
 import { getProcedure, procedures } from "@/lib/procedures";
+import { PatientGuideActions } from "@/components/PatientGuideActions";
 
 export const Route = createFileRoute("/procedures/$slug")({
   loader: ({ params }) => {
@@ -154,15 +155,12 @@ function ProcedurePage() {
             </ul>
           </nav>
 
-          <div className="mt-6 space-y-3 rounded-lg border border-border bg-secondary/50 p-5">
+           <div className="mt-6 space-y-3 rounded-lg border border-border bg-secondary/50 p-5 print:hidden">
             <p className="flex items-start gap-2 text-sm text-muted-foreground">
               <PlayCircle className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
               A short video from Dr. Farhan explaining {procedure.shortName} is coming to this page.
             </p>
-            <p className="flex items-start gap-2 text-sm text-muted-foreground">
-              <Download className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              A downloadable {procedure.shortName} patient guide will be available here.
-            </p>
+             <PatientGuideActions title={procedure.shortName} />
             <Link
               to="/preparing-for-your-procedure"
               className="inline-flex items-center gap-2 text-sm font-semibold text-primary"
@@ -177,7 +175,7 @@ function ProcedurePage() {
       <FaqSection heading={`${procedure.shortName}: Frequently Asked Questions`} faqs={procedure.faqs} />
 
       {/* Back to library */}
-      <section className="border-t border-border bg-secondary/40">
+       <section className="border-t border-border bg-secondary/40 print:hidden">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-6">
           <Link
             to="/procedures"

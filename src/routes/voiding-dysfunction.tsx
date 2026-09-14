@@ -152,7 +152,7 @@ function VoidingDysfunctionPage() {
             <p className="mt-4 leading-relaxed text-muted-foreground">
               His fellowship training in functional urology and voiding dysfunction allows
               him to manage complex cases with urodynamic testing, neuromodulation, Botox,
-              catheter-free solutions, and reconstructive surgery when needed.
+               options to improve bladder emptying, and reconstructive surgery when needed.
             </p>
           </div>
           <div className="rounded-sm bg-card p-8 shadow-sm">
@@ -185,47 +185,41 @@ function VoidingDysfunctionPage() {
             Diagnostic & Treatment Options
           </h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
+            {([
               {
                 title: "Urodynamic Testing",
                 description:
                   "Comprehensive bladder function studies to pinpoint the cause of symptoms.",
-              },
-              {
-                title: "Cystoscopy",
-                description:
-                  "Minimally invasive bladder and urethra examination for accurate diagnosis.",
+                slug: "urodynamics",
               },
               {
                 title: "Sacral Neuromodulation",
                 description:
                   "A small implant that gently restores bladder and bowel control.",
+                slug: "sacral-neuromodulation",
               },
               {
                 title: "Bladder Botox",
                 description:
                   "Targeted injections to relax an overactive or spastic bladder.",
+                slug: "bladder-botox",
               },
-              {
-                title: "Catheter-Free Solutions",
-                description:
-                  "Options to reduce dependence on catheters and improve independence.",
-              },
-              {
-                title: "Reconstructive Surgery",
-                description:
-                  "Surgical options for complex urinary diversion or outlet obstruction.",
-              },
-            ].map((treatment) => (
-              <div
+            ] as const).map((treatment) => (
+              <Link
                 key={treatment.title}
-                className="rounded-sm bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                to="/procedures/$slug"
+                params={{ slug: treatment.slug }}
+                className="group rounded-sm border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-md"
               >
                 <h3 className="font-serif text-xl text-foreground">{treatment.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {treatment.description}
                 </p>
-              </div>
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                  Read the patient guide
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>

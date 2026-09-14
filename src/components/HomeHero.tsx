@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { CalendarDays, MapPin, Play, Users, Activity, ClipboardList, ShieldCheck } from "lucide-react";
+import { CalendarDays, MapPin, Play, Users, Activity, ClipboardList, BookOpenCheck } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import drFarhanCutout from "@/assets/dr-farhan-cutout.png";
 import clinicLobby from "@/assets/clinic-lobby.jpg";
@@ -8,12 +8,12 @@ const trustItems = [
   { icon: Users, lines: ["Fellowship-Trained", "Urologic Surgeon"] },
   { icon: Activity, lines: ["Advanced Technology", "& Minimally Invasive Care"] },
   { icon: ClipboardList, lines: ["Personalized Treatment", "Plans"] },
-  { icon: ShieldCheck, lines: ["Centers of Excellence", "HoLEP • AUS"] },
+  { icon: BookOpenCheck, lines: ["Clear Education", "Shared Decisions"] },
 ];
 
 const credibility = [
   { value: "UTMB", label: "Former Associate Professor" },
-  { value: "2023–2025", label: "Texas Super Doctors" },
+  { value: "60+", label: "Peer-Reviewed Publications" },
   { value: "250+", label: "HoLEP Procedures" },
   { value: "Award", label: "Teaching Recognition" },
   { value: "Fellowship", label: "Trained Subspecialist" },
