@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Award, BadgeCheck, ExternalLink, GraduationCap, ShieldCheck, Star } from "lucide-react";
+import { Award, BadgeCheck, ExternalLink, GraduationCap } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { BOOKING_URL } from "@/lib/booking";
@@ -9,7 +9,7 @@ import teachingAwardAsset from "@/assets/utmb-teaching-award.jpg.asset.json";
 const teachingAward = teachingAwardAsset.url;
 
 const description =
-  "Awards and recognition for Bilal Farhan, MD, FACS: Texas Super Doctors 2023, 2024, and 2025, UTMB teaching recognition, Academy of Master Clinicians, and Centers of Excellence in HoLEP, artificial urinary sphincter, GreenLight, and female sling.";
+  "Verified awards and recognition for Bilal Farhan, MD, FACS, including teaching recognition and the Academy of Master Clinicians Clinician of the Month feature.";
 
 export const Route = createFileRoute("/awards")({
   head: () => ({
@@ -29,12 +29,6 @@ export const Route = createFileRoute("/awards")({
 
 const awards = [
   {
-    icon: Star,
-    title: "Texas Super Doctors",
-    meta: "2023 • 2024 • 2025",
-    body: "Recognized in Texas Super Doctors for three consecutive years, a peer-nominated and independently researched listing.",
-  },
-  {
     icon: GraduationCap,
     title: "Teaching Excellence",
     meta: "UTMB Teaching Awards",
@@ -51,25 +45,6 @@ const awards = [
     title: "Fellowship-Trained Subspecialist",
     meta: "Reconstructive Urology",
     body: "Advanced fellowship training in functional and reconstructive urology at the University of California, Irvine.",
-  },
-];
-
-const centers = [
-  {
-    title: "HoLEP",
-    body: "Advanced BPH surgery, including large glands, retention, and catheter-dependent patients. 250+ procedures performed.",
-  },
-  {
-    title: "Artificial Urinary Sphincter",
-    body: "Implantation and revision surgery for moderate to severe male stress urinary incontinence.",
-  },
-  {
-    title: "GreenLight",
-    body: "Photoselective vaporization of the prostate for selected patients, including those on anticoagulation.",
-  },
-  {
-    title: "Female Sling",
-    body: "Midurethral and autologous sling surgery for female stress urinary incontinence, including revision cases.",
   },
 ];
 
@@ -153,35 +128,6 @@ function AwardsPage() {
               </div>
             </Reveal>
           ))}
-        </div>
-      </section>
-
-      {/* Centers of Excellence */}
-      <section className="bg-secondary/50 py-20">
-        <div className="mx-auto max-w-6xl px-4 lg:px-6">
-          <Reveal>
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
-              Clinical Designations
-            </p>
-            <h2 className="mt-4 font-serif text-3xl text-primary lg:text-4xl">
-              Centers of Excellence
-            </h2>
-            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-              Designations reflecting concentrated surgical volume and advanced training in specific
-              procedures, separate from academic awards.
-            </p>
-          </Reveal>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {centers.map((c, i) => (
-              <Reveal key={c.title} delay={i * 60}>
-                <div className="h-full rounded-lg border border-border bg-card p-6">
-                  <ShieldCheck className="h-7 w-7 text-accent" strokeWidth={1.5} />
-                  <h3 className="mt-4 font-serif text-lg text-primary">{c.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 

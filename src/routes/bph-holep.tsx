@@ -5,7 +5,6 @@ import { Reveal } from "@/components/Reveal";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
 import holepImage from "@/assets/bilal-holep.png.asset.json";
-import galleryRobotic from "@/assets/bph-greenlight.jpg";
 import urodynamicsImage from "@/assets/bilal-urodynamics.webp.asset.json";
 import galleryConsult from "@/assets/bph-consult.jpg";
 import maleUrologyImg from "@/assets/male-urology.jpg";
@@ -43,18 +42,6 @@ const slides = [
       "250+ HoLEP procedures performed",
       "Effective for very large and complex prostates",
       "Tissue is sent for pathology review",
-    ],
-  },
-  {
-    title: "GreenLight Laser",
-    category: "Photoselective Vaporization",
-    description:
-      "Laser vaporization of obstructing prostate tissue, often chosen for smaller glands or men who must remain on blood thinners.",
-    image: galleryRobotic,
-    facts: [
-      "Center of Excellence recognition",
-      "Often suitable for anticoagulated patients",
-      "Typically same-day or overnight stay",
     ],
   },
   {
@@ -107,10 +94,10 @@ const faqs = [
 ];
 
 const excellence = [
-  "HoLEP Center of Excellence",
-  "GreenLight Laser Center of Excellence",
-  "Established the HoLEP service at UTMB",
+  "Established an academic HoLEP service and training program",
   "250+ HoLEP procedures performed",
+  "Experience with large and complex prostates",
+  "Medical and procedural options reviewed together",
 ];
 
 function BphPage() {
@@ -147,7 +134,7 @@ function BphPage() {
           <Reveal delay={120}>
             <div className="rounded-2xl glass p-8">
               <h3 className="font-serif text-2xl text-foreground">
-                Experience & Recognition
+                Experience & Approach
               </h3>
               <ul className="mt-6 space-y-3">
                 {excellence.map((item) => (

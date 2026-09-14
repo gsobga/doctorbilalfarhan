@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ExternalLink, Globe2, HeartHandshake, Users } from "lucide-react";
+import { Globe2, HeartHandshake, Users } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { StatCounter } from "@/components/StatCounter";
@@ -167,15 +167,6 @@ function GlobalSurgeryPage() {
           <p className="mt-6 text-xs text-muted-foreground">
             Identifiable patient photographs are published only where appropriate consent exists.
           </p>
-          <a
-            href="https://www.utmb.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 hover:underline"
-          >
-            Read the UTMB feature on Dr. Farhan&rsquo;s global work
-            <ExternalLink className="h-4 w-4" />
-          </a>
         </Reveal>
       </section>
 

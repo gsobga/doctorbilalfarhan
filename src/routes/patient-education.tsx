@@ -5,6 +5,7 @@ import {
   ClipboardList,
   HeartPulse,
   PlayCircle,
+  Download,
   Stethoscope,
 } from "lucide-react";
 import { Hero } from "@/components/Hero";
@@ -65,14 +66,8 @@ const pillars: {
   },
   {
     icon: ClipboardList,
-    title: "Prepare for Your Procedure",
-    body: "Medications, anesthesia, what to bring, and how to get ready.",
-    to: "/preparing-for-your-procedure",
-  },
-  {
-    icon: HeartPulse,
-    title: "After Your Procedure",
-    body: "Catheter care, pain control, activity, and when to call the office.",
+    title: "Prepare & Download",
+    body: "Preparation instructions and printable procedure guides.",
     to: "/preparing-for-your-procedure",
   },
   {
@@ -189,7 +184,7 @@ function PatientEducationPage() {
 
       {/* Pillars */}
       <section className="mx-auto max-w-7xl px-4 py-16 lg:px-6">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+         <nav aria-label="Patient education sections" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map(({ icon: Icon, title, body, to, hash }, i) => (
             <Reveal key={title} delay={i * 60}>
               <Link
@@ -204,7 +199,7 @@ function PatientEducationPage() {
               </Link>
             </Reveal>
           ))}
-        </div>
+         </nav>
       </section>
 
       {/* Conditions */}
@@ -275,7 +270,7 @@ function PatientEducationPage() {
       </section>
 
       {/* Procedures */}
-      <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
+       <section id="procedures" className="scroll-mt-32 mx-auto max-w-7xl px-4 py-20 lg:px-6">
         <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
             Procedures
@@ -308,7 +303,7 @@ function PatientEducationPage() {
             to="/procedures"
             className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
           >
-            Browse the full procedure library
+             Browse guides and printable handouts
             <ArrowRight className="h-4 w-4" />
           </Link>
         </Reveal>

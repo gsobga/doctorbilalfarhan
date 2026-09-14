@@ -4,7 +4,6 @@ import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
 import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
-import galleryRobotic from "@/assets/male-greenlight.jpg";
 import galleryDiagnostics from "@/assets/male-reconstruction.jpg";
 import maleIncontinenceImage from "@/assets/bilal-male-incontinence.webp.asset.json";
 import holepImage from "@/assets/bilal-holep.png.asset.json";
@@ -12,13 +11,13 @@ import holepImage from "@/assets/bilal-holep.png.asset.json";
 export const Route = createFileRoute("/male-urology")({
   head: () => ({
     meta: [
-      { title: "Men's Health & Continence — Bilal Farhan, MD" },
+      { title: "Male Urinary Incontinence — Bilal Farhan, MD" },
       {
         name: "description",
         content:
           "Advanced men's urology care in Houston, TX. Dr. Bilal Farhan specializes in BPH, urinary incontinence, erectile dysfunction, urethral stricture, and male prosthetic urology.",
       },
-      { property: "og:title", content: "Men's Health & Continence — Bilal Farhan, MD" },
+      { property: "og:title", content: "Male Urinary Incontinence — Bilal Farhan, MD" },
       {
         property: "og:description",
         content:
@@ -43,13 +42,6 @@ const slides = [
     facts: ["Size-independent alternative to TURP", "Often a single overnight stay", "Low risk of needing repeat surgery"],
   },
   {
-    title: "GreenLight Laser Therapy",
-    category: "Minimally Invasive BPH",
-    description: "Photoselective vaporization of the prostate opens the urinary channel with minimal bleeding, making it well suited to men on blood thinners.",
-    image: galleryRobotic,
-    facts: ["Bleeding-sparing option", "Rapid symptom relief", "Usually catheter-free within 24 hours"],
-  },
-  {
     title: "Artificial Urinary Sphincter & Male Sling",
     category: "Prosthetic Urology",
     description: "For post-prostatectomy or moderate-to-severe incontinence, an implanted sphincter or sling restores control and independence from pads.",
@@ -57,11 +49,11 @@ const slides = [
     facts: ["AUS for moderate to severe leakage", "Sling for mild to moderate cases", "Revision of failed prior implants"],
   },
   {
-    title: "Urethroplasty & Stone Surgery",
+    title: "Urethroplasty",
     category: "Reconstruction",
-    description: "Complex urethral reconstruction for stricture disease, plus PCNL, mini-PCNL, and ureteroscopy for stone disease of any size or location.",
+    description: "Complex urethral reconstruction for stricture disease, including recurrent narrowing after prior endoscopic treatment.",
     image: galleryDiagnostics,
-    facts: ["Buccal graft and excisional techniques", "Endoscopic and percutaneous stone care", "Fellowship-trained reconstructive expertise"],
+    facts: ["Buccal graft and excisional techniques", "A durable alternative to repeat dilation", "Fellowship-trained reconstructive expertise"],
   },
 ];
 
@@ -77,7 +69,7 @@ function MaleUrologyPage() {
     <main>
       <Hero
         eyebrow="Urology for Men"
-        title="Men's Health & Continence"
+        title="Male Urinary Incontinence"
         subtitle="Artificial urinary sphincter, male sling, post-prostatectomy incontinence, BPH, and complex or revision continence reconstruction."
         image={maleIncontinenceImage.url}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
@@ -88,13 +80,13 @@ function MaleUrologyPage() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
-              Men&apos;s Health &amp; Continence
+               Male Urinary Incontinence
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
               Male urinary incontinence after prostate surgery, radiation, or previous procedures is treatable, and more than one option usually exists. Treatment is individualized to the degree of leakage, hand function, prior surgery, anatomy, and personal goals.
             </p>
             <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
-              My experience includes Artificial Urinary Sphincter Center of Excellence recognition, with expertise in both straightforward and complex post-prostatectomy incontinence, including patients who have already undergone treatment or surgery.
+              Dr. Farhan treats straightforward and complex post-prostatectomy incontinence, including patients who have already undergone treatment or surgery.
             </p>
           </div>
           <div className="rounded-2xl bg-card p-8 shadow-sm">
@@ -159,12 +151,9 @@ function MaleUrologyPage() {
                 "Benign Prostatic Hyperplasia (BPH)",
                 "Urinary incontinence",
                 "Urethral stricture disease",
-                "Erectile dysfunction",
-                "Peyronie’s disease",
-                "Male sling complications",
                 "Post-prostatectomy incontinence",
-                "Vasectomy / vasectomy reversal",
-                "Kidney stones",
+                "Incontinence after radiation",
+                "Failed prior continence procedures",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-foreground">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />

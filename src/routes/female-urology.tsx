@@ -95,7 +95,7 @@ function FemaleUrologyPage() {
               Treatment includes surgical and non-surgical approaches individualized according to the type and severity of incontinence, anatomy, previous treatment or surgery, goals, and preferences.
             </p>
             <p className="mt-4 rounded-xl glass p-5 text-sm italic leading-relaxed text-muted-foreground">
-              A mesh-related complication does not automatically mean complete mesh removal. Treatment is individualized according to symptoms, examination findings, anatomy, previous procedures, and patient goals. Female Sling / Continence Surgery Center of Excellence recognition.
+              A mesh-related complication does not automatically mean complete mesh removal. Treatment is individualized according to symptoms, examination findings, anatomy, previous procedures, and patient goals.
             </p>
           </div>
           <div className="rounded-2xl bg-card p-8 shadow-sm">

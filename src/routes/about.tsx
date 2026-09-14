@@ -75,12 +75,8 @@ const education = [
 ];
 
 const awards = [
-  "HoLEP Center of Excellence",
-  "GreenLight Laser Center of Excellence",
-  "Artificial Urinary Sphincter (AUS) Center of Excellence",
-  "Female Sling / Continence Surgery Center of Excellence",
-  "Academy of Master Clinicians — 2023",
-  "Recognition for excellence in resident education",
+  "Academy of Master Clinicians Clinician of the Month — 2023",
+  "Outstanding Urology Teacher recognition",
   "Established the HoLEP service/program at UTMB",
   "250+ HoLEP procedures performed",
   "National and international invited speaker",

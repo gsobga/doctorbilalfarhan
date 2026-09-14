@@ -56,14 +56,14 @@ const lectures = [
 ];
 
 const description =
-  "Academic medicine at UTMB, 2019 to 2026. Dr. Bilal Farhan served as Associate Professor of Urology and Program Director of Neurourology and Pelvic Reconstruction, and established the UTMB HoLEP program and surgical training curriculum.";
+  "Seven years in academic urology. Dr. Bilal Farhan served as Associate Professor of Urology, taught trainees, contributed to research, and developed advanced clinical programs.";
 
 export const Route = createFileRoute("/academic-career")({
   head: () => ({
     meta: [
-      { title: "Academic Career at UTMB — Bilal Farhan, MD, FACS" },
+      { title: "Academic Career — Bilal Farhan, MD, FACS" },
       { name: "description", content: description },
-      { property: "og:title", content: "Academic Career at UTMB — Bilal Farhan, MD, FACS" },
+      { property: "og:title", content: "Academic Career — Bilal Farhan, MD, FACS" },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -75,6 +75,11 @@ export const Route = createFileRoute("/academic-career")({
 });
 
 const pillars = [
+  {
+    year: "February 2023",
+    title: "HoLEP program established",
+    body: "Established an academic HoLEP service designed around advanced BPH care and surgical education.",
+  },
   {
     icon: Users,
     title: "Clinical Practice",
@@ -125,7 +130,7 @@ function AcademicCareerPage() {
     <main>
       <Hero
         eyebrow="Academic Medicine"
-        title="Academic Medicine at UTMB"
+        title="Seven Years in Academic Urology"
         subtitle="2019 to 2026. Seven years of complex surgical care, resident and medical student education, research, and program development."
         image={heroBg}
         align="left"
@@ -188,15 +193,6 @@ function AcademicCareerPage() {
                   and live operative training.
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
-                  <a
-                    href="https://www.utmb.edu/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 hover:underline"
-                  >
-                    Read UTMB&rsquo;s HoLEP milestone feature
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
                   <Link
                     to="/procedures/$slug"
                     params={{ slug: "holep" }}
@@ -283,7 +279,7 @@ function AcademicCareerPage() {
       {/* Timeline */}
       <section className="mx-auto max-w-4xl px-4 py-20 lg:px-6">
         <Reveal>
-          <h2 className="font-serif text-3xl text-primary">Seven years at UTMB</h2>
+            <h2 className="font-serif text-3xl text-primary">Seven years in academic urology</h2>
           <span className="mt-3 block h-px w-16 bg-accent" />
         </Reveal>
         <ol className="mt-10 space-y-8 border-l border-border pl-8">

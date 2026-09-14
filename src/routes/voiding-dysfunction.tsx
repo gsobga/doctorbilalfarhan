@@ -152,7 +152,7 @@ function VoidingDysfunctionPage() {
             <p className="mt-4 leading-relaxed text-muted-foreground">
               His fellowship training in functional urology and voiding dysfunction allows
               him to manage complex cases with urodynamic testing, neuromodulation, Botox,
-              catheter-free solutions, and reconstructive surgery when needed.
+               options to improve bladder emptying, and reconstructive surgery when needed.
             </p>
           </div>
           <div className="rounded-sm bg-card p-8 shadow-sm">
@@ -207,7 +207,7 @@ function VoidingDysfunctionPage() {
                   "Targeted injections to relax an overactive or spastic bladder.",
               },
               {
-                title: "Catheter-Free Solutions",
+                 title: "Bladder Emptying Options",
                 description:
                   "Options to reduce dependence on catheters and improve independence.",
               },
