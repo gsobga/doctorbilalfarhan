@@ -76,11 +76,6 @@ export const Route = createFileRoute("/academic-career")({
 
 const pillars = [
   {
-    year: "February 2023",
-    title: "HoLEP program established",
-    body: "Established an academic HoLEP service designed around advanced BPH care and surgical education.",
-  },
-  {
     icon: Users,
     title: "Clinical Practice",
     body: "A subspecialty practice in functional urology, voiding dysfunction, incontinence, and pelvic and urethral reconstruction, including complex revision surgery.",
@@ -107,6 +102,11 @@ const timeline = [
     year: "2020–2024",
     title: "Built a subspecialty practice",
     body: "Developed a referral practice in neurourology, voiding dysfunction, incontinence, and pelvic and urethral reconstruction while teaching residents in clinic and in the operating room.",
+  },
+  {
+    year: "February 2023",
+    title: "HoLEP program established",
+    body: "Established an academic HoLEP service designed around advanced BPH care and surgical education.",
   },
   {
     year: "2023–2025",

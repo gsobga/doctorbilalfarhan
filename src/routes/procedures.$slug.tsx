@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, CalendarDays, Download, PlayCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarDays, PlayCircle } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { FaqSection } from "@/components/FaqSection";
 import { BOOKING_URL } from "@/lib/booking";

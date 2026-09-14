@@ -1,6 +1,12 @@
 # Roadmap — Dr. Farhan Website
 
 ## Completed (meeting transcript changes)
+- [x] Call updates: accessible navigation, standardized Center for Advanced Urology · CLS Health branding, and corrected contact hours
+- [x] Removed unsupported catheter timing, review, Texas Super Doctors, and Centers of Excellence claims pending verification
+- [x] Renamed men's care around Male Urinary Incontinence and removed rejected/mismatched conditions
+- [x] Corrected HoLEP academic timeline to February 2023 establishment and February 2025 100-case milestone
+- [x] Patient Education simplified into four clear pathways with print/save patient guides
+- [x] Procedure cards now link directly to their matching guides; busy inner-page motion reduced
 - [x] Header/Footer: "Advanced Urology Clinic" branding, larger name/nav text
 - [x] Reviews page removed (nav, sitemap, route) — restore when authentic reviews exist
 - [x] Numbered treatment/step cards de-numbered

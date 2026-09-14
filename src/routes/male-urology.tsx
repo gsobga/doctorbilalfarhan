@@ -171,47 +171,40 @@ function MaleUrologyPage() {
             Advanced Treatment Options
           </h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
+            {([
               {
-                title: "HoLEP",
+                title: "Artificial Urinary Sphincter",
                 description:
-                  "Holmium laser enucleation of the prostate for severe BPH with durable results.",
+                  "Implanted control for moderate to severe urinary leakage.",
+                to: "/procedures/artificial-urinary-sphincter",
               },
               {
-                title: "GreenLight Laser Therapy",
+                title: "Male Sling Surgery",
                 description:
-                  "Minimally invasive laser treatment to relieve urinary symptoms from BPH.",
+                  "A pump-free option for selected mild to moderate stress incontinence.",
+                to: "/procedures/male-sling",
               },
               {
                 title: "Urethroplasty",
                 description:
                   "Complex reconstructive surgery for urethral stricture disease.",
+                to: "/procedures/urethroplasty",
               },
-              {
-                title: "Artificial Urinary Sphincter (AUS)",
-                description:
-                  "Prosthetic device to treat moderate to severe male urinary incontinence.",
-              },
-              {
-                title: "Male Sling Surgery",
-                description:
-                  "Minimally invasive option for selected cases of male stress incontinence.",
-              },
-              {
-                title: "Kidney Stone Surgery",
-                description:
-                  "PCNL, mini-PCNL, and ureteroscopy for effective stone treatment.",
-              },
-            ].map((treatment) => (
-              <div
+            ] as const).map((treatment) => (
+              <Link
                 key={treatment.title}
-                className="rounded-sm bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                to={treatment.to}
+                className="group rounded-sm border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-md"
               >
                 <h3 className="font-serif text-xl text-foreground">{treatment.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {treatment.description}
                 </p>
-              </div>
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                  Read the patient guide
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -3,9 +3,7 @@ import {
   ArrowRight,
   BookOpen,
   ClipboardList,
-  HeartPulse,
   PlayCircle,
-  Download,
   Stethoscope,
 } from "lucide-react";
 import { Hero } from "@/components/Hero";
