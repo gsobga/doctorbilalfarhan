@@ -63,9 +63,9 @@ function ContactPage() {
                     CLS Health — Center for Advanced Urology
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    10950 Resource Pkwy
+                    780 Clear Lake City Blvd, Bldg 2
                     <br />
-                    Houston, TX 77089
+                    Webster, TX 77598
                   </p>
                 </div>
               </li>
