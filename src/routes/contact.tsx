@@ -49,7 +49,8 @@ function ContactPage() {
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
               Dr. Farhan sees patients at the CLS Health Center for Advanced Urology in
-              Southeast Houston. New and existing patients can schedule by phone, through
+              Webster, Texas, serving the Clear Lake and Southeast Houston communities. New
+              and existing patients can schedule by phone, through
               online scheduling, or through the patient portal when applicable.
             </p>
 
@@ -63,9 +64,9 @@ function ContactPage() {
                     CLS Health — Center for Advanced Urology
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    10950 Resource Pkwy
+                    780 Clear Lake City Blvd, Bldg 2
                     <br />
-                    Houston, TX 77089
+                    Webster, TX 77598
                   </p>
                 </div>
               </li>
@@ -320,7 +321,7 @@ function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 py-12 lg:px-6">
           <iframe
             title="Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473.0!2d-95.208806!3d29.585581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c0b0b0b0b0b0%3A0x0!2zMTA5NTAgUmVzb3VyY2UgUGFya3dheSwgU3VpdGUgQSwgSG91c3RvbiwgVFggNzcwODk!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps?q=780+Clear+Lake+City+Blvd+Bldg+2,+Webster,+TX+77598&output=embed"
             width="100%"
             height="400"
             style={{ border: 0 }}

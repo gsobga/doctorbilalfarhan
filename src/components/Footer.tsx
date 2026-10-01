@@ -87,9 +87,9 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                 <span>
-                  10950 Resource Pkwy
+                  780 Clear Lake City Blvd, Bldg 2
                   <br />
-                  Houston, TX 77089
+                  Webster, TX 77598
                 </span>
               </li>
               <li className="flex items-center gap-3">

@@ -57,9 +57,10 @@ export const Route = createFileRoute("/")({
               email: "drfarhan@cls.health",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "10950 Resource Pkwy",
-                addressLocality: "Houston",
+                streetAddress: "780 Clear Lake City Blvd, Bldg 2",
+                addressLocality: "Webster",
                 addressRegion: "TX",
+                postalCode: "77598",
                 addressCountry: "US",
               },
               areaServed: [
@@ -561,7 +562,8 @@ function HomePage() {
                 Houston Healthcare Clear Lake.
               </p>
               <p className="mt-5 text-sm text-primary-foreground/70">
-                10950 Resource Pkwy, Houston, TX 77089 • In-person & telehealth
+                780 Clear Lake City Blvd, Bldg 2, Webster, TX 77598 • In-person &
+                telehealth
               </p>
             </Reveal>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">

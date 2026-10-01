@@ -282,7 +282,7 @@ function AboutPage() {
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                   CLS Health — Center for Advanced Urology
                   <br />
-                  10950 Resource Pkwy, Houston, TX 77089
+                  780 Clear Lake City Blvd, Bldg 2, Webster, TX 77598
                   <br />
                   Phone: 346-414-3426 · Fax: 346-400-4338
                 </p>
