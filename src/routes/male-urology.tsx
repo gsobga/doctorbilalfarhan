@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import { Hero } from "@/components/Hero";
-import { ProcedureGallery } from "@/components/ProcedureGallery";
 import { FaqSection } from "@/components/FaqSection";
 import galleryDiagnostics from "@/assets/male-reconstruction.jpg";
 import maleIncontinenceImage from "@/assets/bilal-male-incontinence.webp.asset.json";
@@ -11,17 +10,17 @@ import holepImage from "@/assets/bilal-holep.png.asset.json";
 export const Route = createFileRoute("/male-urology")({
   head: () => ({
     meta: [
-      { title: "Male Urinary Incontinence — Bilal Farhan, MD" },
+      { title: "Male Urinary Incontinence | Houston Area | Bilal Farhan, MD" },
       {
         name: "description",
         content:
-          "Advanced men's urology care in Houston, TX. Dr. Bilal Farhan specializes in BPH, urinary incontinence, erectile dysfunction, urethral stricture, and male prosthetic urology.",
+          "Explore care for male urinary leakage with Dr. Bilal Farhan in Webster, serving the Houston area. Learn about evaluation, male slings, and artificial urinary sphincters.",
       },
-      { property: "og:title", content: "Male Urinary Incontinence — Bilal Farhan, MD" },
+      { property: "og:title", content: "Male Urinary Incontinence | Houston Area | Bilal Farhan, MD" },
       {
         property: "og:description",
         content:
-          "Advanced male urology care in Houston, TX. Dr. Bilal Farhan specializes in BPH, urinary incontinence, erectile dysfunction, urethral stricture, and male prosthetic urology.",
+          "Explore care for male urinary leakage with Dr. Bilal Farhan in Webster, serving the Houston area. Learn about evaluation, male slings, and artificial urinary sphincters.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -58,8 +57,6 @@ const slides = [
 ];
 
 const faqs = [
-  { question: "Which BPH procedure is right for me?", answer: "It depends on prostate size, symptoms, medications, and your goals. Dr. Farhan reviews HoLEP, GreenLight, and medication options with objective testing such as uroflow and ultrasound before recommending a path." },
-  { question: "How long is recovery after HoLEP?", answer: "Most men go home within a day, keep a catheter briefly, and return to normal routines within one to two weeks with clear improvement in flow." },
   { question: "Do you treat incontinence after prostate cancer surgery?", answer: "Yes. Post-prostatectomy incontinence is a core focus, including male slings and artificial urinary sphincter placement, as well as revision of prior devices." },
   { question: "Are you accepting new patients?", answer: "Yes. Dr. Farhan sees new patients at CLS Health Center for Advanced Urology at 780 Clear Lake City Blvd, Bldg 2, Webster, TX 77598. Call 346-414-3426." },
 ];
@@ -69,7 +66,7 @@ function MaleUrologyPage() {
     <main>
       <Hero
         eyebrow="Urology for Men"
-        title="Male Urinary Incontinence"
+        title="Male Urinary Incontinence Care in the Houston Area"
         subtitle="Artificial urinary sphincter, male sling, post-prostatectomy incontinence, BPH, and complex or revision continence reconstruction."
         image={maleIncontinenceImage.url}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
@@ -98,8 +95,6 @@ function MaleUrologyPage() {
                   { label: "Male Sling", to: "/procedures/male-sling" },
                   { label: "Complex male continence reconstruction" },
                   { label: "Revision of previous continence procedures" },
-                  { label: "BPH treatment including HoLEP and GreenLight", to: "/procedures/holep" },
-                  { label: "Urethral stricture and reconstructive surgery", to: "/procedures/urethroplasty" },
                 ] as { label: string; to?: string }[]
               ).map((item) => (
                 <li key={item.label} className="flex items-start gap-2 text-sm text-foreground">
@@ -127,41 +122,21 @@ function MaleUrologyPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <h2 className="font-serif text-3xl text-foreground lg:text-4xl">
-              Specialized Men’s Urological Health
-            </h2>
-            <p className="mt-6 leading-relaxed text-muted-foreground">
-              Dr. Bilal Farhan offers expert diagnosis and treatment for a wide range of male
-              urologic conditions. With advanced fellowship training in functional and
-              reconstructive urology, he provides both medical management and cutting-edge
-              surgical options tailored to each patient’s needs.
-            </p>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              From minimally invasive BPH treatments like HoLEP and GreenLight laser therapy
-              to complex urethral reconstruction and male prosthetic urology, Dr. Farhan
-              helps men regain function, confidence, and quality of life.
-            </p>
-          </div>
-          <div className="rounded-sm bg-card p-8 shadow-sm">
-            <h3 className="mb-6 font-serif text-2xl">Conditions Treated</h3>
-            <ul className="grid gap-3 sm:grid-cols-2">
-              {[
-                "Benign Prostatic Hyperplasia (BPH)",
-                "Urinary incontinence",
-                "Urethral stricture disease",
-                "Post-prostatectomy incontinence",
-                "Incontinence after radiation",
-                "Failed prior continence procedures",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-foreground">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="rounded-sm bg-card p-8 shadow-sm">
+          <h2 className="mb-6 font-serif text-2xl">Continence Conditions Treated</h2>
+          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              "Urinary incontinence",
+              "Post-prostatectomy incontinence",
+              "Incontinence after radiation",
+              "Failed prior continence procedures",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -170,7 +145,7 @@ function MaleUrologyPage() {
           <h2 className="text-center font-serif text-3xl text-foreground lg:text-4xl">
             Advanced Treatment Options
           </h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
             {([
               {
                 title: "Artificial Urinary Sphincter",
@@ -183,12 +158,6 @@ function MaleUrologyPage() {
                 description:
                   "A pump-free option for selected mild to moderate stress incontinence.",
                 slug: "male-sling",
-              },
-              {
-                title: "Urethroplasty",
-                description:
-                  "Complex reconstructive surgery for urethral stricture disease.",
-                slug: "urethroplasty",
               },
             ] as const).map((treatment) => (
               <Link
@@ -211,11 +180,37 @@ function MaleUrologyPage() {
         </div>
       </section>
 
-      <ProcedureGallery
-        heading="Inside the Procedures"
-        intro="From laser BPH surgery to prosthetic and reconstructive urology, here is how Dr. Farhan restores urinary and sexual function in men."
-        slides={slides}
-      />
+      <section className="mx-auto max-w-7xl px-4 py-20 lg:px-6">
+        <h2 className="font-serif text-3xl text-foreground lg:text-4xl">Related Men’s Urology Care</h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <Link
+            to="/bph-holep"
+            className="group rounded-sm border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/50"
+          >
+            <h3 className="font-serif text-xl text-foreground">Enlarged Prostate (BPH) and HoLEP</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {slides[0]?.description}
+            </p>
+            <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+              BPH treatment and HoLEP consultation
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </Link>
+          <Link
+            to="/pelvic-reconstruction"
+            className="group rounded-sm border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/50"
+          >
+            <h3 className="font-serif text-xl text-foreground">Urethral Stricture and Urethroplasty</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {slides[2]?.description}
+            </p>
+            <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+              Pelvic and urethral reconstruction
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </Link>
+        </div>
+      </section>
 
       <FaqSection faqs={faqs} />
     </main>
