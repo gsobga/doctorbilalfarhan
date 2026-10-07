@@ -105,7 +105,7 @@ function BphPage() {
     <main>
       <Hero
         eyebrow="Priority Program • Advanced BPH"
-        title="BPH & HoLEP"
+        title="BPH Treatment and HoLEP in the Houston Area"
         subtitle="Advanced BPH treatment individualized to the patient, not simply the size of the prostate."
         image={maleUrologyImg}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}

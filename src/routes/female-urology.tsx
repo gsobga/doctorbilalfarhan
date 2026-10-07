@@ -13,13 +13,13 @@ import femaleUrologyImg from "@/assets/female-urology.jpg";
 export const Route = createFileRoute("/female-urology")({
   head: () => ({
     meta: [
-      { title: "Women's Health — Bilal Farhan, MD" },
+      { title: "Women’s Urology | Houston Area | Bilal Farhan, MD" },
       {
         name: "description",
         content:
           "Expert women's urology care in Houston, TX. Dr. Bilal Farhan treats urinary incontinence, pelvic organ prolapse, overactive bladder, and other pelvic health conditions.",
       },
-      { property: "og:title", content: "Women's Health — Bilal Farhan, MD" },
+      { property: "og:title", content: "Women’s Urology | Houston Area | Bilal Farhan, MD" },
       {
         property: "og:description",
         content:
@@ -78,7 +78,7 @@ function FemaleUrologyPage() {
     <main>
       <Hero
         eyebrow="Women's Health & Pelvic Care"
-        title="Women's Health"
+        title="Women’s Urology Care in the Houston Area"
         subtitle="Incontinence, prolapse, mesh-related complications, and complex revision care, with mesh, non-mesh, and non-surgical options discussed openly."
         image={femaleUrologyImg}
         cta={{ label: "Schedule an Appointment", to: BOOKING_URL }}
