@@ -189,7 +189,7 @@ function MaleUrologyPage() {
           >
             <h3 className="font-serif text-xl text-foreground">Enlarged Prostate (BPH) and HoLEP</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {slides[0].description}
+              {slides[0]?.description}
             </p>
             <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
               BPH treatment and HoLEP consultation
@@ -202,7 +202,7 @@ function MaleUrologyPage() {
           >
             <h3 className="font-serif text-xl text-foreground">Urethral Stricture and Urethroplasty</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {slides[2].description}
+              {slides[2]?.description}
             </p>
             <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
               Pelvic and urethral reconstruction
