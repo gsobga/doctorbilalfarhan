@@ -15,18 +15,16 @@ import strictureImage from "@/assets/bilal-urethral-stricture.webp.asset.json";
 import kidneyStonesImage from "@/assets/bilal-kidney-stones.webp.asset.json";
 import { Phone, ArrowRight, ArrowUpRight } from "lucide-react";
 
+const title = "Houston Area Urologist | Bilal Farhan, MD, FACS";
 const description =
-  "Bilal Farhan, MD, FACS, fellowship-trained functional and reconstructive urologist in Houston. Advanced expertise and individualized care for BPH and HoLEP, male and female incontinence, mesh complications, voiding dysfunction, urethral reconstruction, and complex kidney stones.";
+  "Urology care in Webster and the Houston area with Dr. Bilal Farhan. Explore BPH and HoLEP, urinary incontinence, reconstruction, and kidney stone care.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bilal Farhan, MD, FACS — Advanced Urology in Houston, TX" },
+      { title },
       { name: "description", content: description },
-      {
-        property: "og:title",
-        content: "Bilal Farhan, MD, FACS — Advanced Urology in Houston, TX",
-      },
+      { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -49,7 +47,7 @@ export const Route = createFileRoute("/")({
                 "Dr Bilal Farhan Urologist",
               ],
               url: "https://drbilalfarhan.dev",
-              image: "https://drbilalfarhan.dev/favicon.png",
+              image: "https://drbilalfarhan.dev/dr-farhan.jpg",
               description:
                 "Fellowship-trained functional and reconstructive urologist in Houston, Texas. HoLEP for BPH, male and female incontinence, mesh complications, urethral reconstruction, and complex kidney stones.",
               medicalSpecialty: "Urologic",
@@ -65,10 +63,12 @@ export const Route = createFileRoute("/")({
               },
               areaServed: [
                 "Houston, TX",
-                "Katy, TX",
-                "Sugar Land, TX",
-                "The Woodlands, TX",
-                "Galveston, TX",
+                "Pearland, TX",
+                "Clear Lake, TX",
+                "Webster, TX",
+                "Friendswood, TX",
+                "League City, TX",
+                "Pasadena, TX",
               ],
               knowsAbout: [
                 "HoLEP",
