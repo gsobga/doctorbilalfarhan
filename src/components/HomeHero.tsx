@@ -80,9 +80,9 @@ export function HomeHero() {
             <div className="mt-9 flex items-start gap-3 border-l-2 border-accent pl-4 text-sm text-muted-foreground">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
               <span>
-                Serving Houston, Pearland,
+                Office in Webster, near Clear Lake
                 <br />
-                Clear Lake &amp; Surrounding Areas
+                Serving Houston, Pearland &amp; surrounding areas
               </span>
             </div>
           </div>
@@ -96,6 +96,7 @@ export function HomeHero() {
             <img
               src={drFarhanCutout}
               alt="Bilal Farhan, MD, FACS, fellowship-trained urologist in Houston"
+              fetchPriority="high"
               className="relative z-10 block w-auto max-w-full object-contain object-bottom drop-shadow-[0_30px_60px_rgba(15,32,64,0.28)] max-h-[46svh] md:max-h-[68svh] lg:max-h-[80svh]"
               width={894}
               height={1118}

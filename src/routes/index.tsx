@@ -47,6 +47,7 @@ export const Route = createFileRoute("/")({
                 "Dr Bilal Farhan Urologist",
               ],
               url: "https://drbilalfarhan.dev",
+              sameAs: ["https://x.com/BilalFarhanMD"],
               image: "https://drbilalfarhan.dev/dr-farhan.jpg",
               description:
                 "Fellowship-trained functional and reconstructive urologist in Houston, Texas. HoLEP for BPH, male and female incontinence, mesh complications, urethral reconstruction, and complex kidney stones.",
@@ -166,18 +167,24 @@ const treatments = [
     body: "Artificial urinary sphincter, male sling, female slings, and urethral bulking.",
     points: ["Male and female continence care", "Primary and revision procedures"],
     to: "/male-urology",
+    links: [
+      { label: "Male continence care", to: "/male-urology" },
+      { label: "Female continence care", to: "/female-urology" },
+    ],
   },
   {
     title: "Reconstructive Surgery",
     body: "Urethroplasty, buccal graft reconstruction, fistula repair, and mesh revision.",
     points: ["Complex and revision cases", "Robotic reconstruction"],
     to: "/pelvic-reconstruction",
+    links: [{ label: "Learn more", to: "/pelvic-reconstruction" }],
   },
   {
     title: "Stone Surgery",
     body: "Ureteroscopy with laser lithotripsy, standard PCNL, mini-PCNL, and supine PCNL.",
     points: ["Minimally invasive approaches", "Recurrent stone prevention"],
     to: "/kidney-stones",
+    links: [{ label: "Learn more", to: "/kidney-stones" }],
   },
 ];
 
@@ -198,22 +205,22 @@ const marqueeItems = [
 
 const insights = [
   {
-    kicker: "Article · Patient Guides",
+    kicker: "Patient Guide",
     title: "What to expect before and after your procedure",
     to: "/preparing-for-your-procedure",
   },
   {
-    kicker: "Article · BPH",
+    kicker: "BPH Care",
     title: "Choosing between HoLEP, GreenLight, and medication",
     to: "/bph-holep",
   },
   {
-    kicker: "Article · Second Opinions",
+    kicker: "Second Opinions",
     title: "When a complex urologic problem deserves another look",
     to: "/second-opinions",
   },
   {
-    kicker: "Article · Access",
+    kicker: "Insurance",
     title: "Insurance, self-pay, and financing at the practice",
     to: "/insurance",
   },
@@ -242,6 +249,7 @@ function HomePage() {
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             <span
               key={i}
+              aria-hidden={i >= marqueeItems.length ? true : undefined}
               className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-background/70"
             >
               <span className="h-1 w-1 rounded-full bg-accent" />
@@ -269,7 +277,7 @@ function HomePage() {
         </div>
 
         <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-24 lg:px-6">
-          {conditions.map((c, i) => (
+          {conditions.map((c) => (
             <Link
               key={c.title}
               to={c.to}
@@ -278,15 +286,12 @@ function HomePage() {
               <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-muted">
                 <img
                   src={c.image}
-                  alt={c.title}
+                  alt=""
                   className="max-h-full max-w-full object-contain transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                   loading="lazy"
                   width={480}
                   height={360}
                 />
-                <span className="absolute left-4 top-4 rounded-full bg-primary/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur">
-                  {String(i + 1).padStart(2, "0")} / {String(conditions.length).padStart(2, "0")}
-                </span>
               </div>
               <h3 className="mt-4 font-serif text-lg uppercase tracking-wide text-foreground">
                 {c.title}
@@ -332,7 +337,7 @@ function HomePage() {
               <div className="relative flex min-h-[280px] items-center justify-center overflow-hidden bg-primary/10">
                 <img
                   src={featuredTreatment.image}
-                  alt={featuredTreatment.title}
+                  alt=""
                   className="max-h-full max-w-full object-contain transition-transform duration-[1400ms] ease-out group-hover:scale-105"
                   loading="lazy"
                   width={800}
@@ -370,10 +375,7 @@ function HomePage() {
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {treatments.map((t, i) => (
               <Reveal key={t.title} delay={i * 110} className="h-full">
-                <Link
-                  to={t.to}
-                  className="group flex h-full flex-col rounded-2xl bg-card p-8 shadow-sm transition-transform duration-500 hover:-translate-y-1"
-                >
+                <div className="flex h-full flex-col rounded-2xl bg-card p-8 shadow-sm">
                   <h3 className="font-serif text-xl uppercase tracking-wide text-foreground">
                     {t.title}
                   </h3>
@@ -389,11 +391,20 @@ function HomePage() {
                       </li>
                     ))}
                   </ul>
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:text-accent">
-                    Learn more
-                    <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
-                  </span>
-                </Link>
+                  <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                    {t.links.map((l) => (
+                      <Link
+                        key={l.to}
+                        to={l.to}
+                        aria-label={l.label === "Learn more" ? `Learn more about ${t.title}` : undefined}
+                        className="group inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-primary hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                      >
+                        {l.label}
+                        <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </Reveal>
             ))}
           </div>

@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, CalendarDays, PlayCircle } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
@@ -77,6 +78,7 @@ function ProcedurePage() {
             <ArrowLeft className="h-3.5 w-3.5" />
             Procedure Library
           </Link>
+          <Breadcrumbs className="mt-6" />
           <p className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-accent">
             {procedure.category}
           </p>
@@ -108,8 +110,8 @@ function ProcedurePage() {
       </section>
 
       {/* Body */}
-      <section className="mx-auto grid max-w-6xl gap-12 px-4 py-16 lg:grid-cols-[minmax(0,1fr)_260px] lg:px-6">
-        <div className="space-y-10">
+      <section className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)] gap-12 px-4 py-16 lg:grid-cols-[minmax(0,1fr)_260px] lg:px-6">
+        <div className="min-w-0 space-y-10 break-words">
           {procedure.sections.map((section, i) => (
             <Reveal key={section.heading} delay={i * 40}>
               <article id={`s-${i}`} className="scroll-mt-32">
