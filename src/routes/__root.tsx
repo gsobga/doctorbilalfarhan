@@ -157,7 +157,7 @@ function RootComponent() {
             Skip to main content
           </a>
           <Header />
-          <div id="main-content" tabIndex={-1} className="flex-1 focus:outline-none">
+          <div id="main-content" tabIndex={-1} className="flex-1 overflow-x-clip focus:outline-none">
             <Outlet />
           </div>
           <Footer />
