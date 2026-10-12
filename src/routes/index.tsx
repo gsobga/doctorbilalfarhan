@@ -166,18 +166,24 @@ const treatments = [
     body: "Artificial urinary sphincter, male sling, female slings, and urethral bulking.",
     points: ["Male and female continence care", "Primary and revision procedures"],
     to: "/male-urology",
+    links: [
+      { label: "Male continence care", to: "/male-urology" },
+      { label: "Female continence care", to: "/female-urology" },
+    ],
   },
   {
     title: "Reconstructive Surgery",
     body: "Urethroplasty, buccal graft reconstruction, fistula repair, and mesh revision.",
     points: ["Complex and revision cases", "Robotic reconstruction"],
     to: "/pelvic-reconstruction",
+    links: [{ label: "Learn more", to: "/pelvic-reconstruction" }],
   },
   {
     title: "Stone Surgery",
     body: "Ureteroscopy with laser lithotripsy, standard PCNL, mini-PCNL, and supine PCNL.",
     points: ["Minimally invasive approaches", "Recurrent stone prevention"],
     to: "/kidney-stones",
+    links: [{ label: "Learn more", to: "/kidney-stones" }],
   },
 ];
 
@@ -368,10 +374,7 @@ function HomePage() {
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {treatments.map((t, i) => (
               <Reveal key={t.title} delay={i * 110} className="h-full">
-                <Link
-                  to={t.to}
-                  className="group flex h-full flex-col rounded-2xl bg-card p-8 shadow-sm transition-transform duration-500 hover:-translate-y-1"
-                >
+                <div className="flex h-full flex-col rounded-2xl bg-card p-8 shadow-sm">
                   <h3 className="font-serif text-xl uppercase tracking-wide text-foreground">
                     {t.title}
                   </h3>
@@ -387,11 +390,20 @@ function HomePage() {
                       </li>
                     ))}
                   </ul>
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:text-accent">
-                    Learn more
-                    <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
-                  </span>
-                </Link>
+                  <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                    {t.links.map((l) => (
+                      <Link
+                        key={l.to}
+                        to={l.to}
+                        aria-label={l.label === "Learn more" ? `Learn more about ${t.title}` : undefined}
+                        className="group inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-primary hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                      >
+                        {l.label}
+                        <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </Reveal>
             ))}
           </div>
