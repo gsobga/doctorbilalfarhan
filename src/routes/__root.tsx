@@ -100,7 +100,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Center for Advanced Urology | Bilal Farhan, MD, FACS" },
-      { property: "og:url", content: "https://drbilalfarhan.dev" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -151,8 +150,14 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <MotionProvider>
         <div className="flex min-h-screen flex-col">
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-background focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-primary focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent"
+          >
+            Skip to main content
+          </a>
           <Header />
-          <div className="flex-1">
+          <div id="main-content" tabIndex={-1} className="flex-1 focus:outline-none">
             <Outlet />
           </div>
           <Footer />

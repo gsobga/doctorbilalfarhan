@@ -198,22 +198,22 @@ const marqueeItems = [
 
 const insights = [
   {
-    kicker: "Article · Patient Guides",
+    kicker: "Patient Guide",
     title: "What to expect before and after your procedure",
     to: "/preparing-for-your-procedure",
   },
   {
-    kicker: "Article · BPH",
+    kicker: "BPH Care",
     title: "Choosing between HoLEP, GreenLight, and medication",
     to: "/bph-holep",
   },
   {
-    kicker: "Article · Second Opinions",
+    kicker: "Second Opinions",
     title: "When a complex urologic problem deserves another look",
     to: "/second-opinions",
   },
   {
-    kicker: "Article · Access",
+    kicker: "Insurance",
     title: "Insurance, self-pay, and financing at the practice",
     to: "/insurance",
   },
@@ -242,6 +242,7 @@ function HomePage() {
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             <span
               key={i}
+              aria-hidden={i >= marqueeItems.length ? true : undefined}
               className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-background/70"
             >
               <span className="h-1 w-1 rounded-full bg-accent" />
@@ -269,7 +270,7 @@ function HomePage() {
         </div>
 
         <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-24 lg:px-6">
-          {conditions.map((c, i) => (
+          {conditions.map((c) => (
             <Link
               key={c.title}
               to={c.to}
@@ -278,15 +279,12 @@ function HomePage() {
               <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-muted">
                 <img
                   src={c.image}
-                  alt={c.title}
+                  alt=""
                   className="max-h-full max-w-full object-contain transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                   loading="lazy"
                   width={480}
                   height={360}
                 />
-                <span className="absolute left-4 top-4 rounded-full bg-primary/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur">
-                  {String(i + 1).padStart(2, "0")} / {String(conditions.length).padStart(2, "0")}
-                </span>
               </div>
               <h3 className="mt-4 font-serif text-lg uppercase tracking-wide text-foreground">
                 {c.title}
@@ -332,7 +330,7 @@ function HomePage() {
               <div className="relative flex min-h-[280px] items-center justify-center overflow-hidden bg-primary/10">
                 <img
                   src={featuredTreatment.image}
-                  alt={featuredTreatment.title}
+                  alt=""
                   className="max-h-full max-w-full object-contain transition-transform duration-[1400ms] ease-out group-hover:scale-105"
                   loading="lazy"
                   width={800}
