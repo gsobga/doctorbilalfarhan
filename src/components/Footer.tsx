@@ -2,6 +2,41 @@ import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, Printer, Clock, Building2 } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 
+const footerGroups = [
+  {
+    heading: "Care",
+    links: [
+      { label: "BPH & HoLEP", to: "/bph-holep" },
+      { label: "Male Urinary Incontinence", to: "/male-urology" },
+      { label: "Women's Urology", to: "/female-urology" },
+      { label: "Voiding Dysfunction & OAB", to: "/voiding-dysfunction" },
+      { label: "Urethral & Pelvic Reconstruction", to: "/pelvic-reconstruction" },
+      { label: "Kidney Stones", to: "/kidney-stones" },
+      { label: "Second Opinions & Revision Care", to: "/second-opinions" },
+    ],
+  },
+  {
+    heading: "Patient Resources",
+    links: [
+      { label: "Patient Education", to: "/patient-education" },
+      { label: "Procedure Library", to: "/procedures" },
+      { label: "Preparing for Your Procedure", to: "/preparing-for-your-procedure" },
+      { label: "Educational Videos", to: "/videos" },
+      { label: "Insurance", to: "/insurance" },
+      { label: "Contact & Scheduling", to: "/contact" },
+    ],
+  },
+  {
+    heading: "About",
+    links: [
+      { label: "About Dr. Farhan", to: "/about" },
+      { label: "Academic Career", to: "/academic-career" },
+      { label: "Awards & Recognition", to: "/awards" },
+      { label: "Global Surgery & Humanitarian Service", to: "/global-surgery" },
+    ],
+  },
+] as const;
+
 export function Footer() {
   return (
     <footer className="bg-foreground text-background">
@@ -32,57 +67,28 @@ export function Footer() {
             </p>
           </div>
 
-          <div>
-            <h4 className="mb-6 font-serif text-lg">Care We Provide</h4>
-            <ul className="space-y-3 text-sm text-background/80">
-              <li>
-                <Link to="/bph-holep" className="hover:text-white">BPH & HoLEP</Link>
-              </li>
-              <li>
-                <Link to="/male-urology" className="hover:text-white">Male Urinary Incontinence</Link>
-              </li>
-              <li>
-                <Link to="/female-urology" className="hover:text-white">Women's Health</Link>
-              </li>
-              <li>
-                <Link to="/voiding-dysfunction" className="hover:text-white">Voiding Dysfunction & OAB</Link>
-              </li>
-              <li>
-                <Link to="/pelvic-reconstruction" className="hover:text-white">Urethral & Pelvic Reconstruction</Link>
-              </li>
-              <li>
-                <Link to="/kidney-stones" className="hover:text-white">Kidney Stones</Link>
-              </li>
-              <li>
-                <Link to="/second-opinions" className="hover:text-white">Second Opinions & Revision Care</Link>
-              </li>
-              <li>
-                <Link to="/patient-education" className="hover:text-white">Patient Education</Link>
-              </li>
-              <li>
-                <Link to="/procedures" className="hover:text-white">Procedure Library</Link>
-              </li>
-              <li>
-                <Link to="/preparing-for-your-procedure" className="hover:text-white">Preparing for Your Procedure</Link>
-              </li>
-              <li>
-                <Link to="/videos" className="hover:text-white">Educational Videos</Link>
-              </li>
-              <li>
-                 <Link to="/academic-career" className="hover:text-white">Academic Career</Link>
-              </li>
-              <li>
-                <Link to="/awards" className="hover:text-white">Awards & Recognition</Link>
-              </li>
-              <li>
-                <Link to="/global-surgery" className="hover:text-white">Global Surgery & Humanitarian Service</Link>
-              </li>
-
-            </ul>
-          </div>
+          <nav aria-label="Footer" className="grid gap-8 sm:grid-cols-2 lg:col-span-1 lg:grid-cols-1">
+            {footerGroups.map((group) => (
+              <div key={group.heading}>
+                <h2 className="mb-4 font-serif text-lg">{group.heading}</h2>
+                <ul className="space-y-2.5 text-sm text-background/80">
+                  {group.links.map((l) => (
+                    <li key={l.to}>
+                      <Link
+                        to={l.to}
+                        className="rounded-sm hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
 
           <div>
-            <h4 className="mb-6 font-serif text-lg">Contact</h4>
+            <h2 className="mb-6 font-serif text-lg">Contact</h2>
             <ul className="space-y-4 text-sm text-background/80">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
@@ -122,7 +128,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-6 font-serif text-lg">Appointments</h4>
+            <h2 className="mb-6 font-serif text-lg">Appointments</h2>
             <ul className="space-y-3 text-sm text-background/80">
               <li className="flex items-start gap-3">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
