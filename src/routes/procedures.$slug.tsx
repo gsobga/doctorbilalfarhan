@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, CalendarDays, PlayCircle } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
@@ -77,6 +78,7 @@ function ProcedurePage() {
             <ArrowLeft className="h-3.5 w-3.5" />
             Procedure Library
           </Link>
+          <Breadcrumbs className="mt-6" />
           <p className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-accent">
             {procedure.category}
           </p>

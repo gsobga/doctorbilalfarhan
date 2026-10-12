@@ -47,6 +47,7 @@ export const Route = createFileRoute("/")({
                 "Dr Bilal Farhan Urologist",
               ],
               url: "https://drbilalfarhan.dev",
+              sameAs: ["https://x.com/BilalFarhanMD"],
               image: "https://drbilalfarhan.dev/dr-farhan.jpg",
               description:
                 "Fellowship-trained functional and reconstructive urologist in Houston, Texas. HoLEP for BPH, male and female incontinence, mesh complications, urethral reconstruction, and complex kidney stones.",

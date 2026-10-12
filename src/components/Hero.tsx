@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Link } from "@tanstack/react-router";
 import { Phone, ArrowRight, ChevronDown } from "lucide-react";
 
@@ -45,6 +46,7 @@ export function Hero({
           align === "center" ? "text-center" : "text-left"
         }`}
       >
+        <Breadcrumbs className={`mb-8 flex ${align === "center" ? "justify-center" : ""}`} />
         {eyebrow && (
           <div
             className={`mb-6 flex ${align === "center" ? "justify-center" : "justify-start"}`}
