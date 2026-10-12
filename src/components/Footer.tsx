@@ -41,7 +41,7 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="mx-auto max-w-7xl px-4 py-16 lg:px-6">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div>
             <div className="mb-6">
             <p className="text-xs uppercase tracking-[0.3em] text-background/60">
@@ -67,7 +67,7 @@ export function Footer() {
             </p>
           </div>
 
-          <nav aria-label="Footer" className="grid gap-8 sm:grid-cols-2 lg:col-span-1 lg:grid-cols-1">
+          <nav aria-label="Footer" className="grid gap-8 sm:grid-cols-3 md:col-span-2 lg:col-span-2">
             {footerGroups.map((group) => (
               <div key={group.heading}>
                 <h2 className="mb-4 font-serif text-lg">{group.heading}</h2>
