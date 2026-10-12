@@ -140,10 +140,10 @@ function AwardsPage() {
         <ul className="mt-8 grid gap-3 sm:grid-cols-2">
           {achievements.map((a, i) => (
             <Reveal key={a} delay={i * 50} as="li">
-              <li className="flex gap-3 rounded-md border border-border bg-card p-4 text-sm leading-relaxed text-muted-foreground">
+              <div className="flex h-full gap-3 rounded-md border border-border bg-card p-4 text-sm leading-relaxed text-muted-foreground">
                 <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                 {a}
-              </li>
+              </div>
             </Reveal>
           ))}
         </ul>
