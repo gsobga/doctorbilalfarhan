@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
 import heroBg from "@/assets/hero-bg.jpg";
-import { PHONE_DISPLAY, BOOKING_URL } from "@/lib/booking";
+import { PHONE_DISPLAY, PHONE_TEL, BOOKING_URL } from "@/lib/booking";
 import { Phone, MapPin, Mail, Clock, Building2, CalendarCheck, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
@@ -11,13 +11,13 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Schedule with Dr. Bilal Farhan in Southeast Houston: 346-414-3426. In-person and telehealth appointments for BPH, incontinence, voiding dysfunction, reconstruction, and kidney stones.",
+          "Schedule with Dr. Bilal Farhan in Webster, TX, serving the Houston area: 346-414-3426. In-person and telehealth appointments for BPH, incontinence, voiding dysfunction, reconstruction, and kidney stones.",
       },
       { property: "og:title", content: "Schedule an Appointment — Bilal Farhan, MD, FACS" },
       {
         property: "og:description",
         content:
-          "Schedule with Dr. Bilal Farhan in Southeast Houston: 346-414-3426. In-person and telehealth appointments for BPH, incontinence, voiding dysfunction, reconstruction, and kidney stones.",
+          "Schedule with Dr. Bilal Farhan in Webster, TX, serving the Houston area: 346-414-3426. In-person and telehealth appointments for BPH, incontinence, voiding dysfunction, reconstruction, and kidney stones.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -148,115 +148,36 @@ function ContactPage() {
 
           </div>
 
-          <div className="rounded-sm bg-card p-8 shadow-sm">
-            <h3 className="mb-2 font-serif text-2xl">Request an Appointment</h3>
+          <div className="self-start rounded-sm bg-card p-8 shadow-sm">
+            <h2 className="font-serif text-2xl text-foreground">Request an Appointment</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Start an appointment request through our secure online scheduling portal, or call
+              the office and our team will help you find the right visit.
+            </p>
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mb-6 flex items-center justify-between gap-3 rounded-md bg-primary px-5 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
+              className="mt-6 flex min-h-11 items-center justify-between gap-3 rounded-md bg-primary px-5 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
             >
               <span className="flex items-center gap-3">
                 <CalendarCheck className="h-5 w-5" />
-                Schedule online now
+                Open online scheduling
               </span>
-              <ExternalLink className="h-4 w-4 opacity-80" />
+              <ExternalLink className="h-4 w-4 opacity-80" aria-hidden="true" />
+              <span className="sr-only">(opens in a new tab)</span>
             </a>
-            <p className="mb-6 text-xs text-muted-foreground">
-              Prefer to schedule in real time? Use our secure online portal to pick a visit
-              time that works for you. You can also use the form below to send a request and our
-              team will reach out, or call {PHONE_DISPLAY}.
+            <a
+              href={PHONE_TEL}
+              className="mt-3 flex min-h-11 items-center gap-3 rounded-md border border-primary/30 px-5 py-4 text-sm font-semibold uppercase tracking-wider text-primary transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              <Phone className="h-5 w-5" />
+              Call {PHONE_DISPLAY}
+            </a>
+            <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
+              Please do not send sensitive medical information by email. For medical
+              emergencies, call 911 or visit the nearest emergency room.
             </p>
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid gap-5 sm:grid-cols-2">
-                <div>
-                  <label htmlFor="firstName" className="mb-1.5 block text-sm font-medium text-foreground">
-                    First Name
-                  </label>
-                  <input
-                    id="firstName"
-                    type="text"
-                    className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="Jane"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="mb-1.5 block text-sm font-medium text-foreground">
-                    Last Name
-                  </label>
-                  <input
-                    id="lastName"
-                    type="text"
-                    className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-foreground">
-                  Email Address
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
-                  placeholder="jane@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-foreground">
-                  Phone Number
-                </label>
-                <input
-                  id="phone"
-                  type="tel"
-                  className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
-                  placeholder="346-414-3426"
-                />
-              </div>
-              <div>
-                <label htmlFor="service" className="mb-1.5 block text-sm font-medium text-foreground">
-                  Service of Interest
-                </label>
-                <select
-                  id="service"
-                  className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
-                >
-                  <option>General Urology Consultation</option>
-                  <option>BPH & HoLEP</option>
-                  <option>Male Urology & Continence</option>
-                  <option>Female Urology & Mesh Complications</option>
-                  <option>Voiding Dysfunction & Overactive Bladder</option>
-                  <option>Urethral & Pelvic Reconstruction</option>
-                  <option>Kidney Stones</option>
-                  <option>Second Opinion / Revision Surgery</option>
-                  <option>Telehealth Visit</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-foreground">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full rounded-sm border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-1 focus:ring-ring"
-                  placeholder="How can we help you?"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-sm bg-primary px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                Submit Request
-              </button>
-              <p className="text-xs text-muted-foreground">
-                This form is for appointment requests only. Please do not include
-                sensitive medical information — call 346-414-3426 to discuss protected
-                health information securely. For medical emergencies, call 911 or visit the
-                nearest emergency room.
-              </p>
-            </form>
           </div>
         </div>
       </section>
@@ -319,8 +240,23 @@ function ContactPage() {
 
       <section className="bg-background">
         <div className="mx-auto max-w-7xl px-4 py-12 lg:px-6">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <p className="text-sm text-muted-foreground">
+              780 Clear Lake City Blvd, Bldg 2, Webster, TX 77598
+            </p>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=780+Clear+Lake+City+Blvd+Bldg+2,+Webster,+TX+77598"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+            >
+              <MapPin className="h-4 w-4" />
+              Get directions
+              <span className="sr-only">to 780 Clear Lake City Blvd, Bldg 2, Webster, TX 77598 (opens in a new tab)</span>
+            </a>
+          </div>
           <iframe
-            title="Office Location"
+            title="Map of the office at 780 Clear Lake City Blvd, Bldg 2, Webster, TX"
             src="https://www.google.com/maps?q=780+Clear+Lake+City+Blvd+Bldg+2,+Webster,+TX+77598&output=embed"
             width="100%"
             height="400"
